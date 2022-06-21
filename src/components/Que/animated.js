@@ -38,10 +38,10 @@ import a1 from './gaurav_audios/a1.mp3'
 import a2 from './gaurav_audios/a2.mp3'
 import a3 from './gaurav_audios/a3.mp3'
 import a4 from './gaurav_audios/a4.mp3'
-import ek from './gaurav_audios/ek.mp3'
-import two from './gaurav_audios/doo.mp3'
-import teen from './gaurav_audios/teen.mp3'
-import char from './gaurav_audios/char.mp3'
+import ek from './AUDIOS/ekl.mp3'
+import two from './AUDIOS/dol.mp3'
+import teen from './AUDIOS/teenl.mp3'
+import char from './AUDIOS/charl.mp3'
 import paanch from './gaurav_audios/paanch.mp3'
 import che from './gaurav_audios/che.mp3'
 import gauravaudio from './audio-trial-2.mp3'
@@ -57,9 +57,32 @@ import gintwo from './AUDIOS/stepOne/step_one_audiodo.mp3'
 import ginthree from './AUDIOS/stepOne/step_one_audioteen.mp3'
 import ginfour from './AUDIOS/stepOne/step_one_audiochar.mp3'
 import steptwopone from './AUDIOS/stepTwo/step_two_audiopart1.mp3'
+import steptwoptwo from './AUDIOS/stepTwo/step_two_audiopart2.mp3'
+import redblockupeqn from './AUDIOS/stepTwo/redblockeqnaudio.mp3'
+import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
+// import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
+
+import yellowdowneqn from './AUDIOS/stepTwo/yellowdowneqn.mp3'
+import yellowupeqn from './AUDIOS/stepTwo/yellowupeqn.mp3'
+import greenupeqn from './AUDIOS/stepTwo/greenupeqn.mp3'
+import blueupeqn from './AUDIOS/stepTwo/blueupeqn.mp3'
+import bluedowneqn from './AUDIOS/stepTwo/bluedowneqn.mp3'
+import greendowneqn from './AUDIOS/stepTwo/greendowneqn.mp3'
+import step3pone from './AUDIOS/stepThree/step3pone.mp3'
+import step3ptwo from './AUDIOS/stepThree/step3ptwo.mp3'
+import step3pthree from './AUDIOS/stepThree/step3pthree.mp3'
+import step3pfour from './AUDIOS/stepThree/step3pfour.mp3'
+import step3pfive from './AUDIOS/stepThree/step3pfive.mp3'
+import step3psix from './AUDIOS/stepThree/step3psix.mp3'
+import step3pseven from './AUDIOS/stepThree/step3pseven.mp3'
+import step4pone from './AUDIOS/stepFour/step4pone.mp3'
+import step4l1 from './AUDIOS/stepFour/step4l1.mp3'
+import step4l2 from './AUDIOS/stepFour/step4l2.mp3'
+import step4l3 from './AUDIOS/stepFour/step4l3.mp3'
+import step4l4 from './AUDIOS/stepFour/step4l4.mp3'
+import step4l5 from './AUDIOS/stepFour/step4l5.mp3'
 import pyaudio from './pythonaudios/step_one_audio.mp3'
 // import Audiogaurav from "./Audiogaurav";
-// github
 
 
 
@@ -85,6 +108,7 @@ const TestThree = (props) => {
         var count =0;
         var pyplayer = document.getElementById('pysound');
         var gplayer = document.getElementById('gsound');
+        var count = 0;
 
         // function startpart1() {
         //     if (t==answer[0]) {
@@ -197,7 +221,10 @@ const TestThree = (props) => {
         var unkb_audio = [unk0_before, unk1_before]
         var unka_audio = [unk0_after, unk1_after]
         var cu_audio = [cu1bq, cu2bq, cu3bq, cu4bq, cu5bq, cu6bq, cu7bq, cu8bq, cu9bq, cu10bq, cu11bq, cu12bq, cu13bq, cu14bq, cu15bq, cu16bq]
-        
+        var up_eqn = [redblockupeqn , redblockupeqn,yellowupeqn ,blueupeqn ,greenupeqn]
+        var down_eqn = [redblockdowneqn , redblockdowneqn,yellowdowneqn ,bluedowneqn,greendowneqn]
+        var step3_aud = [step3pone , step3pone , step3ptwo , step3pthree , step3pfour ,step3pfive , step3psix ,step3pseven ]
+        var step4_audl = [step4l1 , step4l1 , step4l2 ,step4l3 , step4l4 , step4l5]
         // var numbering = [ek, two, teen , char , paanch, che , a1, a2, a3, a4]
         
 
@@ -346,6 +373,7 @@ const TestThree = (props) => {
         // }
 
         var audioncount = 0;
+        
         if (step == "motion" && substep == 0) {
             let player = document.getElementById('radio');
             player.src = unkb_audio[0];
@@ -355,6 +383,7 @@ const TestThree = (props) => {
             // pyplayer.play();
             setTimeout( ()=>{ pyplayer.pause();
                                    },50000 );
+
             gplayer.src = steponepone;
             gplayer.play();
             
@@ -397,16 +426,17 @@ const TestThree = (props) => {
                         pyplayer.pause();
                      
                         },7750); 
-
+                gplayer.pause();
                 gplayer.src = steponeptwo;
                 gplayer.play();
-                setTimeout(
+              setTimeout(
                     
                     function(){
                      
                         ganswerdone(t);
                         setTimeout(function(){
                             gplayer.src = steponepthree;
+                            gplayer.currentTime = 0.35;
                 gplayer.play();
                         },1450)
                     }
@@ -466,7 +496,7 @@ const TestThree = (props) => {
                         // pyanswerdone(totalunknowns);
                     },9500); 
 
-
+                    
                     gplayer.src = steponepfive;
                     gplayer.play();
                     setTimeout(
@@ -485,15 +515,26 @@ const TestThree = (props) => {
             }
         }
 
-        if (step == "fbd" && subsubstep == -100) {
-            gplayer.pause();
-            gplayer.src = steptwopone;
-                              gplayer.play();
-                              if ( iscorrect == 1) {
-                                gplayer.pause();
-                                ganswerdone(t);
-                              }
-        } 
+        // if (step == "fbd" && subsubstep == -100) {
+        //     gplayer.pause();
+        //     gplayer.src = steptwopone;
+        //                       gplayer.play();
+        //                       if ( iscorrect == 1) {
+        //                         gplayer.pause();
+        //                         // ganswerdone(t);
+        //                       }
+        // } 
+        // if (step == "fbd" && subsubstep == 1) {
+        //     gplayer.pause();
+        //     gplayer.src = steptwoptwo;
+        //                       gplayer.play();
+        //                       if ( iscorrect == 1) {
+        //                         gplayer.pause();
+        //                         // ganswerdone(t);
+        //                       }
+        // } 
+
+
 
 
 
@@ -530,8 +571,57 @@ const TestThree = (props) => {
 
         var b;
 
+
+     // audio code by gaurav on 20june starts 
+  for(let flag = 1 ; flag <= n_b ; flag++) {
+      if(step == "fbd" && substep == flag && subsubstep == -100){
+        //this is red block 
+        gplayer.pause();
+            gplayer.src = steptwopone;
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 1){
+        //this is t1 upwards or downwards 
+        gplayer.pause();
+            gplayer.src = steptwoptwo;
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
+        gplayer.pause();
+            gplayer.src = up_eqn[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
+        gplayer.pause();
+            gplayer.src = down_eqn[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+    }
+
+    // audio  for step3 
+    
+
+
+      // audio code by gaurav on 20june ends 
+
         //has to be deleted immediately after Akshat corrects his files
-        if (alld_question_no == 35) {
+        if (alld_question_no == 35 || (alld_question_no >= 54 && alld_question_no <= 62)) {
             for (b = 1; b < n_b + 1; b++) {
                 var inc_ang = blockdata[b]["angle of incline"] 
                 if (inc_ang > 0) {
@@ -570,7 +660,7 @@ const TestThree = (props) => {
 
         //mangalik bigblock code starts
         //debugger
-        if (alld_question_no > 33) {
+        if (alldata["bigblock dick"] != undefined) {
 
             var bigblockdata = alldata["bigblock dick"]
             
@@ -582,27 +672,52 @@ const TestThree = (props) => {
 
                 var ic
                 for (ic = 1; ic < n_p + 1; ic++) {
-                if (pulleydata[ic].acceleration == 0) {
-                    pulleydata[ic].acceleration = [0, 0]
-                }}
+                    if (pulleydata[ic].acceleration == 0) {
+                        pulleydata[ic].acceleration = [0, 0]
+                    }
+                }
                 const material_bb = new THREE.MeshBasicMaterial({color: 0x009900})
                 if (bigblockdata["type"] == "tp") {
 
                     var x_size = bigblockdata.size[0] / 15
-                    if (alld_question_no == 35)
-                        x_size += 4.15
+                    var y_size = bigblockdata.size[1] / 15
+                    var rpulley = bigblockdata.rpulley
+                    var lpulley = bigblockdata.lpulley
+                    if (rpulley == 0) {
+                        if (lpulley == 0) {
+                            x_size = bigblockdata.size[0] / 15;
+                        }
+                        else {
+                            var left_loc = (pulleydata[lpulley].centre[0] - 150) / 15
+                            var mid_loc = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15 + bigblockdata.block[1][2][0]/15
+                            x_size = 2*(mid_loc - left_loc)
+                        }
+                    }
+                    else {
+                        if (lpulley == 0) {
+                            var right_loc = (pulleydata[rpulley].centre[0] - 150) / 15
+                            var mid_loc = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15 + bigblockdata.block[1][2][0]/15
+                            x_size = 2*(right_loc - mid_loc)
+                        }
+                        else {
+                            var left_loc = (pulleydata[lpulley].centre[0] - 150) / 15
+                            var right_loc = (pulleydata[rpulley].centre[0] - 150) / 15
+                            x_size = (right_loc - left_loc)
+                        }
+                    }
 
+                    
                     meshbb = new THREE.Mesh(
-                        new THREE.BoxGeometry(x_size, bigblockdata.size[1] / 15, bigblockdata.size[1] / 10000), 
+                        new THREE.BoxGeometry(x_size, y_size, bigblockdata.size[1] / 100000), 
                         material_bb);
            
-                    var blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/20
-                    var blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/20
+                    var blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15
+                    var blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/15
 
                     //bigblockdata.block[1][2][0/20]
 
                     meshbb.position.x = blocloc_x + bigblockdata.block[1][2][0]/15 //- blockdata[1].size[0]/15
-                    meshbb.position.y = blocloc_y + bigblockdata.block[1][2][1]*15/20+ 2.5
+                    meshbb.position.y = blocloc_y + bigblockdata.block[1][2][1]/15 - y_size/2//- bigblockdata.size[1] / 15
                 
                     camera_avg_x = camera_avg_x + meshbb.position.x
                     camera_avg_y = camera_avg_y + meshbb.position.y
@@ -615,15 +730,20 @@ const TestThree = (props) => {
                 else if (bigblockdata["type"] == "tr") {
                     const shape_tr = new THREE.Shape();
 
+                    var cpulley = bigblockdata.cpulley
+                    if (cpulley != 0) {
+                        var ploc_x = (pulleydata[cpulley].centre[0] - 150) /15
+                        var ploc_y = (pulleydata[cpulley].centre[1] - 150) /15
+                    }
                     const length_tr = 4
                     const langle = Math.PI * (bigblockdata.langle/180)
                     const rangle = Math.PI * (bigblockdata.rangle/180)
 
-                    const blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/20 + Math.sin(langle)*blockdata[bigblockdata.block[1][0]].size[0]/30
-                    const blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/20 - Math.cos(langle)*blockdata[bigblockdata.block[1][0]].size[0]/30
+                    const blocloc_x = (blockdata[bigblockdata.block[1][0]].loc[0] - 150)/15 + Math.sin(langle)*blockdata[bigblockdata.block[1][0]].size[0]/30
+                    const blocloc_y = (blockdata[bigblockdata.block[1][0]].loc[1] - 150)/15 - Math.cos(langle)*blockdata[bigblockdata.block[1][0]].size[0]/30
                     
-                    const left_mid_x = blocloc_x + bigblockdata.block[1][2][0]/20 //+ //M*blockdata[bigblockdata.block[1][0]].size[0]
-                    const left_mid_y = blocloc_y - bigblockdata.block[1][2][1]/20
+                    const left_mid_x = blocloc_x + bigblockdata.block[1][2][0]/15 //+ //M*blockdata[bigblockdata.block[1][0]].size[0]
+                    const left_mid_y = blocloc_y - bigblockdata.block[1][2][1]/15
                     //debugger
                     const left_side = length_tr/Math.sin(langle);
                     
@@ -633,20 +753,27 @@ const TestThree = (props) => {
                     const right_side = length_tr/Math.sin(rangle)
 
 
-                    const x_tr = perp_x + length_tr/Math.tan(rangle);
-                    const y_tr = perp_y;
-                    var y_range = y_tr
+                    const x_tr = ploc_x
+                    const y_tr = ploc_y;
+
+                    var dist = Math.pow (Math.pow((left_mid_x - ploc_x), 2) + Math.pow((left_mid_y - ploc_y), 2), 0.5)
+                    var po2x = ploc_x - 3*Math.cos(langle)*dist 
+                    var po2y = ploc_y - 3*Math.sin(langle)*dist
+                    var po3y = po2y
+                    var po3x = ploc_x + (ploc_y - po2y)/Math.tan(rangle)
+                    
+                    var y_range = po3y
                     var median_x;
                     var median_y;
             
 
                     shape_tr.moveTo(x_tr, y_tr);
-                    shape_tr.lineTo(x_tr - right_side*Math.cos(rangle), y_tr + right_side*Math.sin(rangle));
-                    shape_tr.lineTo(x_tr - right_side*Math.cos(rangle) - right_side*Math.cos(langle)*Math.sin(rangle)/Math.sin(langle), y_tr);
+                    shape_tr.lineTo(po2x, po2y);
+                    shape_tr.lineTo(po3x, po2y);
 
             
-                    median_x = x_tr + x_tr - length_tr*Math.cos(rangle) + x_tr - length_tr*Math.cos(rangle) - length_tr*Math.cos(langle)*Math.sin(rangle)/Math.sin(langle);
-                    median_y = y_tr + y_tr + length_tr*Math.sin(rangle) + y_tr;
+                    median_x = x_tr + po2x + po3x
+                    median_y = y_tr + po2y + po3y
                     median_x = median_x / 3;
                     median_y = median_y / 3;
             
@@ -727,7 +854,7 @@ const TestThree = (props) => {
         var acc_arrow_length
         var acc_arrowHelper = new Array(n_b + n_p)
         var acc_cone = new Array(n_b + n_p)
-        const geometryc = new THREE.ConeGeometry(0.1, 0.2, 32);
+        const geometryc = new THREE.ConeGeometry(0.15, 0.25, 32); //changed from 0.1, 0.2 to 0.15, 0.25 on 20th June
         const materialc = new THREE.MeshBasicMaterial({ color: 0xffffff });
 
         var clr = [0xff0000, 0xffff00, 0x0000ff, 0x00ff00]
@@ -766,8 +893,9 @@ const TestThree = (props) => {
                 }
             }
 
-            meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 20; // where do these positions come from?
-            meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 20;
+            //changed from /20 to /15 on 20th June
+            meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
+            meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
             meshk[i - 1].rotation.z = block_angle[i - 1]
             
             camera_avg_x = camera_avg_x + meshk[i - 1].position.x //added by mangalik
@@ -939,7 +1067,7 @@ const TestThree = (props) => {
                 
                     var norm_angle = currentnormal.angle;
                     var cone_angle
-                    var normal_length = (blockdata[i].size[0])/20//length of normal proportional to magnitude
+                    var normal_length = (blockdata[i].size[0])/17//length of normal has to be finally made proportional to magnitude
                     var normal_points = []
 
                     if (currentnormal.objects[1] == ("b"+i)){
@@ -966,10 +1094,11 @@ const TestThree = (props) => {
                             normal_from.y = normal_from.y + (1)/8
                             normal_to.y = normal_from.y
                         }*/
-                        normal_from.x = normal_from.x + 1/8*Math.cos(norm_angle - Math.PI/2)
-                        normal_to.x = normal_to.x + 1/8*Math.cos(norm_angle - Math.PI/2)
-                        normal_from.y = normal_from.y + 1/8*Math.sin(norm_angle - Math.PI/2)
-                        normal_to.y = normal_to.y + 1/8*Math.sin(norm_angle - Math.PI/2)
+                        //changed from 1/8 to 1/6 on 20th June
+                        normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                        normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle - Math.PI/2)
+                        normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle - Math.PI/2)
+                        normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle - Math.PI/2)
 
                     }
                     if (currentnormal.objects[0] == ("b"+i)){
@@ -997,10 +1126,11 @@ const TestThree = (props) => {
                             normal_from.y = normal_from.y - (1)/8
                             normal_to.y = normal_from.y
                         }*/
-                        normal_from.x = normal_from.x + 1/8*Math.cos(norm_angle + Math.PI / 2)
-                        normal_to.x = normal_to.x + 1/8*Math.cos(norm_angle + Math.PI / 2)
-                        normal_from.y = normal_from.y + 1/8*Math.sin(norm_angle + Math.PI / 2)
-                        normal_to.y = normal_to.y + 1/8*Math.sin(norm_angle + Math.PI / 2)
+                        //changed from 1/8 to 1/6 on 20th June
+                        normal_from.x = normal_from.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                        normal_to.x = normal_to.x + 1/6*Math.cos(norm_angle + Math.PI / 2)
+                        normal_from.y = normal_from.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
+                        normal_to.y = normal_to.y + 1/6*Math.sin(norm_angle + Math.PI / 2)
                     }
     
                     //acc_arrow_direction = normal_to.clone().sub(normal_from);
@@ -1337,26 +1467,27 @@ const TestThree = (props) => {
             meshpl[x - 1] = new THREE.Mesh(geometrypl, materialpl);
 
 
-
-            meshpl[x - 1].position.x = (ceilingdata[x].loc[0] - 150) / 20;
-            meshpl[x - 1].position.y = (ceilingdata[x].loc[1] - 150) / 20;
+            //changed /20 to /15 on 20th June
+            meshpl[x - 1].position.x = (ceilingdata[x].loc[0] - 150) / 15;
+            meshpl[x - 1].position.y = (ceilingdata[x].loc[1] - 150) / 15;
 
 
 
              //mangalik code starts
+             //20th June change starts
              if (ceilingdata[x].position == "t") {
                 meshpl[x - 1].position.y = meshpl[x - 1].position.y + 1
                 meshpl[x - 1].rotation.x = Math.PI/1.5
             }
             else if (ceilingdata[x].position == "b") {
-                meshpl[x - 1].position.y = meshpl[x - 1].position.y - 0.13
+                meshpl[x - 1].position.y = meshpl[x - 1].position.y
                 meshpl[x - 1].rotation.x = Math.PI/2
             }
             else if (ceilingdata[x].position == "l")
                 meshpl[x - 1].rotation.y = Math.PI/1.65
             else
-                meshpl[x - 1].rotation.y = -Math.PI/1.85 //15 june change
- 
+                meshpl[x - 1].rotation.y = -Math.PI/1.85
+            //20th June change ends
              //mangalik code ends
 
 
@@ -1457,7 +1588,8 @@ const TestThree = (props) => {
             //materialp.map = texture
             //materialp.color = new THREE.Color(clr[i-1])
             meshp[i - 1] = new THREE.Mesh(
-                new THREE.CylinderGeometry(pulleydata[i].radius / 20, pulleydata[i].radius / 20, 0.03, 32),
+                //changed from /20 to /15 on 20th June
+                new THREE.CylinderGeometry(pulleydata[i].radius / 15, pulleydata[i].radius / 15, 0.03, 32),
                 materialp
             )
             //debugger
@@ -1481,8 +1613,8 @@ const TestThree = (props) => {
                 }
             }
             meshp[i - 1].rotation.x = Math.PI/2
-            meshp[i - 1].position.x = (pulleydata[i].centre[0] - 150) / 20;
-            meshp[i - 1].position.y = (pulleydata[i].centre[1] - 150) / 20;
+            meshp[i - 1].position.x = (pulleydata[i].centre[0] - 150) / 15;
+            meshp[i - 1].position.y = (pulleydata[i].centre[1] - 150) / 15; //changed from 20 to 15 on 20th June 
 
             //mangalik code starts
             camera_avg_x = camera_avg_x + meshp[i - 1].position.x //added by mangalik
@@ -1493,8 +1625,10 @@ const TestThree = (props) => {
             pulley_ini_pos_x[i - 1] = meshp[i - 1].position.x;
             pulley_ini_pos_y[i - 1] = meshp[i - 1].position.y;
 
-            acc_arrow_to = new THREE.Vector3(meshp[i - 1].position.x + 1.05, meshp[i - 1].position.y + 0.5, 0)
-            acc_arrow_from = new THREE.Vector3(meshp[i - 1].position.x + 1.05, meshp[i - 1].position.y - 0.5, 0)
+            //the 1.05 has been changed to 1.55, as pulley size increased on 20th June
+            //this arrow can be in the x-direction, conditions for that have not been added
+            acc_arrow_to = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y + 0.5, 0)
+            acc_arrow_from = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y - 0.5, 0)
 
 
             acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
@@ -1503,7 +1637,7 @@ const TestThree = (props) => {
             acc_cone[i + n_b - 1] = new THREE.Mesh(geometryc, materialx);
 
 
-            acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 1.05;
+            acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 1.55;
 
             //mangalik code starts
             if (pulleydata[i].acceleration[1] > 0) {
@@ -1697,7 +1831,7 @@ const TestThree = (props) => {
         //const camera = new THREE.OrthographicCamera(- 2, 2, 2, - 2, 0.1, 100)
         const aspectRatio = sizes.width / sizes.height
         //const camera = new THREE.OrthographicCamera(- 2 * aspectRatio, 2 * aspectRatio, 2, - 2, 0.1, 100)
-        camera.position.z = 9.5;
+        camera.position.z = 11;
         if ( alld_question_no == 3 || alld_question_no == 13 ) {
             camera.position.z = 14;
 
@@ -1766,6 +1900,51 @@ const TestThree = (props) => {
         var endpt_acc_y = []
         //var endpos_second =[]
         //console.log(meshk)
+        // step 4 audio by gaurav patidar on 21 june starts 
+        var strpart;
+        if(step == "constraint" && substep == 1 && subsubstep == -100 ) {
+            gplayer.pause();
+            gplayer.src=step4pone;
+            gplayer.play();
+
+            if(iscorrect==1){
+                gplayer.pause();
+                strpart = t;
+                console.log(strpart);
+            }
+        }
+        if(step == "constraint" && substep == 1 && subsubstep == 1 ){
+                 
+            console.log(strpart);
+                gplayer.pause();
+                gplayer.src=step4_audl[1]
+                gplayer.play();
+                if(iscorrect==1){
+                    gplayer.pause();
+                   
+                  
+                }
+            }
+        
+
+        for( let f=2; f<=4 ; f++) {
+            
+            if(step == "constraint" && substep == f){
+                console.log(strpart);
+                gplayer.pause();
+                gplayer.src=step4_audl[f]
+                gplayer.play();
+                if(iscorrect==1){
+                    gplayer.pause();
+                  
+                }
+
+            }
+
+
+            }
+        
+        // step 4 audio by gaurav patidar on 21 june ends 
 
         for (i = 1; i < n_s + 1; i++) {
             strpart = stringdata[i];
@@ -1821,32 +2000,41 @@ const TestThree = (props) => {
 
             // added by mangalik, the condition to draw string when 1 is block, 2 is ceiling.ground
             if (strpart["first obj type"] == "<class 'blocksclass.blocks'>" && strpart["second obj type"] == "<class 'blocksclass.grounds'>") {
-                if (Math.abs(strpart.angle-Math.PI/2) < 0.01 || Math.abs(strpart.angle+Math.PI/2) < 0.01 || Math.abs(strpart.angle-3*Math.PI/2) < 0.01){
-                    pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
-                    pt2 = new THREE.Vector3(meshpl[stringdata[i]["second obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
-                }
-                else if (Math.abs(strpart.angle-Math.PI) < 0.01 || Math.abs(strpart.angle) < 0.01){
-                    pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
-                    pt2 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshpl[stringdata[i]["second obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                
+                pt1 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, 0)
+                pt2 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, 0)
+
+                if (block_angle[strpart["first obj"] - 1] == 0) {
+                    if (Math.abs(strpart.angle-Math.PI/2) < 0.01 || Math.abs(strpart.angle+Math.PI/2) < 0.01 || Math.abs(strpart.angle-3*Math.PI/2) < 0.01){
+                        pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                        pt2 = new THREE.Vector3(meshpl[stringdata[i]["second obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                    }
+                    else if (Math.abs(strpart.angle-Math.PI) < 0.01 || Math.abs(strpart.angle) < 0.01){
+                        pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                        pt2 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshpl[stringdata[i]["second obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+                    }
                 }
                 
+                //pt1 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, 0)
+                //pt2 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, 0)
                 points[i - 1] = []
                 endpos[i - 1] = []
                 //console.log(pt1)
                 //console.log(pt2)
                 //pt1.y = pt1.y + 0.7
                 //the if-elses can and should be replaced by some angle data to be asked from the JSON-maker
-                if (pt1.y < pt2.y) {
-                    pt1.y = pt1.y + blockdata[stringdata[i]["first obj"]].size[0] / 30 // box k aadhe size ka karo
-                }
-                if (pt2.y < pt1.y) {
-                    pt1.y = pt1.y - blockdata[stringdata[i]["first obj"]].size[0] / 30 // box k aadhe size ka karo
-                }
-                if (pt1.x < pt2.x)
-                    pt1.x = pt1.x + blockdata[stringdata[i]["first obj"]].size[0] / 30
-                if (pt1.x > pt2.x)
+                if (block_angle[strpart["first obj"] - 1] == 0) {
+                    if (pt1.y < pt2.y) {
+                        pt1.y = pt1.y + blockdata[stringdata[i]["first obj"]].size[0] / 30 // box k aadhe size ka karo
+                    }
+                    if (pt2.y < pt1.y) {
+                        pt1.y = pt1.y - blockdata[stringdata[i]["first obj"]].size[0] / 30 // box k aadhe size ka karo
+                    }
+                    if (pt1.x < pt2.x)
+                        pt1.x = pt1.x + blockdata[stringdata[i]["first obj"]].size[0] / 30
+                    if (pt1.x > pt2.x)
                     pt1.x = pt1.x - blockdata[stringdata[i]["first obj"]].size[0] / 30
-
+                }
                 points[i - 1].push(pt1)
                 points[i - 1].push(pt2)
                 
@@ -1927,12 +2115,16 @@ const TestThree = (props) => {
             
             //debugger
             //added by mangalik, some conditions to draw horizontal string, but this is not perfect will have to change for inclined conditions
+            //change on 20 June starts
             if (strpart["second obj type"] == "<class 'blocksclass.blocks'>" && strpart["first obj type"] == "<class 'blocksclass.pulleys'>") {
                 angle = Math.PI - stringdata[i].angle
                 firstobj = meshp[stringdata[i]["first obj"] - 1]
                 //console.log( firstobj)
-                if (strpart["toc"] != "mm") {
+                if (strpart["toc"] == "tm") {
                     pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), firstobj.position.z)
+                }
+                else if (strpart["toc"] == "zm") {
+                    pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), firstobj.position.z)
                 }
                 else {
                     pt1 = new THREE.Vector3(firstobj.position.x, firstobj.position.y, firstobj.position.z)
@@ -1946,13 +2138,20 @@ const TestThree = (props) => {
                 //console.log( pt2 )
                 points[i - 1].push(pt2);
 
+                pt2.x = pt2.x + Math.sin(Math.PI + strpart.angle)*blockdata[strpart["second obj"]].size[0]/30 //16th June
+                pt2.y = pt2.y + Math.cos(Math.PI + strpart.angle)*blockdata[strpart["second obj"]].size[0]/30 //16th June
+
+                endpos[i - 1] = []
+                endpos[i - 1].push(pt1)
+                endpos[i - 1].push(pt2)
+                /*
                 if (Math.abs(pt1.y-pt2.y) < Math.abs(pt1.x-pt2.x))
-                    pt2.y = pt1. y;
+                    pt2.y = pt1.y;
                 else
-                    pt2.x = pt1.x;
+                    pt2.x = pt1.x;*/
 
                 const geometry4 = new THREE.BufferGeometry().setFromPoints(points[i - 1]);
-
+                /*
                 if (pt2.y < pt1.y) {
                     pt2.y = pt2.y + blockdata[stringdata[i]["second obj"]].size[0] / 30 //0.6 // box k aadhe size ka karo
                 }
@@ -1964,10 +2163,8 @@ const TestThree = (props) => {
                 }
                 else if (pt2.x > pt1.x) {
                     pt2.x = pt2.x - blockdata[stringdata[i]["second obj"]].size[0] / 30
-                }
-                endpos[i - 1] = []
-                endpos[i - 1].push(pt1)
-                endpos[i - 1].push(pt2)
+                }*/
+                
                 
 
 
@@ -1979,6 +2176,7 @@ const TestThree = (props) => {
                     scene.add(linestr[i - 1])
                 }
             }
+            //change on 20 June ends
 
             //added by mangalik, some conditions to draw horizontal string, but this is not perfect will have to change for inclined conditions
             if (strpart["second obj type"] == "<class 'blocksclass.blocks'>" && strpart["first obj type"] == "<class 'blocksclass.blocks'>") {
@@ -2142,7 +2340,7 @@ const TestThree = (props) => {
 
             // added by manglik on 14 starts
 
-
+            //changed by mangalik on 20 June starts
             if (strpart["second obj type"] == "<class 'blocksclass.grounds'>" && strpart["first obj type"] == "<class 'blocksclass.pulleys'>") {
                 
                 
@@ -2158,17 +2356,17 @@ const TestThree = (props) => {
                 console.log( firstobj)
                 pt2 = new THREE.Vector3(secondobj.position.x, secondobj.position.y, secondobj.position.z)
 
-                
+                console.log(Math.sin(angle))
                 
                 if (strpart["toc"] == "zm") {
-                    pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["second obj"] - 1].position.z)
+                    pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.z)
                 }
                 if (strpart["toc"] == "mm") {
                     //debugger
                     pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x, meshp[stringdata[i]["first obj"] - 1].position.y, meshp[stringdata[i]["first obj"] - 1].position.z)
                 }
                 if (strpart["toc"] == "tm") {
-                    pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["second obj"] - 1].position.z)
+                    pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.z)
                 }
                 
                 points[i - 1] = []
@@ -2193,7 +2391,7 @@ const TestThree = (props) => {
                     scene.add(linestr[i - 1])
                 }
             }
-
+            //changed by mangalik on 20 JUne ends
             // added by manglik on 14 ends
 
 
@@ -2371,6 +2569,7 @@ const TestThree = (props) => {
             }
         }
         
+        // on 20th June, changed all occurences of 1.2 units relating to pulleyfbd sphere size to 1.6 units
         for (i = 1; i < n_p + 1; i++) {
 
             //const material = new THREE.MeshNormalMaterial()
@@ -2381,7 +2580,7 @@ const TestThree = (props) => {
             materialfbd.transparent = true
             materialfbd.opacity = 0.3
             spherefbd[i - 1 + n_b] = new THREE.Mesh(
-                new THREE.SphereGeometry(1.2, 16, 16),
+                new THREE.SphereGeometry(1.6, 16, 16),
                 materialfbd
             )
 
@@ -2428,28 +2627,28 @@ const TestThree = (props) => {
                     }
                     var a_angp = Math.atan (slope);
                     a_ang_list[i + n_b] = a_angp
-                    if (alld_question_no <= 33 || bigblockdata.mass == 0 || bigblockdata.type == "tp" || checker == 0) {
+                    if (alldata["bigblock dick"] == undefined || bigblockdata.mass == 0 || bigblockdata.type == "tp" || checker == 0) {
 
                         if (Math.abs(slope) > 100) {
                             intersection_x = (linestr[j].geometry.attributes.position.array[0] + linestr[j].geometry.attributes.position.array[3]) / 2;
                             if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["second obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[1] > linestr[j].geometry.attributes.position.array[4]) {
-                                    intersection_y = meshp[i].position.y + Math.pow(1.2 * 1.2 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
+                                    intersection_y = meshp[i].position.y + Math.pow(1.6 * 1.6 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x, intersection_y + 0.7, 0);
                                 }
                                 if (linestr[j].geometry.attributes.position.array[4] > linestr[j].geometry.attributes.position.array[1]) {
-                                    intersection_y = meshp[i].position.y - Math.pow(1.2 * 1.2 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
+                                    intersection_y = meshp[i].position.y - Math.pow(1.6 * 1.6 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
 
                                     a_to = new THREE.Vector3(intersection_x, intersection_y - 0.7, 0);
                                 }
                             }
                             if (stringdata[j + 1]["first obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["first obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[1] > linestr[j].geometry.attributes.position.array[4]) {
-                                    intersection_y = meshp[i].position.y - Math.pow(1.2 * 1.2 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
+                                    intersection_y = meshp[i].position.y - Math.pow(1.6 * 1.6 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x, intersection_y - 0.7, 0);
                                 }
                                 if (linestr[j].geometry.attributes.position.array[4] > linestr[j].geometry.attributes.position.array[1]) {
-                                    intersection_y = meshp[i].position.y + Math.pow(1.2 * 1.2 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
+                                    intersection_y = meshp[i].position.y + Math.pow(1.6 * 1.6 - Math.pow(intersection_x - meshp[i].position.x, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x, intersection_y + 0.7, 0);
                                 }
                             }
@@ -2467,22 +2666,22 @@ const TestThree = (props) => {
                             intersection_y = (linestr[j].geometry.attributes.position.array[1] + linestr[j].geometry.attributes.position.array[4]) / 2;
                             if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["second obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[0] > linestr[j].geometry.attributes.position.array[3]) {
-                                    intersection_x = meshp[i].position.x + Math.pow(1.2 * 1.2 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
+                                    intersection_x = meshp[i].position.x + Math.pow(1.6 * 1.6 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x+0.7, intersection_y, 0);
                                 }
                                 if (linestr[j].geometry.attributes.position.array[3] > linestr[j].geometry.attributes.position.array[0]) {
-                                    intersection_x = meshp[i].position.x - Math.pow(1.2 * 1.2 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
+                                    intersection_x = meshp[i].position.x - Math.pow(1.6 * 1.6 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
 
                                     a_to = new THREE.Vector3(intersection_x-0.7, intersection_y, 0);
                                 }
                             }
                             if (stringdata[j + 1]["first obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["first obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[0] > linestr[j].geometry.attributes.position.array[3]) {
-                                    intersection_x = meshp[i].position.x - Math.pow(1.2 * 1.2 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
+                                    intersection_x = meshp[i].position.x - Math.pow(1.6* 1.6 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x-0.7, intersection_y, 0);
                                 }
                                 if (linestr[j].geometry.attributes.position.array[3] > linestr[j].geometry.attributes.position.array[0]) {
-                                    intersection_x = meshp[i].position.x + Math.pow(1.2 * 1.2 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
+                                    intersection_x = meshp[i].position.x + Math.pow(1.6 * 1.6 - Math.pow(intersection_y - meshp[i].position.y, 2), 0.5);
                                     a_to = new THREE.Vector3(intersection_x+0.7, intersection_y, 0);
                                 }
                             }
@@ -2496,7 +2695,7 @@ const TestThree = (props) => {
                         }
                     } 
                     else {
-                        var dis_from_p = Math.pow(1.2 * 1.2 - Math.pow(pulleydata[i + 1].radius / 20, 2), 0.5)
+                        var dis_from_p = Math.pow(1.6 * 1.6 - Math.pow(pulleydata[i + 1].radius / 15, 2), 0.5) //changed from 1.2 to 1.6 on 20th June
                         if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["second obj"] - 1) == i) {
                             intersection_x = linestr[j].geometry.attributes.position.array[3] - dis_from_p*Math.cos(a_angp);
                             intersection_y = linestr[j].geometry.attributes.position.array[4] - dis_from_p*Math.sin(a_angp);
@@ -2738,8 +2937,19 @@ const TestThree = (props) => {
         // constraint understaning code begins
         if (step == "constraint Understanding") {
             var velocity_cu = [subsubstep[0] / 10, subsubstep[1] / 10]
-
-
+             // audio  for step3 by gaurav on 20june starts 
+            for(let flagc=1; flagc <=7 ;flagc++ ){
+                if( substep == flagc ){
+                    gplayer.pause();
+                    gplayer.src = step3_aud[flagc];
+                                      gplayer.play();
+                                      if ( iscorrect == 1) {
+                                        gplayer.pause();
+                                        // ganswerdone(t);
+                                      }
+              }
+         }
+           // audio  for step3 by gaurav on 20june ends 
             let player = document.getElementById('radio');
             player.pause()
             player.src = cu_audio[substep - 1];
@@ -3082,7 +3292,7 @@ const TestThree = (props) => {
 
                 cone[cs_count].position.y = arrow_to[i + n_b - 1][j].y;//ip_y[i-1][j] + 0.5;
 
-                if (alld_question_no <= 33 || bigblockdata.mass == 0 || bigblockdata.type == "tp") {
+                //if (alld_question_no <= 33 || bigblockdata.mass == 0 || bigblockdata.type == "tp") { commented out on 20th June
                     if (-arrow_to[i + n_b - 1][j].y + arrow_from[i + n_b - 1][j].y > 0.1) {
                         cone[cs_count].rotation.z = Math.PI
                     }
@@ -3092,10 +3302,10 @@ const TestThree = (props) => {
                     if (arrow_to[i + n_b - 1][j].x - arrow_from[i + n_b - 1][j].x > 0.1) {
                         cone[cs_count].rotation.z = -Math.PI/2
                     }
-                }
+                /*} commented out on 20th June
                 else {
                     cone[cs_count].rotation.z = Math.PI/2 + a_ang_list[i + n_b - 1]
-                }
+                }*/
 
 
                 if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1)) {
@@ -3157,7 +3367,7 @@ const TestThree = (props) => {
 
 
 
-        
+        // 20th June last change starts
         //the following part has a lot of changes made by mangalik
         //debugger
         //console.log(realpts)
@@ -3202,11 +3412,11 @@ const TestThree = (props) => {
                 }
 
                 for (i = 1; i < n_b + 1; i++) {
-                    if (meshk[i - 1].position.x > camera.position.x + 8 || meshk[i - 1].position.x < camera.position.x - 8) {
+                    if (meshk[i - 1].position.x > camera.position.x + 100 || meshk[i - 1].position.x < camera.position.x - 100) {
                         animation_on = 0;
                         break;
                     }
-                    if (meshk[i - 1].position.y > camera.position.y + 7.5 || meshk[i - 1].position.y < camera.position.y - 7.5) {
+                    if (meshk[i - 1].position.y > camera.position.y + 100 || meshk[i - 1].position.y < camera.position.y - 100) {
                         animation_on = 0;
                         break;
                     }
@@ -3402,7 +3612,58 @@ const TestThree = (props) => {
                     //console.log( strpart["first obj type"])
                     if (strpart["first obj type"] == "<class 'blocksclass.blocks'>" && strpart["second obj type"] == "<class 'blocksclass.pulleys'>") {
                         linestr[i - 1].geometry.attributes.position.needsUpdate = true;
-                        linestr[i - 1].geometry.attributes.position.array[1] = meshk[stringdata[i]["first obj"] - 1].position.y
+                        
+                        pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
+
+
+                        //points[i - 1].push(pt1);
+                        angle = Math.PI - stringdata[i].angle
+                        secondobj = meshp[stringdata[i]["second obj"] - 1]
+
+                        if (strpart["toc"] != "mm")
+                            pt2 = new THREE.Vector3(secondobj.position.x + secondobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + secondobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
+                        else
+                            pt2 = new THREE.Vector3(secondobj.position.x, secondobj.position.y, secondobj.position.z)
+                            //console.log( pt2 )
+                        //points[i - 1].push(pt2);
+
+                        if (block_angle[strpart["first obj"] - 1] == 0) {
+                            if (Math.abs(pt1.y-pt2.y) < Math.abs(pt1.x-pt2.x))
+                                pt2.y = pt1.y;
+                            else
+                                pt2.x = pt1.x;
+                        }
+
+                        //const geometry4 = new THREE.BufferGeometry().setFromPoints(points[i - 1]);
+
+                        if (block_angle[strpart["first obj"] - 1] == 0) {
+                            if (pt1.y < pt2.y) {
+                                pt1.y = pt1.y + blockdata[stringdata[i]["first obj"]].size[0] / 30 //0.6 // box k aadhe size ka karo
+                            }
+                            else if (pt2.y < pt1.y) {
+                                pt1.y = pt1.y - blockdata[stringdata[i]["first obj"]].size[0] / 30 // 0.6 // box k aadhe size ka karo
+                            }
+                            else if (pt2.x < pt1.x) {
+                                pt1.x = pt1.x - blockdata[stringdata[i]["first obj"]].size[0] / 30
+                            }
+                            else if (pt2.x > pt1.x) {
+                                pt1.x = pt1.x + blockdata[stringdata[i]["first obj"]].size[0] / 30
+                            }
+
+                            //endpos[i - 1].push(pt1)
+                            //endpos[i - 1].push(pt2)
+                        }
+                        else {
+                            pt1.x = pt1.x + Math.cos(block_angle[strpart["first obj"] - 1])*blockdata[stringdata[i]["first obj"]].size[0] / 30
+                            pt1.y = pt1.y + Math.sin(block_angle[strpart["first obj"] - 1])*blockdata[stringdata[i]["first obj"]].size[0] / 30
+                            //endpos[i - 1].push(pt1)
+                            //endpos[i - 1].push(pt2)
+                        }
+                        linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
+                        linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
+                        linestr[i - 1].geometry.attributes.position.array[3] = pt2.x
+                        linestr[i - 1].geometry.attributes.position.array[4] = pt2.y
+                        /*linestr[i - 1].geometry.attributes.position.array[1] = meshk[stringdata[i]["first obj"] - 1].position.y
                         linestr[i - 1].geometry.attributes.position.array[0] = meshk[stringdata[i]["first obj"] - 1].position.x
                         
                         //added conditions for line change in both directions
@@ -3411,10 +3672,15 @@ const TestThree = (props) => {
                         if (Math.abs(strpart["angle"] - Math.PI/2) < 0.01 || Math.abs(strpart["angle"] + Math.PI/2) < 0.01)
                             linestr[i - 1].geometry.attributes.position.array[3] = meshp[stringdata[i]["second obj"] - 1].position.x
                         //linestr[i - 1].geometry.attributes.position.array[4] = meshp[stringdata[i]["second obj"] - 1].position.y
-
+                        */
                         if (step == "constraint"){
-                        cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0] + Math.sin(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30
-                        cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1] + Math.cos(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30;
+
+                        cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0] //+ Math.sin(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30;
+                        cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1] //+ Math.cos(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30;
+
+                        cs_cons[cs_count_cons + 1].position.x = linestr[i - 1].geometry.attributes.position.array[3]// + Math.sin(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30;
+                        cs_cons[cs_count_cons + 1].position.y = linestr[i - 1].geometry.attributes.position.array[4]// + Math.cos(strpart.angle)*blockdata[stringdata[i]["first obj"]].size[0]/30;
+
 
                         cs_count_cons = cs_count_cons + 2
                         }
@@ -3425,17 +3691,34 @@ const TestThree = (props) => {
                         linestr[i - 1].geometry.attributes.position.array[3] = meshk[stringdata[i]["second obj"] - 1].position.x
                         linestr[i - 1].geometry.attributes.position.array[4] = meshk[stringdata[i]["second obj"] - 1].position.y
                         
+                        angle = Math.PI - stringdata[i].angle
+                        firstobj = meshp[stringdata[i]["first obj"] - 1]
+                        //console.log( firstobj)
+                        if (strpart["toc"] == "tm") {
+                            pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), firstobj.position.z)
+                            
+                        }
+                        else if (strpart["toc"] == "zm") {
+                            pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), firstobj.position.z)
+                        }
+                        else {
+                            pt1 = new THREE.Vector3(firstobj.position.x, firstobj.position.y, firstobj.position.z)
+                        }
+                        linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
+                        linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
+                        /*
                         if (Math.abs(strpart["angle"] - Math.PI) < 0.01 || Math.abs(strpart["angle"] < 0.01))
                             linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
                         if (Math.abs(strpart["angle"] - Math.PI/2) < 0.01 || Math.abs(strpart["angle"] + Math.PI/2) < 0.01)
                             linestr[i - 1].geometry.attributes.position.array[0] = meshp[stringdata[i]["first obj"] - 1].position.x
+                            */
                         //linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
                         if (step == "constraint"){
                         cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0]
                         cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1];
 
-                        cs_cons[cs_count_cons + 1].position.x = linestr[i - 1].geometry.attributes.position.array[3]
-                        cs_cons[cs_count_cons + 1].position.y = linestr[i - 1].geometry.attributes.position.array[4] + 0.6;
+                        cs_cons[cs_count_cons + 1].position.x = linestr[i - 1].geometry.attributes.position.array[3] + Math.sin(Math.PI + strpart.angle)*blockdata[strpart["second obj"]].size[0]/30; //16th June
+                        cs_cons[cs_count_cons + 1].position.y = linestr[i - 1].geometry.attributes.position.array[4] + Math.cos(Math.PI + strpart.angle)*blockdata[strpart["second obj"]].size[0]/30; //16th June
 
                         cs_count_cons = cs_count_cons + 2
                         }
@@ -3483,28 +3766,84 @@ const TestThree = (props) => {
                     if (strpart["second obj type"] == "<class 'blocksclass.pulleys'>" && strpart["first obj type"] == "<class 'blocksclass.pulleys'>") {
                         linestr[i - 1].geometry.attributes.position.needsUpdate = true;
                         //linestr[i-1].geometry.attributes.position.array[3] = meshk[stringdata[i]["second obj"] - 1].position.x
-                        linestr[i - 1].geometry.attributes.position.array[4] = meshp[stringdata[i]["second obj"] - 1].position.y
+                        angle = Math.PI - stringdata[i].angle
+                        firstobj = meshp[stringdata[i]["first obj"] - 1]
+                        secondobj = meshp[stringdata[i]["second obj"] - 1]
+                        //console.log( firstobj)
+                        if (strpart["toc"][0] == "m") {
+                            pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x, meshp[stringdata[i]["first obj"] - 1].position.y, meshp[stringdata[i]["first obj"] - 1].position.z)
+                        }
+                        else if (strpart["toc"][0] == "z") 
+                            pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), firstobj.position.z)
+                        else 
+                            pt1 = new THREE.Vector3(firstobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), firstobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), firstobj.position.z)
+                        points[i - 1] = []
+                        points[i - 1].push(pt1);
 
-                        linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
+                        if (strpart["toc"][1] == "m") {
+                            pt2 = new THREE.Vector3(meshp[stringdata[i]["second obj"] - 1].position.x, meshp[stringdata[i]["second obj"] - 1].position.y, meshp[stringdata[i]["second obj"] - 1].position.z)
+                        }
+                        else if (strpart["toc"][1] == "t")
+                            pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
+                        else
+                            pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), secondobj.position.z)
 
+                        linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
+                        linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
+                        linestr[i - 1].geometry.attributes.position.array[3] = pt2.x
+                        linestr[i - 1].geometry.attributes.position.array[4] = pt2.y
+                        
                         if (step == "constraint"){
-                        cs_cons[cs_count_cons + 1].position.x = linestr[i - 1].geometry.attributes.position.array[3]
-                        cs_cons[cs_count_cons + 1].position.y = linestr[i - 1].geometry.attributes.position.array[4] //+ 0.6;
 
-                        cs_count_cons = cs_count_cons + 2
+                            cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0]
+                            cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1] //+ 0.6;
+                            
+                            cs_cons[cs_count_cons + 1].position.x = linestr[i - 1].geometry.attributes.position.array[3]
+                            cs_cons[cs_count_cons + 1].position.y = linestr[i - 1].geometry.attributes.position.array[4] //+ 0.6;
+
+                            cs_count_cons = cs_count_cons + 2
                         }
                     }
+
                     if (strpart["second obj type"] == "<class 'blocksclass.grounds'>" && strpart["first obj type"] == "<class 'blocksclass.pulleys'>") {
                         linestr[i - 1].geometry.attributes.position.needsUpdate = true;
+                        secondobj = meshpl[stringdata[i]["second obj"] - 1]
+                        firstobj = meshp[stringdata[i]["first obj"] - 1]
+                        //console.log( firstobj)
+                        angle = Math.PI - strpart["angle"]
+                        //console.log(Math.sin(angle))
+                        if (alld_question_no >= 10 && alld_question_no <= 13)
+                            angle = Math.PI - angle
+                        if (strpart["toc"] == "zm") {
+                            linestr[i - 1].geometry.attributes.position.array[0] = meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle)
+                            linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle)
+                            //pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["second obj"] - 1].position.z)
+                        }
+                        if (strpart["toc"] == "mm") {
+                            //debugger
+                            pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x, meshp[stringdata[i]["first obj"] - 1].position.y, meshp[stringdata[i]["first obj"] - 1].position.z)
+                            linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
+                            linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
+                        }
+                        if (strpart["toc"] == "tm") {
+                            pt1 = new THREE.Vector3(meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), meshp[stringdata[i]["first obj"] - 1].position.z)
+                            linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
+                            linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
+                        }
+                        /*
+                        if (Math.abs(strpart["angle"] - Math.PI) < 0.01 || Math.abs(strpart["angle"] < 0.01))
+                            linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
+                        if (Math.abs(strpart["angle"] - Math.PI/2) < 0.01 || Math.abs(strpart["angle"] + Math.PI/2) < 0.01)
+                            linestr[i - 1].geometry.attributes.position.array[0] = meshp[stringdata[i]["first obj"] - 1].position.x
                         //linestr[i-1].geometry.attributes.position.array[3] = meshk[stringdata[i]["second obj"] - 1].position.x
                         //linestr[i-1].geometry.attributes.position.array[4] = meshp[stringdata[i]["second obj"] - 1].position.y
-
-                        linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
+                        */
+                        //linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y
                         if (step == "constraint"){
-                        cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0]
-                        cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1];
+                            cs_cons[cs_count_cons].position.x = linestr[i - 1].geometry.attributes.position.array[0]
+                            cs_cons[cs_count_cons].position.y = linestr[i - 1].geometry.attributes.position.array[1];
 
-                        cs_count_cons = cs_count_cons + 2
+                            cs_count_cons = cs_count_cons + 2
                         }
                     }
                 }
@@ -3528,7 +3867,7 @@ const TestThree = (props) => {
 
 
         //******************************************SHIVAM CODE ENDS */
-      
+        //20th June last change ends, basically I changed the whole clock-tick part
 
         mountRef.current.appendChild(renderer.domElement);
         return  () => mountRef.current.removeChild(renderer.domElement);

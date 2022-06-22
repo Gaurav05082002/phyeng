@@ -23,6 +23,7 @@
 .eqa {
     border: 2px solid rgb(114, 143, 236);
     padding: 2%;
+    
 
 }
 
@@ -39,7 +40,7 @@
 
 .nextQue {
     margin-left: 70%;
-    margin-top: 48%
+    margin-top: 4%
 }
 
 .activeGridStyle {

@@ -61,6 +61,9 @@ import steptwoptwo from './AUDIOS/stepTwo/step_two_audiopart2.mp3'
 import redblockupeqn from './AUDIOS/stepTwo/redblockeqnaudio.mp3'
 import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
 // import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
+import step2yellowcut from './AUDIOS/stepTwo/step2yellblockcut.mp3'
+import step2bluecut from './AUDIOS/stepTwo/step2bluecut.mp3'
+import step2greencut from './AUDIOS/stepTwo/step2greenbcut.mp3'
 
 import yellowdowneqn from './AUDIOS/stepTwo/yellowdowneqn.mp3'
 import yellowupeqn from './AUDIOS/stepTwo/yellowupeqn.mp3'
@@ -223,6 +226,7 @@ const TestThree = (props) => {
         var cu_audio = [cu1bq, cu2bq, cu3bq, cu4bq, cu5bq, cu6bq, cu7bq, cu8bq, cu9bq, cu10bq, cu11bq, cu12bq, cu13bq, cu14bq, cu15bq, cu16bq]
         var up_eqn = [redblockupeqn , redblockupeqn,yellowupeqn ,blueupeqn ,greenupeqn]
         var down_eqn = [redblockdowneqn , redblockdowneqn,yellowdowneqn ,bluedowneqn,greendowneqn]
+        var cut_aud = [ steptwopone , steptwopone, step2yellowcut, step2bluecut , step2greencut]
         var step3_aud = [step3pone , step3pone , step3ptwo , step3pthree , step3pfour ,step3pfive , step3psix ,step3pseven ]
         var step4_audl = [step4l1 , step4l1 , step4l2 ,step4l3 , step4l4 , step4l5]
         // var numbering = [ek, two, teen , char , paanch, che , a1, a2, a3, a4]
@@ -573,46 +577,47 @@ const TestThree = (props) => {
 
 
      // audio code by gaurav on 20june starts 
-  for(let flag = 1 ; flag <= n_b ; flag++) {
-      if(step == "fbd" && substep == flag && subsubstep == -100){
-        //this is red block 
-        gplayer.pause();
-            gplayer.src = steptwopone;
-                              gplayer.play();
-                              if ( iscorrect == 1) {
-                                gplayer.pause();
-                                // ganswerdone(t);
-                              }
-      }
-      if(step == "fbd" && substep == flag && subsubstep == 1){
-        //this is t1 upwards or downwards 
-        gplayer.pause();
-            gplayer.src = steptwoptwo;
-                              gplayer.play();
-                              if ( iscorrect == 1) {
-                                gplayer.pause();
-                                // ganswerdone(t);
-                              }
-      }
-      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
-        gplayer.pause();
-            gplayer.src = up_eqn[flag];
-                              gplayer.play();
-                              if ( iscorrect == 1) {
-                                gplayer.pause();
-                                // ganswerdone(t);
-                              }
-      }
-      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
-        gplayer.pause();
-            gplayer.src = down_eqn[flag];
-                              gplayer.play();
-                              if ( iscorrect == 1) {
-                                gplayer.pause();
-                                // ganswerdone(t);
-                              }
-      }
-    }
+    //  audio for step2
+//    {for(let flag = 1 ; flag <= n_b ; flag++) {
+//       if(step == "fbd" && substep == flag && subsubstep == -100){
+//         //this is red block 
+//         gplayer.pause();
+//             gplayer.src = cut_aud[flag];
+//                               gplayer.play();
+//                               if ( iscorrect == 1) {
+//                                 gplayer.pause();
+//                                 // ganswerdone(t);
+//                               }
+//       }
+//       if(step == "fbd" && substep == flag && subsubstep == 1){
+//         //this is t1 upwards or downwards 
+//         gplayer.pause();
+//             gplayer.src = steptwoptwo;
+//                               gplayer.play();
+//                               if ( iscorrect == 1) {
+//                                 gplayer.pause();
+//                                 // ganswerdone(t);
+//                               }
+//       }
+//       if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
+//         gplayer.pause();
+//             gplayer.src = up_eqn[flag];
+//                               gplayer.play();
+//                               if ( iscorrect == 1) {
+//                                 gplayer.pause();
+//                                 // ganswerdone(t);
+//                               }
+//       }
+//       if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
+//         gplayer.pause();
+//             gplayer.src = down_eqn[flag];
+//                               gplayer.play();
+//                               if ( iscorrect == 1) {
+//                                 gplayer.pause();
+//                                 // ganswerdone(t);
+//                               }
+//       }
+//     }}
 
     // audio  for step3 
     
@@ -621,15 +626,16 @@ const TestThree = (props) => {
       // audio code by gaurav on 20june ends 
 
         //has to be deleted immediately after Akshat corrects his files
-        if (alld_question_no == 35 || (alld_question_no >= 54 && alld_question_no <= 62)) {
-            for (b = 1; b < n_b + 1; b++) {
-                var inc_ang = blockdata[b]["angle of incline"] 
-                if (inc_ang > 0) {
-                    blockdata[b].acceleration[0] = blockdata[b].acceleration[1]*Math.cos(inc_ang*Math.PI/180)
-                    blockdata[b].acceleration[1] = blockdata[b].acceleration[1]*Math.sin(inc_ang*Math.PI/180) 
-                }
-            }
-        }
+        //if statement commment out on 22june by manglik
+        // if (alld_question_no == 35 || (alld_question_no >= 54 && alld_question_no <= 62)) {
+        //     for (b = 1; b < n_b + 1; b++) {
+        //         var inc_ang = blockdata[b]["angle of incline"] 
+        //         if (inc_ang > 0) {
+        //             blockdata[b].acceleration[0] = blockdata[b].acceleration[1]*Math.cos(inc_ang*Math.PI/180)
+        //             blockdata[b].acceleration[1] = blockdata[b].acceleration[1]*Math.sin(inc_ang*Math.PI/180) 
+        //         }
+        //     }
+        // }
 
         var c;
         var block_normals = new Array(n_b);
@@ -872,7 +878,7 @@ const TestThree = (props) => {
             //materialx.map = texture
             //materialx.color = new THREE.Color(clr[i - 1])
             meshk[i - 1] = new THREE.Mesh(
-                new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 10000), //added by mangalik
+                new THREE.BoxGeometry(blockdata[i].size[0] / 15, blockdata[i].size[0] / 15, blockdata[i].size[1] / 100000), //added by mangalik
                 materialx); //where does the division by 15 come from?
             //debugger
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
@@ -880,7 +886,7 @@ const TestThree = (props) => {
                 scene.add(meshk[i-1])
 
             }
-            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")) {
+            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.blocks'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.blocks'>") {
                     if (stringdata[substep]["first obj"] == i) {
                         scene.add(meshk[i - 1])
@@ -892,7 +898,26 @@ const TestThree = (props) => {
                     }
                 }
             }
-
+             
+            // 22June change code starts manglik
+            if (step == "constraint") {
+                var sc;
+                for (sc = 1; sc < n_s + 1; sc++) {
+                    if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
+                        if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
+                            if (stringdata[sc]["first obj"] == i) {
+                                scene.add(meshk[i - 1])
+                            }
+                        }
+                        if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
+                            if (stringdata[sc]["second obj"] == i) {
+                                scene.add(meshk[i - 1])
+                            }
+                        }
+                    }
+                }
+            }
+            // 22June change code ends manglik
             //changed from /20 to /15 on 20th June
             meshk[i - 1].position.x = (blockdata[i].loc[0] - 150) / 15; // where do these positions come from?
             meshk[i - 1].position.y = (blockdata[i].loc[1] - 150) / 15;
@@ -1495,7 +1520,7 @@ const TestThree = (props) => {
             if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
                 scene.add(meshpl[x - 1])
             }
-            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>")) {
+            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.grounds'>") && subsubstep !=300 ) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.grounds'>") {
                     if (stringdata[substep]["first obj"] == x) {
                         scene.add(meshpl[x - 1])
@@ -1508,7 +1533,28 @@ const TestThree = (props) => {
                 }
             }
 
-           
+            // 22june manglik code starts 
+
+            //22 June
+            if (step == "constraint") {
+                var sc;
+                for (sc = 1; sc < n_s + 1; sc++) {
+                    if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
+                        if (stringdata[sc]["first obj type"] == "<class 'blocksclass.grounds'>") {
+                            if (stringdata[sc]["first obj"] == x) {
+                                scene.add(meshpl[x - 1])
+                            }
+                        }
+                        if (stringdata[sc]["second obj type"] == "<class 'blocksclass.grounds'>") {
+                            if (stringdata[sc]["second obj"] == x) {
+                                scene.add(meshpl[x - 1])
+                            }
+                        }
+                    }
+                }
+            }
+            // 22june manglik code ends 
+            
         }
         var usevarx = 0
 
@@ -1596,7 +1642,7 @@ const TestThree = (props) => {
             if (!step.includes("constraint") || (step == "constraint" && (subsubstep == 0 || subsubstep == -1))) {
                 scene.add(meshp[i - 1])
             }
-            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")) {
+            if (step == "constraint" && (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>" || stringdata[substep]["second obj type"] == "<class 'blocksclass.pulleys'>")&& subsubstep !=300) {
                 if (stringdata[substep]["first obj type"] == "<class 'blocksclass.pulleys'>") {
                     if (stringdata[substep]["first obj"] == i) {
                         scene.add(meshp[i - 1])
@@ -1612,6 +1658,26 @@ const TestThree = (props) => {
 
                 }
             }
+            // 22june manglik code starts 
+            //22 June
+            if (step == "constraint") {
+                var sc;
+                for (sc = 1; sc < n_s + 1; sc++) {
+                    if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
+                        if (stringdata[sc]["first obj type"] == "<class 'blocksclass.pulleys'>") {
+                            if (stringdata[sc]["first obj"] == i) {
+                                scene.add(meshp[i - 1])
+                            }
+                        }
+                        if (stringdata[sc]["second obj type"] == "<class 'blocksclass.pulleys'>") {
+                            if (stringdata[sc]["second obj"] == i) {
+                                scene.add(meshp[i - 1])
+                            }
+                        }
+                    }
+                }
+            }
+            // 22june manglik code ends 
             meshp[i - 1].rotation.x = Math.PI/2
             meshp[i - 1].position.x = (pulleydata[i].centre[0] - 150) / 15;
             meshp[i - 1].position.y = (pulleydata[i].centre[1] - 150) / 15; //changed from 20 to 15 on 20th June 
@@ -1625,49 +1691,131 @@ const TestThree = (props) => {
             pulley_ini_pos_x[i - 1] = meshp[i - 1].position.x;
             pulley_ini_pos_y[i - 1] = meshp[i - 1].position.y;
 
-            //the 1.05 has been changed to 1.55, as pulley size increased on 20th June
-            //this arrow can be in the x-direction, conditions for that have not been added
-            acc_arrow_to = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y + 0.5, 0)
-            acc_arrow_from = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y - 0.5, 0)
+        //  {   //the 1.05 has been changed to 1.55, as pulley size increased on 20th June
+        //     //this arrow can be in the x-direction, conditions for that have not been added
+        //     acc_arrow_to = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y + 0.5, 0)
+        //     acc_arrow_from = new THREE.Vector3(meshp[i - 1].position.x + 1.55, meshp[i - 1].position.y - 0.5, 0)
 
 
-            acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
-            acc_arrow_length = acc_arrow_direction.length();
-            acc_arrowHelper[i + n_b - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]);
-            acc_cone[i + n_b - 1] = new THREE.Mesh(geometryc, materialx);
+        //     acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
+        //     acc_arrow_length = acc_arrow_direction.length();
+        //     acc_arrowHelper[i + n_b - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]);
+        //     acc_cone[i + n_b - 1] = new THREE.Mesh(geometryc, materialx);
 
 
-            acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 1.55;
+        //     acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 1.55;
 
-            //mangalik code starts
-            if (pulleydata[i].acceleration[1] > 0) {
-                acc_cone[i + n_b - 1].position.y = meshp[i - 1].position.y + 0.5;
-            }
+        //     //mangalik code starts
+        //     if (pulleydata[i].acceleration[1] > 0) {
+        //         acc_cone[i + n_b - 1].position.y = meshp[i - 1].position.y + 0.5;
+        //     }
 
-            else if (pulleydata[i].acceleration[1] < 0) {
-                acc_cone[i + n_b - 1].position.y = meshp[i - 1].position.y - 0.5;
-                acc_cone[i + n_b - 1].rotation.z = Math.PI
-            }
+        //     else if (pulleydata[i].acceleration[1] < 0) {
+        //         acc_cone[i + n_b - 1].position.y = meshp[i - 1].position.y - 0.5;
+        //         acc_cone[i + n_b - 1].rotation.z = Math.PI
+        //     }
 
             
-            else if (pulleydata[i].acceleration[0] > 0) {
-                acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 0.5;
-                acc_cone[i + n_b - 1].rotation.z = -Math.PI/2
-            }
+        //     else if (pulleydata[i].acceleration[0] > 0) {
+        //         acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x + 0.5;
+        //         acc_cone[i + n_b - 1].rotation.z = -Math.PI/2
+        //     }
 
-            else if (pulleydata[i].acceleration[0] < 0) {
-                acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x - 0.5;
-                acc_cone[i + n_b - 1].rotation.z = Math.PI/2
-            }
+        //     else if (pulleydata[i].acceleration[0] < 0) {
+        //         acc_cone[i + n_b - 1].position.x = meshp[i - 1].position.x - 0.5;
+        //         acc_cone[i + n_b - 1].rotation.z = Math.PI/2
+        //     }
             
 
-            if (pulleydata[i].acceleration[1] != 0 || pulleydata[i].acceleration[0] != 0) {
-                if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
-                    scene.add(acc_cone[i + n_b - 1])
-                    scene.add(acc_arrowHelper[i + n_b - 1])
-                }
-            }
-            //mangalik code ends
+        //     if (pulleydata[i].acceleration[1] != 0 || pulleydata[i].acceleration[0] != 0) {
+        //         if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
+        //             scene.add(acc_cone[i + n_b - 1])
+        //             scene.add(acc_arrowHelper[i + n_b - 1])
+        //         }
+        //     }
+        //     //mangalik code ends
+        // } 
+
+        // 22june code starts 
+            
+         //22nd June change starts
+         acc_arrow_to = new THREE.Vector3(meshp[i - 1].position.x, meshp[i - 1].position.y, 0)
+         acc_arrow_from = new THREE.Vector3(meshp[i - 1].position.x, meshp[i - 1].position.y, 0)
+         acc_cone[i + n_b - 1] = new THREE.Mesh(geometryc, materialx);
+
+         //mangalik code starts
+         if (pulleydata[i].acceleration[1] > 0) {
+             acc_arrow_from.x +=  pulleydata[i].radius / 12.5
+             acc_arrow_to.x += pulleydata[i].radius / 12.5
+             acc_arrow_from.y -= pulleydata[i].radius / 30
+             acc_arrow_to.y += pulleydata[i].radius / 30
+
+             acc_cone[i + n_b - 1].position.x = acc_arrow_to.x
+             acc_cone[i + n_b - 1].position.y = acc_arrow_to.y
+         }
+
+         else if (pulleydata[i].acceleration[1] < 0) {
+             acc_arrow_from.x +=  pulleydata[i].radius / 12.5
+             acc_arrow_to.x += pulleydata[i].radius / 12.5
+             acc_arrow_from.y += pulleydata[i].radius / 30
+             acc_arrow_to.y -= pulleydata[i].radius / 30
+
+             acc_cone[i + n_b - 1].position.x = acc_arrow_to.x
+             acc_cone[i + n_b - 1].position.y = acc_arrow_to.y
+
+             acc_cone[i + n_b - 1].rotation.z = Math.PI
+         }
+
+         
+         else if (pulleydata[i].acceleration[0] > 0) {
+             acc_arrow_from.y +=  pulleydata[i].radius / 12.5
+             acc_arrow_to.y += pulleydata[i].radius / 12.5
+             acc_arrow_from.x -= pulleydata[i].radius / 30
+             acc_arrow_to.x += pulleydata[i].radius / 30
+
+             acc_cone[i + n_b - 1].position.x = acc_arrow_to.x
+             acc_cone[i + n_b - 1].position.y = acc_arrow_to.y
+
+             acc_cone[i + n_b - 1].rotation.z = -Math.PI/2
+         }
+
+         else if (pulleydata[i].acceleration[0] < 0) {
+             acc_arrow_from.y +=  pulleydata[i].radius / 12.5
+             acc_arrow_to.y += pulleydata[i].radius / 12.5
+             acc_arrow_from.x += pulleydata[i].radius / 30
+             acc_arrow_to.x -= pulleydata[i].radius / 30
+
+             acc_cone[i + n_b - 1].position.x = acc_arrow_to.x
+             acc_cone[i + n_b - 1].position.y = acc_arrow_to.y
+
+             acc_cone[i + n_b - 1].rotation.z = Math.PI/2
+         }
+
+         //acc_arrow_direction = acc_arrow_to.clone().sub(acc_arrow_from);
+         //acc_arrow_length = acc_arrow_direction.length();
+         //acc_arrowHelper[i + n_b - 1] = new THREE.ArrowHelper(acc_arrow_direction.normalize(), acc_arrow_from, acc_arrow_length, clr[i - 1]);
+
+         var p_arr_points = []
+
+         p_arr_points.push(acc_arrow_from)
+         p_arr_points.push(acc_arrow_to)
+
+         const p_acc_geometry = new THREE.BufferGeometry().setFromPoints(p_arr_points)
+         var p_acc_mat = new THREE.MeshBasicMaterial()
+
+         acc_arrowHelper[i + n_b - 1] = new THREE.Line(p_acc_geometry, p_acc_mat);
+         
+
+         if (pulleydata[i].acceleration[1] != 0 || pulleydata[i].acceleration[0] != 0) {
+             if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
+                 scene.add(acc_cone[i + n_b - 1])
+                 scene.add(acc_arrowHelper[i + n_b - 1])
+             }
+         }
+         //mangalik code ends
+         //22nd June change ends
+
+        // 22june code ends 
         }
 
         //console.log( meshp[0].position.y )
@@ -1831,7 +1979,7 @@ const TestThree = (props) => {
         //const camera = new THREE.OrthographicCamera(- 2, 2, 2, - 2, 0.1, 100)
         const aspectRatio = sizes.width / sizes.height
         //const camera = new THREE.OrthographicCamera(- 2 * aspectRatio, 2 * aspectRatio, 2, - 2, 0.1, 100)
-        camera.position.z = 11;
+        camera.position.z = 12;
         if ( alld_question_no == 3 || alld_question_no == 13 ) {
             camera.position.z = 14;
 
@@ -1900,49 +2048,50 @@ const TestThree = (props) => {
         var endpt_acc_y = []
         //var endpos_second =[]
         //console.log(meshk)
-        // step 4 audio by gaurav patidar on 21 june starts 
-        var strpart;
-        if(step == "constraint" && substep == 1 && subsubstep == -100 ) {
-            gplayer.pause();
-            gplayer.src=step4pone;
-            gplayer.play();
+         // step 4 audio by gaurav patidar on 21 june starts 
+        // {var strpart;
+        // if(step == "constraint" && substep == 1 && subsubstep == -100 ) {
+        //     gplayer.pause();
+        //     gplayer.src=step4pone;
+        //     gplayer.play();
 
-            if(iscorrect==1){
-                gplayer.pause();
-                strpart = t;
-                console.log(strpart);
-            }
-        }
-        if(step == "constraint" && substep == 1 && subsubstep == 1 ){
+        //     if(iscorrect==1){
+        //         gplayer.pause();
+        //         strpart = t;
+        //         console.log(strpart);
+        //     }
+        // }
+        // if(step == "constraint" && substep == 1 && subsubstep == 1 ){
                  
-            console.log(strpart);
-                gplayer.pause();
-                gplayer.src=step4_audl[1]
-                gplayer.play();
-                if(iscorrect==1){
-                    gplayer.pause();
+        //     console.log(strpart);
+        //         gplayer.pause();
+        //         gplayer.src=step4_audl[1]
+        //         gplayer.play();
+        //         if(iscorrect==1){
+        //             gplayer.pause();
                    
                   
-                }
-            }
+        //         }
+        //     }
         
 
-        for( let f=2; f<=4 ; f++) {
+        // for( let f=2; f<=4 ; f++) {
             
-            if(step == "constraint" && substep == f){
-                console.log(strpart);
-                gplayer.pause();
-                gplayer.src=step4_audl[f]
-                gplayer.play();
-                if(iscorrect==1){
-                    gplayer.pause();
+        //     if(step == "constraint" && substep == f){
+        //         console.log(strpart);
+        //         gplayer.pause();
+        //         gplayer.src=step4_audl[f]
+        //         gplayer.play();
+        //         if(iscorrect==1){
+        //             gplayer.pause();
                   
-                }
+        //         }
 
-            }
+        //     }
 
 
-            }
+        //     }
+        // }
         
         // step 4 audio by gaurav patidar on 21 june ends 
 
@@ -1963,7 +2112,7 @@ const TestThree = (props) => {
                     pt2 = new THREE.Vector3(meshk[stringdata[i]["second obj"] - 1].position.x, meshk[stringdata[i]["second obj"] - 1].position.y, meshk[stringdata[i]["second obj"] - 1].position.z)
                     pt1 = new THREE.Vector3(meshk[stringdata[i]["second obj"] - 1].position.x, meshpl[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["second obj"] - 1].position.z)
                 }
-                
+                pt2.z = 0
                 points[i - 1] = []
                 endpos[i - 1] = []
                 //console.log(pt1)
@@ -1993,7 +2142,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2017,6 +2169,7 @@ const TestThree = (props) => {
                 
                 //pt1 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/30, 0)
                 //pt2 = new THREE.Vector3(meshk[strpart["first obj"] - 1].position.x + Math.sin(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, meshk[strpart["first obj"] - 1].position.y + Math.cos(strpart.angle)*blockdata[strpart["first obj"]].size[0]/5, 0)
+                pt1.z = 0
                 points[i - 1] = []
                 endpos[i - 1] = []
                 //console.log(pt1)
@@ -2047,7 +2200,13 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                // if (step == "constraint" && i == substep) {
+                //     scene.add(linestr[i - 1])
+                // }
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2057,7 +2216,7 @@ const TestThree = (props) => {
                 pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
                 points[i - 1] = []
                 endpos[i - 1] = []
-
+                pt1.z = 0
                 points[i - 1].push(pt1);
                 angle = Math.PI - stringdata[i].angle
                 secondobj = meshp[stringdata[i]["second obj"] - 1]
@@ -2067,6 +2226,7 @@ const TestThree = (props) => {
                 else
                     pt2 = new THREE.Vector3(secondobj.position.x, secondobj.position.y, secondobj.position.z)
                     //console.log( pt2 )
+                
                 points[i - 1].push(pt2);
 
                 if (block_angle[strpart["first obj"] - 1] == 0) {
@@ -2108,7 +2268,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2131,11 +2294,13 @@ const TestThree = (props) => {
 
                 }
                 points[i - 1] = []
+                
                 points[i - 1].push(pt1);
 
                 pt2 = new THREE.Vector3(meshk[stringdata[i]["second obj"] - 1].position.x, meshk[stringdata[i]["second obj"] - 1].position.y, meshk[stringdata[i]["second obj"] - 1].position.z)
 
                 //console.log( pt2 )
+                pt2.z = 0
                 points[i - 1].push(pt2);
 
                 pt2.x = pt2.x + Math.sin(Math.PI + strpart.angle)*blockdata[strpart["second obj"]].size[0]/30 //16th June
@@ -2172,7 +2337,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2228,6 +2396,8 @@ const TestThree = (props) => {
                     }
                 }
                 */
+                pt1.z = 0
+                pt2.z = 0
                 points[i - 1].push(pt1);
                 points[i - 1].push(pt2);
                 const geometry4 = new THREE.BufferGeometry().setFromPoints(points[i - 1]);
@@ -2241,7 +2411,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2266,9 +2439,9 @@ const TestThree = (props) => {
                     pt2 = new THREE.Vector3(meshp[stringdata[i]["second obj"] - 1].position.x, meshp[stringdata[i]["second obj"] - 1].position.y, meshp[stringdata[i]["second obj"] - 1].position.z)
                 }
                 else if (strpart["toc"][1] == "t")
-                    pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
+                    pt2 = new THREE.Vector3(secondobj.position.x + secondobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + secondobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
                 else
-                    pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), secondobj.position.z)
+                    pt2 = new THREE.Vector3(secondobj.position.x + secondobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), secondobj.position.y + secondobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), secondobj.position.z)
 
                 //console.log( pt2 )
                 points[i - 1].push(pt2);
@@ -2285,7 +2458,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2347,8 +2523,8 @@ const TestThree = (props) => {
                 angle = Math.PI - stringdata[i].angle
                 
                 //the following condition has to be removed in the long run when questions 10 through 13 are corrected
-                if (alld_question_no >= 10 && alld_question_no <= 13)
-                    angle = Math.PI - angle
+                // if (alld_question_no >= 10 && alld_question_no <= 13)
+                //     angle = Math.PI - angle
                 
                 
                 secondobj = meshpl[stringdata[i]["second obj"] - 1]
@@ -2387,7 +2563,10 @@ const TestThree = (props) => {
                 if (!step.includes("constraint") || (step == "constraint" && subsubstep <= 0)) {
                     scene.add(linestr[i - 1])
                 }
-                if (step == "constraint" && i == substep) {
+                if (step == "constraint" && i == substep && subsubstep !=300) {
+                    scene.add(linestr[i - 1])
+                }
+                if (step == "constraint" && strpart["str no"] == substep && subsubstep ==300) {
                     scene.add(linestr[i - 1])
                 }
             }
@@ -2613,23 +2792,42 @@ const TestThree = (props) => {
                     slope = (linestr[j].geometry.attributes.position.array[1] - linestr[j].geometry.attributes.position.array[4]) / (linestr[j]
                         .geometry.attributes.position.array[0] - linestr[j].geometry.attributes.position.array[3])
                     //console.log(linestr)
-                    var checker = 1
+                    // var checker = 1
                     
-                    if (stringdata[j + 1]["first obj type"] == "<class 'blocksclass.blocks'>") {
-                        if (block_angle[stringdata[j + 1]["first obj"] - 1] == 0) {
-                            checker = 0;
-                        }
-                    }
-                    if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.blocks'>") {
-                        if (block_angle[stringdata[j + 1]["second obj"] - 1] == 0) {
-                            checker = 0;
-                        }
-                    }
+                    // if (stringdata[j + 1]["first obj type"] == "<class 'blocksclass.blocks'>") {
+                    //     if (block_angle[stringdata[j + 1]["first obj"] - 1] == 0) {
+                    //         checker = 0;
+                    //     }
+                    // }
+                    // if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.blocks'>") {
+                    //     if (block_angle[stringdata[j + 1]["second obj"] - 1] == 0) {
+                    //         checker = 0;
+                    //     }
+                    // }
+                     // 22june manglik code starts
+                     var checker = 1
+                     var sa =  stringdata[j + 1]["angle"]
+                     //22nd June
+                     if (stringdata[j + 1]["first obj type"] == "<class 'blocksclass.blocks'>") {
+                         if (block_angle[stringdata[j + 1]["first obj"] - 1] == 0) {
+                             checker = 0;
+                         }
+                     }
+                     else if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.blocks'>") {
+                         if (block_angle[stringdata[j + 1]["second obj"] - 1] == 0) {
+                             checker = 0;
+                         }
+                     }
+                     else if (Math.abs(sa - Math.PI/2) < 0.01 || Math.abs (sa - Math.PI) < 0.01 || Math.abs (sa) < 0.01)
+                         checker = 0
+
+
+                      // 22june manglik code ends
                     var a_angp = Math.atan (slope);
                     a_ang_list[i + n_b] = a_angp
                     if (alldata["bigblock dick"] == undefined || bigblockdata.mass == 0 || bigblockdata.type == "tp" || checker == 0) {
 
-                        if (Math.abs(slope) > 100) {
+                        if (Math.abs(slope) >= 10) {
                             intersection_x = (linestr[j].geometry.attributes.position.array[0] + linestr[j].geometry.attributes.position.array[3]) / 2;
                             if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["second obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[1] > linestr[j].geometry.attributes.position.array[4]) {
@@ -2662,7 +2860,7 @@ const TestThree = (props) => {
                             arrow_to[i + n_b].push(a_to)
                         }
 
-                        if (Math.abs(slope) < 100) {
+                        if (Math.abs(slope) < 10) {
                             intersection_y = (linestr[j].geometry.attributes.position.array[1] + linestr[j].geometry.attributes.position.array[4]) / 2;
                             if (stringdata[j + 1]["second obj type"] == "<class 'blocksclass.pulleys'>" && (stringdata[j + 1]["second obj"] - 1) == i) {
                                 if (linestr[j].geometry.attributes.position.array[0] > linestr[j].geometry.attributes.position.array[3]) {
@@ -2975,12 +3173,12 @@ const TestThree = (props) => {
                 new THREE.SphereGeometry(0.14, 16, 16),
                 materialcs_cu
             )
+            
+            cs_cu[0].position.x = -0.3 + camera.position.x
+            cs_cu[0].position.y = 0  + camera.position.y
 
-            cs_cu[0].position.x = -0.3
-            cs_cu[0].position.y = 0
-
-            cs_cu_more[0].position.x = -0.3
-            cs_cu_more[0].position.y = -2
+            cs_cu_more[0].position.x = -0.3 + camera.position.x
+            cs_cu_more[0].position.y = -2 + camera.position.y
 
             scene.add(cs_cu[0])
             if (substep > 4 && substep % 3 != 1) {
@@ -2997,13 +3195,13 @@ const TestThree = (props) => {
                 materialcs_cu
             )
 
-            cs_cu[1].position.x = 4
-            cs_cu[1].position.y = 0
+            cs_cu[1].position.x = 4 + camera.position.x
+            cs_cu[1].position.y = 0 + camera.position.y
 
             scene.add(cs_cu[1])
 
-            cs_cu_more[1].position.x = 4
-            cs_cu_more[1].position.y = -2
+            cs_cu_more[1].position.x = 4 + camera.position.x
+            cs_cu_more[1].position.y = -2 + camera.position.y
 
             if (substep > 4 && substep % 3 != 1) {
                 scene.add(cs_cu_more[1])
@@ -3159,6 +3357,11 @@ const TestThree = (props) => {
                         scene.add(cs_cons[cs_count_cons]);
                     }
 
+                    // 22june manglik code starts 
+                    if (step == "constraint" && stringdata[i]["str no"] == substep && subsubstep == 300)
+                    scene.add(cs_cons[cs_count_cons]);
+                     // 22june manglik code ends 
+
                     // debugger
                     cone_constraint[cs_count_cons] = new THREE.Mesh(geometryc, materialc);
 
@@ -3293,15 +3496,28 @@ const TestThree = (props) => {
                 cone[cs_count].position.y = arrow_to[i + n_b - 1][j].y;//ip_y[i-1][j] + 0.5;
 
                 //if (alld_question_no <= 33 || bigblockdata.mass == 0 || bigblockdata.type == "tp") { commented out on 20th June
-                    if (-arrow_to[i + n_b - 1][j].y + arrow_from[i + n_b - 1][j].y > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI
-                    }
-                    if (-arrow_to[i + n_b - 1][j].x + arrow_from[i + n_b - 1][j] > 0.1) {
-                        cone[cs_count].rotation.z = Math.PI/2
-                    }
-                    if (arrow_to[i + n_b - 1][j].x - arrow_from[i + n_b - 1][j].x > 0.1) {
-                        cone[cs_count].rotation.z = -Math.PI/2
-                    }
+                    
+                if (-arrow_to[i + n_b - 1][j].y + arrow_from[i + n_b - 1][j].y > 0.1) {
+                    cone[cs_count].rotation.z = Math.PI
+                }
+                else if (-arrow_to[i + n_b - 1][j].x + arrow_from[i + n_b - 1][j].x > 0.1) {
+                    cone[cs_count].rotation.z = Math.PI/2
+                }
+                else if (arrow_to[i + n_b - 1][j].x - arrow_from[i + n_b - 1][j].x > 0.1) {
+                    cone[cs_count].rotation.z = -Math.PI/2
+                }
+                
+                
+                
+                // if (-arrow_to[i + n_b - 1][j].y + arrow_from[i + n_b - 1][j].y > 0.1) {
+                //         cone[cs_count].rotation.z = Math.PI
+                //     }
+                //     else if (-arrow_to[i + n_b - 1][j].x + arrow_from[i + n_b - 1][j] > 0.1) {
+                //         cone[cs_count].rotation.z = Math.PI/2
+                //     }
+                //     else if (arrow_to[i + n_b - 1][j].x - arrow_from[i + n_b - 1][j].x > 0.1) {
+                //         cone[cs_count].rotation.z = -Math.PI/2
+                //     }
                 /*} commented out on 20th June
                 else {
                     cone[cs_count].rotation.z = Math.PI/2 + a_ang_list[i + n_b - 1]
@@ -3481,6 +3697,35 @@ const TestThree = (props) => {
 
                     time_main = elapsedTime - Time_tillnow;
 
+
+                     // 22June change code starts manglik
+            if (step == "constraint") {
+                var sc;
+                for (sc = 1; sc < n_s + 1; sc++) {
+                    if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
+                        if (stringdata[sc]["first obj type"] == "<class 'blocksclass.blocks'>") {
+                            if (stringdata[sc]["first obj"] == i) {
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+
+                            }
+                        }
+                        if (stringdata[sc]["second obj type"] == "<class 'blocksclass.blocks'>") {
+                            if (stringdata[sc]["second obj"] == i) {
+                                meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
+                        meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
+
+                            }
+                        }
+                    }
+                }
+            }
+            // 22June change code ends manglik
+
+
+
+
+
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
                         meshk[i - 1].position.x = meshk[i - 1].position.x + 0.5 * (blockdata[i].acceleration[0]) * time_main * time_main / 5000;
                         meshk[i - 1].position.y = meshk[i - 1].position.y + 0.5 * (blockdata[i].acceleration[1]) * time_main * time_main / 5000;
@@ -3549,13 +3794,13 @@ const TestThree = (props) => {
                     line_size_cu_more = line_pos_cu_more[3] - line_pos_cu_more[0];
 
                     if (line_size_cu < 0.5 || line_size_cu > 10 || cs_cu[1].position.x > 9) {
-                        cs_cu[0].position.x = -0.3
-                        cs_cu[1].position.x = 4
+                        cs_cu[0].position.x = -0.3 + camera.position.x
+                        cs_cu[1].position.x = 4 + camera.position.x
                         Time_tillnow = elapsedTime
                     }
                     if (line_size_cu_more < 0.5 || line_size_cu_more > 10 || cs_cu_more[1].position.x > 9) {
-                        cs_cu_more[0].position.x = -0.3
-                        cs_cu_more[1].position.x = 4
+                        cs_cu_more[0].position.x = -0.3 + camera.position.x
+                        cs_cu_more[1].position.x = 4 + camera.position.x
                     Time_tillnow = elapsedTime
                     }
                 }
@@ -3565,6 +3810,38 @@ const TestThree = (props) => {
                 for (i = 1; i < n_p + 1; i++) {
 
                     time_main = elapsedTime - Time_tillnow;
+
+                   
+
+                      // 22June change code starts manglik
+            if (step == "constraint") {
+                var sc;
+                for (sc = 1; sc < n_s + 1; sc++) {
+                    if (stringdata[sc]["str no"] == substep && subsubstep == 300) {
+                        if (stringdata[sc]["first obj type"] == "<class 'blocksclass.pulleys'>") {
+                            if (stringdata[sc]["first obj"] == i) {
+                                meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
+                                meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
+        
+
+                            }
+                        }
+                        if (stringdata[sc]["second obj type"] == "<class 'blocksclass.pulleys'>") {
+                            if (stringdata[sc]["second obj"] == i) {
+                                meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
+                        meshp[i - 1].position.y = meshp[i - 1].position.y + 0.5 * (pulleydata[i].acceleration[1]) * time_main * time_main / 5000;
+
+
+                            }
+                        }
+                    }
+                }
+            }
+            // 22June change code ends manglik
+
+
+
+
 
                     if (step == "motion" || (step == "constraint" && subsubstep == -1)) {
                         meshp[i - 1].position.x = meshp[i - 1].position.x + 0.5 * (pulleydata[i].acceleration[0]) * time_main * time_main / 5000;
@@ -3614,7 +3891,7 @@ const TestThree = (props) => {
                         linestr[i - 1].geometry.attributes.position.needsUpdate = true;
                         
                         pt1 = new THREE.Vector3(meshk[stringdata[i]["first obj"] - 1].position.x, meshk[stringdata[i]["first obj"] - 1].position.y, meshk[stringdata[i]["first obj"] - 1].position.z)
-
+                        pt1.z=0
 
                         //points[i - 1].push(pt1);
                         angle = Math.PI - stringdata[i].angle
@@ -3784,9 +4061,9 @@ const TestThree = (props) => {
                             pt2 = new THREE.Vector3(meshp[stringdata[i]["second obj"] - 1].position.x, meshp[stringdata[i]["second obj"] - 1].position.y, meshp[stringdata[i]["second obj"] - 1].position.z)
                         }
                         else if (strpart["toc"][1] == "t")
-                            pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
+                            pt2 = new THREE.Vector3(secondobj.position.x + secondobj.geometry.parameters.radiusTop * Math.cos(angle), secondobj.position.y + secondobj.geometry.parameters.radiusTop * Math.sin(angle), secondobj.position.z)
                         else
-                            pt2 = new THREE.Vector3(secondobj.position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), secondobj.position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), secondobj.position.z)
+                            pt2 = new THREE.Vector3(secondobj.position.x + secondobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle), secondobj.position.y + secondobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle), secondobj.position.z)
 
                         linestr[i - 1].geometry.attributes.position.array[0] = pt1.x
                         linestr[i - 1].geometry.attributes.position.array[1] = pt1.y
@@ -3812,8 +4089,8 @@ const TestThree = (props) => {
                         //console.log( firstobj)
                         angle = Math.PI - strpart["angle"]
                         //console.log(Math.sin(angle))
-                        if (alld_question_no >= 10 && alld_question_no <= 13)
-                            angle = Math.PI - angle
+                        // if (alld_question_no >= 10 && alld_question_no <= 13)
+                        //     // angle = Math.PI - angle
                         if (strpart["toc"] == "zm") {
                             linestr[i - 1].geometry.attributes.position.array[0] = meshp[stringdata[i]["first obj"] - 1].position.x + firstobj.geometry.parameters.radiusTop * Math.cos(Math.PI - angle)
                             linestr[i - 1].geometry.attributes.position.array[1] = meshp[stringdata[i]["first obj"] - 1].position.y + firstobj.geometry.parameters.radiusTop * Math.sin(Math.PI - angle)
@@ -3874,15 +4151,17 @@ const TestThree = (props) => {
         
     }, [props]);
 
-    return (
+    return (<>
         <div ref={mountRef}>
-         
+             
         {/* earlier src="" that is empty gaurav change to {gauravaudio} */}
             <audio src="" id="radio" class="hidden" preload="none"></audio>
             <audio src={gauravaudio} id="beep" class="hidden" preload="none"></audio>
             <audio src="" id="pysound" class="hidden" preload="none"></audio>
             <audio src="" id="gsound" class="hidden" preload="none"></audio>
         </div>
+        {/* <button>mute</button> */}
+        </>
     );
 
 

@@ -125,6 +125,10 @@ return (
         <Link to="/home/34" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >34</Card.Grid></Link>
         <Link to="/home/35" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >35</Card.Grid></Link>
         <Link to="/home/36" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >36</Card.Grid></Link>
+        <Link to="/home/37" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >37</Card.Grid></Link> 
+        {/* 37 is 39 */}
+        <Link to="/home/38" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >38</Card.Grid></Link>
+
         
       </Card>
     </div>

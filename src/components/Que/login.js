@@ -1,6 +1,7 @@
 import { Button, Checkbox, Form, Input } from 'antd';
 import React, {useCallback} from 'react';
 import {useNavigate} from 'react-router-dom';
+import './login.css';
 
 const Login = (props) => {
     const navigate = useNavigate();
@@ -15,7 +16,16 @@ const Login = (props) => {
       const handleSubmit = useCallback(() => navigate('/chapters', {replace: true}), [navigate]);
 
     return (
-        <Form
+        <div className='logbody'>
+          <div className='leftlog'>
+           <div className='leftname'>Physics Engine</div>
+          </div>
+          <div className='rightlog'>
+          <div id="sign-form">
+          <div id="sub-title" >
+                    LOG IN
+                </div>
+          <Form
           name="basic"
           labelCol={{
             span: 8,
@@ -31,6 +41,7 @@ const Login = (props) => {
           autoComplete="off"
         >
           <Form.Item
+           className='loginput'
             label="Username"
             name="username"
             rules={[
@@ -44,6 +55,7 @@ const Login = (props) => {
           </Form.Item>
     
           <Form.Item
+             className='loginput'
             label="Password"
             name="password"
             rules={[
@@ -57,6 +69,7 @@ const Login = (props) => {
           </Form.Item>
     
           <Form.Item
+           className='loginput'
             name="remember"
             valuePropName="checked"
             wrapperCol={{
@@ -73,11 +86,15 @@ const Login = (props) => {
               span: 16,
             }}
           >
-            <Button type="primary" htmlType="submit" onClick= {handleSubmit}>
+            <Button type="primary" htmlType="submit" onClick= {handleSubmit} className="SubmitButton">
               Submit
             </Button>
           </Form.Item>
         </Form>
+        </div>
+          </div>
+        </div>
+        
       );
 }
 

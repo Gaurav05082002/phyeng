@@ -142,8 +142,8 @@ return (
       <Card.Grid style={gridStyle}>1</Card.Grid> */}
       
 
-        <Link to="/home/1" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >1</Card.Grid></Link>
-        <Link to="/home/2" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >2</Card.Grid></Link>
+        <Link to="/home/39" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >1</Card.Grid></Link>
+        <Link to="/home/40" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >2</Card.Grid></Link>
         <Link to="/home/3" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >3</Card.Grid></Link>
         <Link to="/home/4" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >4</Card.Grid></Link>
         <Link to="/home/5" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >5</Card.Grid></Link>

@@ -47,6 +47,7 @@ const Questions = (props) => {
     const [right, setright] = useState("heart");
     const [wrong , setwrong] = useState("heart");
     const [backstl , setbackstl] = useState("bac");
+    const [advtobas , setadvtobas] = useState(0);
      
     // var colors = ["red","blue","green"];
     // localStorage.setItem("my_colors", JSON.stringify(colors)); //store colors
@@ -67,8 +68,21 @@ const Questions = (props) => {
         //debugger;
         setStepSelected(data.stepNumber);
 
+
     }
 
+    //function for advancee to basic starts
+    // var threejstep;
+    //  function advancetobasic() {
+    //     setadvtobas(1);
+    //     threejstep = "fbd"
+    //  }
+    //  if(advtobas==0){
+    //     threejstep = stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep
+    //  }
+     
+
+    //function for advancee to basic ends
     // codes for spinning right wrong icons 
     function correct() {setwrong("heart"); setright("hearta"); 
              setTimeout(() => { setright("heartb")
@@ -81,7 +95,7 @@ const Questions = (props) => {
       
     }, 500);}
 
-
+  
    var corans;
     const checkAnswer = () => {
         //  debugger
@@ -102,7 +116,126 @@ const Questions = (props) => {
         setIscorrect(ansGiven === correctAns);
         setAnswerClicked(answerClicked + 1)
     }
-    const changeQuetion = () => {
+    var rcnt=0;
+    var shownarray = [];
+    const noOfSteps = stepDetails.stepQuestions.length;
+    for (let i = 0; i < noOfSteps; i++) {
+
+        shownarray[i] = stepDetails.stepQuestions[i].tobeshown;
+    }
+
+    // var currentquen=currentQue+1;
+    // var currentquenn=currentQue+2;
+    // var currentquennn=currentQue+3;
+    // shownarray[0] = stepDetails.stepQuestions[currentQue].tobeshown;
+    // shownarray[1] = stepDetails.stepQuestions[currentquen].tobeshown;
+    // shownarray[2] = stepDetails.stepQuestions[currentquen+1].tobeshown;
+    // shownarray[3] = stepDetails.stepQuestions[currentquenn+1].tobeshown;
+     
+    
+        // var changeQuetion = () => {
+        //     var shown = stepDetails.stepQuestions[currentQue].tobeshown;
+        //     form.setFieldsValue({ answer: '' });
+        //     const noOfSteps = stepDetails.stepQuestions.length;
+        //     setShowPrint(false)
+        //     if (currentQue + 1 === noOfSteps) {
+        //         //change the step
+        //         let newStep = [...step];
+        //         var c = stepCount;
+        //         setStepCount(stepCount + 1);
+        //         newStep[c].stepStatus = 'inactive';
+        //         newStep[c + 1].stepStatus = 'active';
+        //         setSteps(newStep);
+        //         setcurrentQue(0)
+        //         setStepSelected(stepSelected + 1)
+        //     } 
+        //     else {
+            // for (let index = 0; index < 4; index++) {
+            //     if(shownarray[index]==0){
+            //         rcnt++;
+            //     }
+            //     else{
+            //         setcurrentQue(currentQue + rcnt);
+            //         rcnt=0;
+            //     }
+                
+            // }
+            //     if(shown == 0) {
+            //         rcnt++;
+            //         currentQue++;
+            //         shown = stepDetails.stepQuestions[currentQue].tobeshown;
+            //     }
+            //     let shown = stepDetails.stepQuestions[currentQue].tobeshown;
+            //      if(shown==0){
+            //         rcnt++;
+            //         currentQue=currentQue+1;
+            //     }
+                
+            //   if(shown==1){
+            //     setcurrentQue(currentQue + 1);
+            //     rcnt=0;
+            //   }
+        //     if(iscorrect==true && shown == 1)
+        //     {
+        //     for (var kb = currentQue+1; kb < noOfSteps; kb++) {
+                
+        //         if(shownarray[kb]==1) {
+        //             break;
+        //         }  
+                
+        //     }
+            
+        //     if(kb < noOfSteps){
+        //         setcurrentQue(kb);
+        //     }
+        //     else{
+        //         //change the step
+        //         let newStep = [...step];
+        //         var c = stepCount;
+        //         setStepCount(stepCount + 1);
+        //         newStep[c].stepStatus = 'inactive';
+        //         newStep[c + 1].stepStatus = 'active';
+        //         setSteps(newStep);
+        //         setcurrentQue(0)
+        //         setStepSelected(stepSelected + 1)
+        //     }
+        // }
+        // else {
+        //     setcurrentQue(currentQue + 1); 
+        // }
+                // if(shownarray[1]==1) {
+                //     setcurrentQue(currentQue + 1)
+                // }  
+                // if(shownarray[1]==0) {
+                //     setcurrentQue(currentQue + 2)
+                // }       
+    
+                // if(shown){setcurrentQue(currentQue + 1)}
+                // if(!shown){setcurrentQue(currentQue + 4)}
+                // setcurrentQue(currentQue + 1);
+                // setcurrentQue(currentQue + 1);
+                // if(shown == 0){
+                //     setcurrentQue(currentQue + 1);
+                //     changeQuetion();
+                //  }
+                // if(shown == 1){
+                //     setcurrentQue(currentQue + 1);
+                // }
+                // setcurrentQue(currentQue + 1); 
+        //     }
+                
+            
+        //     setAnswerClicked(0)
+        //     setIscorrect(false)
+        //     setright("heart")
+        //     setwrong("heart")
+    
+        // }
+    
+
+    
+    var changeQuetion = () => {
+        var shown = stepDetails.stepQuestions[currentQue].tobeshown;
         form.setFieldsValue({ answer: '' });
         const noOfSteps = stepDetails.stepQuestions.length;
         setShowPrint(false)
@@ -117,14 +250,89 @@ const Questions = (props) => {
             setcurrentQue(0)
             setStepSelected(stepSelected + 1)
         } else {
-            setcurrentQue(currentQue + 1)
+        // for (let index = 0; index < 4; index++) {
+        //     if(shownarray[index]==0){
+        //         rcnt++;
+        //     }
+        //     else{
+        //         setcurrentQue(currentQue + rcnt);
+        //         rcnt=0;
+        //     }
+            
+        // }
+        //     if(shown == 0) {
+        //         rcnt++;
+        //         currentQue++;
+        //         shown = stepDetails.stepQuestions[currentQue].tobeshown;
+        //     }
+        //     let shown = stepDetails.stepQuestions[currentQue].tobeshown;
+        //      if(shown==0){
+        //         rcnt++;
+        //         currentQue=currentQue+1;
+        //     }
+            
+        //   if(shown==1){
+        //     setcurrentQue(currentQue + 1);
+        //     rcnt=0;
+        //   }
+        if(iscorrect==true && shown == 1)
+        {
+        for (var kb = currentQue+1; kb < noOfSteps; kb++) {
+            
+            if(shownarray[kb]==1) {
+                break;
+            }  
+            
         }
+        
+        if(kb < noOfSteps){
+            setcurrentQue(kb);
+        }
+        else{
+            //change the step
+            let newStep = [...step];
+            var c = stepCount;
+            setStepCount(stepCount + 1);
+            newStep[c].stepStatus = 'inactive';
+            newStep[c + 1].stepStatus = 'active';
+            setSteps(newStep);
+            setcurrentQue(0)
+            setStepSelected(stepSelected + 1)
+        }
+    }
+    else {
+        setcurrentQue(currentQue + 1); 
+    }
+            // if(shownarray[1]==1) {
+            //     setcurrentQue(currentQue + 1)
+            // }  
+            // if(shownarray[1]==0) {
+            //     setcurrentQue(currentQue + 2)
+            // }       
+
+            // if(shown){setcurrentQue(currentQue + 1)}
+            // if(!shown){setcurrentQue(currentQue + 4)}
+            // setcurrentQue(currentQue + 1);
+            // setcurrentQue(currentQue + 1);
+            // if(shown == 0){
+            //     setcurrentQue(currentQue + 1);
+            //     changeQuetion();
+            //  }
+            // if(shown == 1){
+            //     setcurrentQue(currentQue + 1);
+            // }
+        }
+            
+        
         setAnswerClicked(0)
         setIscorrect(false)
         setright("heart")
         setwrong("heart")
 
     }
+         
+
+
     // this set show is now present in check answer
     const onChangeAns = () => {
         setShowPrint(true)
@@ -157,6 +365,7 @@ const Questions = (props) => {
 
     return (
         <Container >
+        
             <Form form={form} onFinish={checkAnswer} >
                 <Row>
                     <Col span={6}>
@@ -183,16 +392,17 @@ const Questions = (props) => {
                                     <Col>
                                         <Card className="flex-row" >
                                             <CardBody>
-                                                <CardTitle>Video </CardTitle>
+                                                <CardTitle>Simulation</CardTitle>
                                                 <div className="three">
                                                     <TestThree
+                                                        //   threejsstep = {threejstep}
                                                         threejsstep={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep}
                                                         threejssubstep={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejssubstep}
                                                         threejssubsubstep={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejssubsubstep}
                                                         answerClicked={answerClicked}
                                                         iscorrect={iscorrect}
                                                         qno = {quesNo}
-                                                        
+                                                        atob = {advtobas}
                                                         stepans={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].options[stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].answer]}
                                                     />
                                                     {/* <Audiogaurav 

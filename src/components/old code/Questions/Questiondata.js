@@ -38465,4 +38465,1005 @@ export const questionData = [
       },
     ],
   },
+  {
+    chapterNumber: 1,
+    chapterName: "Newton's law",
+    steps: [
+      {
+        stepName: "Find no.of unknowns",
+        stepStatus: "active",
+        stepNumber: 1,
+      },
+      {
+        stepName: "Use F= ma for each object",
+        stepStatus: "inactive",
+        stepNumber: 2,
+      },
+      {
+        stepName: "Understanding Constaint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      {
+        stepName: "Constraint equation for each string",
+        stepStatus: "inactive",
+        stepNumber: 4,
+      },
+    ],
+    questions: [
+      {
+        questionNumber: 39,
+        questionDesc:
+          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+        steps: [   
+          {
+              "stepName": "Identify Motion of objects",
+              "stepNumber": 1,
+              "stepQuestions": [
+                {
+                  "question": "How many moving objects are present?",
+                  "options": [3, 0, 1, 6],
+                  "answer": 0,
+                  "threejsstep": "motion",
+                  "threejssubstep": 0,
+                  "threejssubsubstep": -1,
+                  "show": ["Unknowns: a\u2081, a\u2082, a\u2083"],
+                  "showfc": [],
+                  "tobeshown":1
+                },
+                {
+                  "question": "How many strings are there?",
+                  "options": [1, 2, 0, 4],
+                  "answer": 1,
+                  "threejsstep": "motion",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": 0,
+                  "show": ["Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, "],
+                  "showfc": [],
+                  "tobeshown":1
+                }
+               
+              ]
+          },
+          {
+            "stepName": "Write FBD equation for each Moving block",
+            "stepNumber": 2,
+            "stepQuestions": [
+              {
+                "question": "Whats the FBD equation of red block in the y-direction",
+                "options": [
+                  "+30-T\u2081=3.0a\u2081",
+                  "+30+T\u2081=3.0a\u2081",
+                  "-30+T\u2081=3.0a\u2081",
+                  "-30-T\u2081=3.0a\u2081"
+                ],
+                "answer": 0,
+                "threejsstep": "fbd",
+                "threejssubstep": 1,
+                "threejssubsubstep": 100,
+                "show": [],
+                "tobeshown":1
+              },
+              {
+                  "question": "How many surfaces are in contact with the red block?",
+                  "options": [0, 1, 2, 3],
+                  "threejsstep": "fbd",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": -200,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, "
+                  ],
+                  "answer": 0,
+                  "tobeshown":0
+                },
+                {
+                  "question": "At how many points does the imaginary sphere for red block cuts the strings",
+                  "options": [0, 1, 2, 3],
+                  "threejsstep": "fbd",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": -100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, "
+                  ],
+                  "answer": 1,
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the force at this point of intersection on red block in the y-direction ?",
+                  "options": ["T\u2081 upwards", "T\u2081 downwards"],
+                  "answer": 0,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, "
+                  ],
+                  "showfc": ["Upward Forces T\u2081,", "Downward Forces "],
+                  "tobeshown":0
+                },
+                {
+                  "question": "Whats the FBD equation of red block in the y-direction",
+                  "options": [
+                    "+10+T\u2081=1.0a\u2081",
+                    "-10+T\u2081=1.0a\u2081",
+                    "+10-T\u2081=1.0a\u2081",
+                    "-10-T\u2081=1.0a\u2081"
+                  ],
+                  "answer": 2,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": 100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, "
+                  ],
+                  "tobeshown":0
+                },
+              {
+                "question": "Whats the FBD equation of yellow block in the y-direction",
+                "options": [
+                  "+T\u2082-40=4.0a\u2082",
+                  "+T\u2082+40=4.0a\u2082",
+                  "-T\u2082+40=4.0a\u2082",
+                  "-T\u2082-40=4.0a\u2082"
+                ],
+                "answer": 0,
+                "threejsstep": "fbd",
+                "threejssubstep": 2,
+                "threejssubsubstep": 100,
+                "show": ["+30-T\u2081=3.0a\u2081"],
+                "tobeshown":1
+              },
+              {
+                  "question": "How many surfaces are in contact with the yellow block?",
+                  "options": [3, 2, 0, 1],
+                  "threejsstep": "fbd",
+                  "threejssubstep": 2,
+                  "threejssubsubstep": -200,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081"
+                  ],
+                  "answer": 2,
+                  "tobeshown":0
+                },
+                {
+                  "question": "At how many points does the imaginary sphere for yellow block cuts the strings",
+                  "options": [0, 1, 2, 3],
+                  "threejsstep": "fbd",
+                  "threejssubstep": 2,
+                  "threejssubsubstep": -100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the force at this point of intersection on yellow block in the y-direction ?",
+                  "options": ["T\u2082 downwards", "T\u2082 upwards"],
+                  "answer": 1,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 3,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081"
+                  ],
+                  "showfc": ["Upward Forces T\u2082,", "Downward Forces "],
+                  "tobeshown":0
+                },
+                {
+                  "question": "Whats the FBD equation of yellow block in the y-direction",
+                  "options": [
+                    "+T\u2082+10=1.0a\u2082",
+                    "-T\u2082+10=1.0a\u2082",
+                    "+T\u2082-10=1.0a\u2082",
+                    "-T\u2082-10=1.0a\u2082"
+                  ],
+                  "answer": 2,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 3,
+                  "threejssubsubstep": 100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081"
+                  ],
+                  "tobeshown":0
+                },
+              {
+                "question": "Whats the FBD equation of second pulley in the y-direction",
+                "options": [
+                  "+2T\u2081+T\u2082=0.0",
+                  "-2T\u2081+T\u2082=0.0",
+                  "+2T\u2081-T\u2082=0.0",
+                  "-2T\u2081-T\u2082=0.0"
+                ],
+                "answer": 2,
+                "threejsstep": "fbd",
+                "threejssubstep": 4,
+                "threejssubsubstep": 100,
+                "show": ["+30-T\u2081=3.0a\u2081", "+T\u2082-40=4.0a\u2082"],
+                "tobeshown":1
+              },
+              {
+                  "question": "At how many points does the imaginary sphere for second pulley cuts the strings",
+                  "options": [0, 1, 2, 3],
+                  "threejsstep": "fbd",
+                  "threejssubstep": 4,
+                  "threejssubsubstep": -100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the force at this point of intersection on second pulley in the y-direction ?",
+                  "options": ["T\u2081 downwards", "T\u2081 upwards"],
+                  "answer": 1,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 7,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082"
+                  ],
+                  "showfc": ["Upward Forces T\u2081,", "Downward Forces "],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the force at this point of intersection on second pulley in the y-direction ?",
+                  "options": ["T\u2081 upwards", "T\u2081 downwards"],
+                  "answer": 0,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 7,
+                  "threejssubsubstep": 2,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082"
+                  ],
+                  "showfc": ["Upward Forces T\u2081,T\u2081,", "Downward Forces "],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the force at this point of intersection on second pulley in the y-direction ?",
+                  "options": ["T\u2082 downwards", "T\u2082 upwards"],
+                  "answer": 0,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 7,
+                  "threejssubsubstep": 3,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082"
+                  ],
+                  "showfc": ["Upward Forces T\u2081,T\u2081,", "Downward Forces T\u2082,"],
+                  "tobeshown":0
+                },
+                {
+                  "question": "Whats the FBD equation of second pulley in the y-direction",
+                  "options": [
+                    "+2T\u2081+T\u2082=0.0",
+                    "-2T\u2081+T\u2082=0.0",
+                    "+2T\u2081-T\u2082=0.0",
+                    "-2T\u2081-T\u2082=0.0"
+                  ],
+                  "answer": 2,
+                  "threejsstep": "fbd",
+                  "threejssubstep": 4,
+                  "threejssubsubstep": 100,
+                  "show": ["+30-T\u2081=3.0a\u2081", "+T\u2082-40=4.0a\u2082"],
+                  "tobeshown":0
+                }
+            ]
+          },
+          {
+            "stepName": "Constraint Equations",
+            "stepNumber": 3,
+            "stepQuestions": [
+              {
+                "question": "What is the constraint equation for pink string?",
+                "options": [
+                  "+a\u2081+2.0a\u2084=0",
+                  "+a\u2081-2.0a\u2084=0",
+                  "-a\u2081+2.0a\u2084=0",
+                  "-a\u2081-2.0a\u2084=0"
+                ],
+                "answer": 1,
+                "threejsstep": "constraint",
+                "threejssubstep": 1,
+                "threejssubsubstep": 100,
+                "show": [
+                  "+30-T\u2081=3.0a\u2081",
+                  "+T\u2082-40=4.0a\u2082",
+                  "+2T\u2081-T\u2082=0.0"
+                ],
+                "tobeshown":1
+              },
+              {
+                  "question": "What is the number of parts which change length in the pink string?",
+                  "options": [6, 5, 3, 4],
+                  "answer": 2,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": -100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is double derivative of change in l\u2081 for pink string:",
+                  "options": ["+a\u2081", "-a\u2081"],
+                  "answer": 0,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is double derivative of change in l\u2082 for pink string:",
+                  "options": ["+a\u2083", "-a\u2083"],
+                  "answer": 1,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 2,
+                  "threejssubsubstep": 2,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is double derivative of change in l\u2083 for pink string:",
+                  "options": ["+a\u2083", "-a\u2083"],
+                  "answer": 1,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 3,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the constraint equation for pink string?",
+                  "options": [
+                    "+a\u2081+-2.0a\u2083=0",
+                    "+a\u2081--2.0a\u2083=0",
+                    "-a\u2081+-2.0a\u2083=0",
+                    "-a\u2081--2.0a\u2083=0"
+                  ],
+                  "answer": 1,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 1,
+                  "threejssubsubstep": 100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+              {
+                "question": "What is the constraint equation for red string?",
+                "options": [
+                  "+a\u2082+a\u2084=0",
+                  "+a\u2082-a\u2084=0",
+                  "-a\u2082+a\u2084=0",
+                  "-a\u2082-a\u2084=0"
+                ],
+                "answer": 2,
+                "threejsstep": "constraint",
+                "threejssubstep": 2,
+                "threejssubsubstep": 100,
+                "show": [
+                  "+30-T\u2081=3.0a\u2081",
+                  "+T\u2082-40=4.0a\u2082",
+                  "+2T\u2081-T\u2082=0.0",
+                  "+a\u2081-2.0a\u2084=0"
+                ],
+                "tobeshown":1
+              },
+              {
+                  "question": "What is the number of parts which change length in the red string?",
+                  "options": [4, 3, 1, 2],
+                  "answer": 2,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 2,
+                  "threejssubsubstep": -100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is double derivative of change in l\u2081 for red string:",
+                  "options": ["+a\u2083", "-a\u2083"],
+                  "answer": 0,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 4,
+                  "threejssubsubstep": 1,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is double derivative of change in l\u2081 for red string:",
+                  "options": ["+a\u2082", "-a\u2082"],
+                  "answer": 1,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 4,
+                  "threejssubsubstep": 2,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is net double derivative of change in l\u2081 for red string:",
+                  "options": [
+                    "+a\u2083+a\u2082",
+                    "-a\u2083+a\u2082",
+                    "+a\u2083-a\u2082",
+                    "-a\u2083-a\u2082"
+                  ],
+                  "answer": [2],
+                  "threejsstep": "constraint",
+                  "threejssubstep": 4,
+                  "threejssubsubstep": 100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                },
+                {
+                  "question": "What is the constraint equation for red string?",
+                  "options": [
+                    "+a\u2082+a\u2083=0",
+                    "+a\u2082-a\u2083=0",
+                    "-a\u2082+a\u2083=0",
+                    "-a\u2082-a\u2083=0"
+                  ],
+                  "answer": 2,
+                  "threejsstep": "constraint",
+                  "threejssubstep": 2,
+                  "threejssubsubstep": 100,
+                  "show": [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, T\u2081, T\u2082, ",
+                    "+10-T\u2081=1.0a\u2081",
+                    "+T\u2082-10=1.0a\u2082",
+                    3,
+                    "+a\u2081--2.0a\u2083=0",
+                    1,
+                    "-a\u2082+a\u2083=0"
+                  ],
+                  "tobeshown":0
+                }
+            ]
+          }
+        ]
+        ,
+      },
+    ],
+  },
+  {
+    chapterNumber: 1,
+    chapterName: "Newton's law",
+    steps: [
+      {
+        stepName: "Find no.of unknowns",
+        stepStatus: "active",
+        stepNumber: 1,
+      },
+      {
+        stepName: "Use F= ma for each object",
+        stepStatus: "inactive",
+        stepNumber: 2,
+      },
+      {
+        stepName: "Understanding Constaint equation",
+        stepStatus: "inactive",
+        stepNumber: 3,
+      },
+      {
+        stepName: "Constraint equation for each string",
+        stepStatus: "inactive",
+        stepNumber: 4,
+      },
+    ],
+    questions: [
+      {
+        questionNumber: 40,
+        questionDesc:
+          "A red block and yellow block, both of mass 1 kg are in motion as follows. Determine the acceleration of the masses and the tension in the string.",
+        steps: [
+          {
+            stepName: "Identify Motion of objects",
+            stepNumber: 1,
+            stepQuestions: [
+              {
+                question: "How many moving objects are present?",
+                options: [4, 6, 3, 1],
+                answer: 2,
+                threejsstep: "motion",
+                threejssubstep: 0,
+                threejssubsubstep: -1,
+                show: ["Unknowns: a\u2081, a\u2082, a\u2083"],
+                showfc: [],
+                "tobeshown":1
+              },
+              {
+                question: "How many strings are there?",
+                options: [0, 1, 2, 4],
+                answer: 2,
+                threejsstep: "motion",
+                threejssubstep: 1,
+                threejssubsubstep: 0,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                ],
+                showfc: [],
+                "tobeshown":1
+              }
+              
+            ],
+          },
+          {
+            stepName: "Write FBD equation for each Moving block",
+            stepNumber: 2,
+            stepQuestions: [
+              {
+                  question:
+                    "Whats the FBD equation of red block in the y-direction",
+                  options: [
+                    "+30+T\u2081=3.0a\u2081",
+                    "-30-T\u2081=3.0a\u2081",
+                    "-30+T\u2081=3.0a\u2081",
+                    "+30-T\u2081=3.0a\u2081",
+                  ],
+                  answer: 3,
+                  threejsstep: "fbd",
+                  threejssubstep: 1,
+                  threejssubsubstep: 100,
+                  show: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  ],
+                  "tobeshown":1
+                },
+              {
+                question:
+                  "At how many points does the imaginary sphere for red block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: -100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                ],
+                answer: 1,
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on red block?",
+                options: ["T\u2081 upwards", "T\u2081 downwards"],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                ],
+                showfc: ["Upward Forces T\u2081,", "Downward Forces "],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "Whats the FBD equation of red block in the y-direction",
+                options: [
+                  "+30+T\u2081=3.0a\u2081",
+                  "-30-T\u2081=3.0a\u2081",
+                  "-30+T\u2081=3.0a\u2081",
+                  "+30-T\u2081=3.0a\u2081",
+                ],
+                answer: 3,
+                threejsstep: "fbd",
+                threejssubstep: 1,
+                threejssubsubstep: 100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                ],
+                "tobeshown":0
+              },
+              {
+                  question:
+                    "Whats the FBD equation of yellow block in the y-direction",
+                  options: [
+                    "+40+T\u2081+T\u2082=4.0a\u2082",
+                    "+40-T\u2081-T\u2082=4.0a\u2082",
+                    "+40-T\u2081+T\u2082=4.0a\u2082",
+                    "+40+T\u2081-T\u2082=4.0a\u2082",
+                  ],
+                  answer: 3,
+                  threejsstep: "fbd",
+                  threejssubstep: 2,
+                  threejssubsubstep: 100,
+                  show: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+30-T\u2081=3.0a\u2081",
+                  ],
+                  "tobeshown":1
+                },
+              {
+                question:
+                  "At how many points does the imaginary sphere for yellow block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: -100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                ],
+                answer: 2,
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on yellow block?",
+                options: ["T\u2081 downwards", "T\u2081 upwards"],
+                answer: 0,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                ],
+                showfc: ["Upward Forces ", "Downward Forces T\u2081,"],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on yellow block?",
+                options: ["T\u2082 downwards", "T\u2082 upwards"],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 2,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                ],
+                showfc: ["Upward Forces T\u2082,", "Downward Forces T\u2081,"],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "Whats the FBD equation of yellow block in the y-direction",
+                options: [
+                  "+40+T\u2081+T\u2082=4.0a\u2082",
+                  "+40-T\u2081-T\u2082=4.0a\u2082",
+                  "+40-T\u2081+T\u2082=4.0a\u2082",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                ],
+                answer: 3,
+                threejsstep: "fbd",
+                threejssubstep: 2,
+                threejssubsubstep: 100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                ],
+                "tobeshown":0
+              },
+              {
+                  question:
+                    "Whats the FBD equation of blue block in the y-direction",
+                  options: [
+                    "+T\u2082+50=5.0a\u2083",
+                    "-T\u2082+50=5.0a\u2083",
+                    "+T\u2082-50=5.0a\u2083",
+                    "-T\u2082-50=5.0a\u2083",
+                  ],
+                  answer: 2,
+                  threejsstep: "fbd",
+                  threejssubstep: 3,
+                  threejssubsubstep: 100,
+                  show: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+30-T\u2081=3.0a\u2081",
+                    "+40+T\u2081-T\u2082=4.0a\u2082",
+                  ],
+                  "tobeshown":1
+                },
+              {
+                question:
+                  "At how many points does the imaginary sphere for blue block cuts the strings",
+                options: [0, 1, 2, 3],
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: -100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                ],
+                answer: 1,
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is the force at this point of intersection on blue block?",
+                options: ["T\u2082 downwards", "T\u2082 upwards"],
+                answer: 1,
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: 1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                ],
+                showfc: ["Upward Forces T\u2082,", "Downward Forces "],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "Whats the FBD equation of blue block in the y-direction",
+                options: [
+                  "+T\u2082+50=5.0a\u2083",
+                  "-T\u2082+50=5.0a\u2083",
+                  "+T\u2082-50=5.0a\u2083",
+                  "-T\u2082-50=5.0a\u2083",
+                ],
+                answer: 2,
+                threejsstep: "fbd",
+                threejssubstep: 3,
+                threejssubsubstep: 100,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                ],
+                "tobeshown":0
+              },
+            ],
+          },
+         
+          {
+            stepName: "Constraint Equations",
+            stepNumber: 3,
+            stepQuestions: [
+              {
+                  question: "What is the constraint equation for pink string?",
+                  options: [
+                    "+a\u2081+a\u2082=0",
+                    "+a\u2081-a\u2082=0",
+                    "-a\u2081+a\u2082=0",
+                    "-a\u2081-a\u2082=0",
+                  ],
+                  answer: 1,
+                  threejsstep: "constraint",
+                  threejssubstep: 1,
+                  threejssubsubstep: 300,
+                  show: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+30-T\u2081=3.0a\u2081",
+                    "+40+T\u2081-T\u2082=4.0a\u2082",
+                    "+T\u2082-50=5.0a\u2083",
+                  ],
+                  "tobeshown":1
+                },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for pink string:",
+                options: ["+a\u2081", "-a\u2081"],
+                answer: 0,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: 1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                ],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for pink string:",
+                options: ["+a\u2082", "-a\u2082"],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: 2,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                ],
+                "tobeshown":0
+              },
+              {
+                question: "What is the constraint equation for pink string?",
+                options: [
+                  "+a\u2081+a\u2082=0",
+                  "+a\u2081-a\u2082=0",
+                  "-a\u2081+a\u2082=0",
+                  "-a\u2081-a\u2082=0",
+                ],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 1,
+                threejssubsubstep: 300,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                ],
+                "tobeshown":0
+              },
+              {
+                  question: "What is the constraint equation for red string?",
+                  options: [
+                    "+a\u2082+a\u2083=0",
+                    "+a\u2082-a\u2083=0",
+                    "-a\u2082+a\u2083=0",
+                    "-a\u2082-a\u2083=0",
+                  ],
+                  answer: 1,
+                  threejsstep: "constraint",
+                  threejssubstep: 2,
+                  threejssubsubstep: 300,
+                  show: [
+                    "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                    "+30-T\u2081=3.0a\u2081",
+                    "+40+T\u2081-T\u2082=4.0a\u2082",
+                    "+T\u2082-50=5.0a\u2083",
+                    "+a\u2081-a\u2082=0",
+                  ],
+                  "tobeshown":1
+                },
+              {
+                question:
+                  "What is the number of parts which change length in the red string?",
+                options: [5, 4, 2, 3],
+                answer: 2,
+                threejsstep: "constraint",
+                threejssubstep: 2,
+                threejssubsubstep: -1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                  "+a\u2081-a\u2082=0",
+                ],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2081 for red string:",
+                options: ["+a\u2082", "-a\u2082"],
+                answer: 0,
+                threejsstep: "constraint",
+                threejssubstep: 2,
+                threejssubsubstep: 1,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                  "+a\u2081-a\u2082=0",
+                ],
+                "tobeshown":0
+              },
+              {
+                question:
+                  "What is double derivative of change in l\u2082 for red string:",
+                options: ["+a\u2083", "-a\u2083"],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 3,
+                threejssubsubstep: 2,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                  "+a\u2081-a\u2082=0",
+                ],
+                "tobeshown":0
+              },
+              {
+                question: "What is the constraint equation for red string?",
+                options: [
+                  "+a\u2082+a\u2083=0",
+                  "+a\u2082-a\u2083=0",
+                  "-a\u2082+a\u2083=0",
+                  "-a\u2082-a\u2083=0",
+                ],
+                answer: 1,
+                threejsstep: "constraint",
+                threejssubstep: 2,
+                threejssubsubstep: 300,
+                show: [
+                  "Unknowns: a\u2081, a\u2082, a\u2083, T\u2081, T\u2082, ",
+                  "+30-T\u2081=3.0a\u2081",
+                  "+40+T\u2081-T\u2082=4.0a\u2082",
+                  "+T\u2082-50=5.0a\u2083",
+                  "+a\u2081-a\u2082=0",
+                ],
+                "tobeshown":0
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  }
+
 ];

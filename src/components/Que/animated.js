@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
 import React from "react";
+import { Link } from "react-router-dom";
 import { propTypes } from "react-latex";
 import * as THREE from "three";
 import typefaceFont from './fonts/optimer_bold.typeface.json'
@@ -71,6 +72,10 @@ import greenupeqn from './AUDIOS/stepTwo/greenupeqn.mp3'
 import blueupeqn from './AUDIOS/stepTwo/blueupeqn.mp3'
 import bluedowneqn from './AUDIOS/stepTwo/bluedowneqn.mp3'
 import greendowneqn from './AUDIOS/stepTwo/greendowneqn.mp3'
+import pulleycut from './AUDIOS/stepTwo/pulleycut.mp3'
+import pulleyeqn from './AUDIOS/stepTwo/pulleyeqn.mp3'
+import pulleyupeqn from './AUDIOS/stepTwo/pulleyupeqn.mp3'
+import pulleydowneqn from './AUDIOS/stepTwo/pulleydowneqn.mp3'
 import step3pone from './AUDIOS/stepThree/step3pone.mp3'
 import step3ptwo from './AUDIOS/stepThree/step3ptwo.mp3'
 import step3pthree from './AUDIOS/stepThree/step3pthree.mp3'
@@ -202,8 +207,16 @@ const TestThree = (props) => {
        
         // var uselessvar = 0.55
         //  manglik data ends
+        // if(props.atob == 0) {
+        //     var step = props.threejsstep;
+        // }
+        // if(props.atob == 1) {
+        //     var step = "fbd";
+        // }
+        // console.log(props.atob);
 
-        var step = props.threejsstep; // motion -> fbd -> constraint
+
+        var step = props.threejsstep;// motion -> fbd -> constraint
         var substep = props.threejssubstep; // for fbd it goes from 1 to n_b + n_p , for contraint 1 to n_s
         var subsubstep = props.threejssubsubstep; // 1 and 2 - used only for contraint , signifie sthe ends
         var answerClicked = props.answerClicked
@@ -403,7 +416,11 @@ const TestThree = (props) => {
                     console.log(totalunknowns);
                     count++;
                 }
-
+            
+                // if (answerClicked == 1 && iscorrect != 1 ) {
+                //     const alldata = require("./all_dick_1.json");
+                // }
+                
                 let player = document.getElementById('radio');
                 // player.pause()
                 // player.src = unka_audio[0];
@@ -556,7 +573,8 @@ const TestThree = (props) => {
         //var loader = new THREE.JSONLoader();
         //alldata =  fetch("C:/Users/Shivam Saxena/Desktop/alldata.json").then(results=> results.json() ).then(console.log);
         var alld_question_no = props.qno+1
-        const alldata = require("./all_dick_" + alld_question_no + ".json");
+        const  alldata = require("./all_dick_" + alld_question_no + ".json");
+        
         //console.log(alldata);
         const blockdata = alldata["block dick"];
         const pulleydata = alldata["pulley dick"]
@@ -574,50 +592,111 @@ const TestThree = (props) => {
         var j;
 
         var b;
-
+       
 
      // audio code by gaurav on 20june starts 
     //  audio for step2
-//    {for(let flag = 1 ; flag <= n_b ; flag++) {
-//       if(step == "fbd" && substep == flag && subsubstep == -100){
-//         //this is red block 
-//         gplayer.pause();
-//             gplayer.src = cut_aud[flag];
-//                               gplayer.play();
-//                               if ( iscorrect == 1) {
-//                                 gplayer.pause();
-//                                 // ganswerdone(t);
-//                               }
-//       }
-//       if(step == "fbd" && substep == flag && subsubstep == 1){
-//         //this is t1 upwards or downwards 
-//         gplayer.pause();
-//             gplayer.src = steptwoptwo;
-//                               gplayer.play();
-//                               if ( iscorrect == 1) {
-//                                 gplayer.pause();
-//                                 // ganswerdone(t);
-//                               }
-//       }
-//       if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
-//         gplayer.pause();
-//             gplayer.src = up_eqn[flag];
-//                               gplayer.play();
-//                               if ( iscorrect == 1) {
-//                                 gplayer.pause();
-//                                 // ganswerdone(t);
-//                               }
-//       }
-//       if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
-//         gplayer.pause();
-//             gplayer.src = down_eqn[flag];
-//                               gplayer.play();
-//                               if ( iscorrect == 1) {
-//                                 gplayer.pause();
-//                                 // ganswerdone(t);
-//                               }
-//       }
-//     }}
+   {for(let flag = 1 ; flag <= n_b ; flag++) {
+      if(step == "fbd" && substep == flag && subsubstep == -100){
+        //this is red block 
+        gplayer.pause();
+            gplayer.src = cut_aud[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 1){
+        //this is t1 upwards or downwards 
+        gplayer.pause();
+            gplayer.src = steptwoptwo;
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
+        gplayer.pause();
+            gplayer.src = up_eqn[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
+        gplayer.pause();
+            gplayer.src = down_eqn[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                // ganswerdone(t);
+                              }
+      }
+    }}
+
+    {for(let flag = 4 ; flag <= n_p+4 ; flag++) {
+        if(step == "fbd" && substep == flag && subsubstep == -100){
+          //this is pulley cut 
+          gplayer.pause();
+              gplayer.src = pulleycut;
+                                gplayer.play();
+                                if ( iscorrect == 1) {
+                                  gplayer.pause();
+                                  // ganswerdone(t);
+                                }
+        }
+        if(step == "fbd" && substep == flag && subsubstep == 1){
+          //this is t1 upwards or downwards 
+          gplayer.pause();
+              gplayer.src = steptwoptwo;
+                                gplayer.play();
+                                if ( iscorrect == 1) {
+                                  gplayer.pause();
+                                  // ganswerdone(t);
+                                }
+        }
+        if(step == "fbd" && substep == flag && subsubstep == 2){
+            //this is t1 upwards or downwards 
+            gplayer.pause();
+                gplayer.src = steptwoptwo;
+                                  gplayer.play();
+                                  if ( iscorrect == 1) {
+                                    gplayer.pause();
+                                    // ganswerdone(t);
+                                  }
+          }
+          if(step == "fbd" && substep == flag && subsubstep == 3){
+            //this is t1 upwards or downwards 
+            gplayer.pause();
+                gplayer.src = steptwoptwo;
+                                  gplayer.play();
+                                  if ( iscorrect == 1) {
+                                    gplayer.pause();
+                                    // ganswerdone(t);
+                                  }
+          }
+        if(step == "fbd" && substep == flag && subsubstep == 100 ){
+          gplayer.pause();
+              gplayer.src = pulleyeqn;
+                                gplayer.play();
+                                if ( iscorrect == 1) {
+                                  gplayer.pause();
+                                  // ganswerdone(t);
+                                }
+        }
+        // if(step == "fbd" && substep == flag && subsubstep == 100 && pulleydata[flag].acceleration[1]<0){
+        //   gplayer.pause();
+        //       gplayer.src = pulleydowneqn;
+        //                         gplayer.play();
+        //                         if ( iscorrect == 1) {
+        //                           gplayer.pause();
+        //                           // ganswerdone(t);
+        //                         }
+        // }
+      }}
 
     // audio  for step3 
     
@@ -1515,7 +1594,7 @@ const TestThree = (props) => {
             //20th June change ends
              //mangalik code ends
 
-
+            
 
             if ((step == "constraint" && (subsubstep == 0 || subsubstep == -1)) || (step == "motion") || (step == "fbd")) {
                 scene.add(meshpl[x - 1])
@@ -4148,10 +4227,10 @@ const TestThree = (props) => {
 
         mountRef.current.appendChild(renderer.domElement);
         return  () => mountRef.current.removeChild(renderer.domElement);
-        
+                      
     }, [props]);
 
-    return (<>
+    return (
         <div ref={mountRef}>
              
         {/* earlier src="" that is empty gaurav change to {gauravaudio} */}
@@ -4159,11 +4238,12 @@ const TestThree = (props) => {
             <audio src={gauravaudio} id="beep" class="hidden" preload="none"></audio>
             <audio src="" id="pysound" class="hidden" preload="none"></audio>
             <audio src="" id="gsound" class="hidden" preload="none"></audio>
+            
         </div>
-        {/* <button>mute</button> */}
-        </>
+       
+        
     );
-
+    
 
 
 }

@@ -48,6 +48,8 @@ const Questions = (props) => {
     const [wrong , setwrong] = useState("heart");
     const [backstl , setbackstl] = useState("bac");
     const [advtobas , setadvtobas] = useState(0);
+    const [showoldprint , setshowoldprint] = useState(false)
+    const [countnn,setcountnn] = useState(0);
      
     // var colors = ["red","blue","green"];
     // localStorage.setItem("my_colors", JSON.stringify(colors)); //store colors
@@ -95,7 +97,7 @@ const Questions = (props) => {
       
     }, 500);}
 
-  
+ 
    var corans;
     const checkAnswer = () => {
         //  debugger
@@ -109,13 +111,17 @@ const Questions = (props) => {
             // message.success('Correct');
             correct();
             setShowPrint(true);
+            setcountnn(1);
+            
         } else {
             // message.error('Opps! Try Again');
             incorrect();
         }
         setIscorrect(ansGiven === correctAns);
-        setAnswerClicked(answerClicked + 1)
+        setAnswerClicked(answerClicked + 1);
+      
     }
+
     var rcnt=0;
     var shownarray = [];
     const noOfSteps = stepDetails.stepQuestions.length;
@@ -123,6 +129,13 @@ const Questions = (props) => {
 
         shownarray[i] = stepDetails.stepQuestions[i].tobeshown;
     }
+
+    // if(currentQue == 1){
+    //     setshowoldprint(true);
+    // }
+    // else {
+    //     setshowoldprint(false);
+    // }
 
     // var currentquen=currentQue+1;
     // var currentquenn=currentQue+2;
@@ -235,6 +248,7 @@ const Questions = (props) => {
 
     
     var changeQuetion = () => {
+        setcountnn(1);
         var shown = stepDetails.stepQuestions[currentQue].tobeshown;
         form.setFieldsValue({ answer: '' });
         const noOfSteps = stepDetails.stepQuestions.length;
@@ -472,11 +486,42 @@ const Questions = (props) => {
                                             <h6>"hello"</h6>
                                         })} */}
 
-                                            {showPrint && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
+                                        
+                                            {/* { !currentQue && showPrint && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
                                                 
                                                 <div className='print' style={{fontWeight:"bold"}}
                                                 >{data}</div>
                                             ))}
+                                         */}
+                                         {/* { countnn!=0 && currentQue==0  && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))} */}
+
+                                        {!showPrint   && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))}
+                                            {showPrint   && stepDetails && stepDetails.stepQuestions[currentQue+1] && stepDetails?.stepQuestions[currentQue+1].show.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))}
+
+
+                                            {/* {showPrint && currentQue!=0 && stepDetails && stepDetails.stepQuestions[currentQue+1] && stepDetails?.stepQuestions[currentQue+1].show.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))} */}
+
+                                            {/* {currentQue+1==noOfSteps && showPrint && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))} */}
                                             
                                               {/* {
                                                 

@@ -499,16 +499,17 @@ const Questions = (props) => {
                                                 >{data}</div>
                                             ))} */}
 
-                                        {!showPrint   && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show.map((data, idx) => (
+                                        {!showPrint   && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show1.map((data, idx) => (
                                                 
                                                 <div className='print' style={{fontWeight:"bold"}}
                                                 >{data}</div>
                                             ))}
-                                            {showPrint   && stepDetails && stepDetails.stepQuestions[currentQue+1] && stepDetails?.stepQuestions[currentQue+1].show.map((data, idx) => (
+                                            {showPrint   && stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].show2.map((data, idx) => (
                                                 
                                                 <div className='print' style={{fontWeight:"bold"}}
                                                 >{data}</div>
                                             ))}
+                                           
 
 
                                             {/* {showPrint && currentQue!=0 && stepDetails && stepDetails.stepQuestions[currentQue+1] && stepDetails?.stepQuestions[currentQue+1].show.map((data, idx) => (

@@ -90,6 +90,15 @@ import step4l3 from './AUDIOS/stepFour/step4l3.mp3'
 import step4l4 from './AUDIOS/stepFour/step4l4.mp3'
 import step4l5 from './AUDIOS/stepFour/step4l5.mp3'
 import pyaudio from './pythonaudios/step_one_audio.mp3'
+import ekunknownacc from './AUDIOS/newstep1/ekunknownacc.mp3'  
+import dounknownacc from './AUDIOS/newstep1/dounknownacc.mp3'
+import teenunknownacc from './AUDIOS/newstep1/teenunknownacc.mp3'
+import charunknownacc from './AUDIOS/newstep1/charunknownacc.mp3'
+import paanchunknownacc from './AUDIOS/newstep1/paanchunknownacc.mp3'
+import ekunknowntension from './AUDIOS/newstep1/ekunknowntension.mp3'
+import dotensions from './AUDIOS/newstep1/dotensions.mp3'
+import teentensions from './AUDIOS/newstep1/teentensions.mp3'
+import chartensions from './AUDIOS/newstep1/chartensions.mp3'
 // import Audiogaurav from "./Audiogaurav";
 
 
@@ -242,6 +251,8 @@ const TestThree = (props) => {
         var cut_aud = [ steptwopone , steptwopone, step2yellowcut, step2bluecut , step2greencut]
         var step3_aud = [step3pone , step3pone , step3ptwo , step3pthree , step3pfour ,step3pfive , step3psix ,step3pseven ]
         var step4_audl = [step4l1 , step4l1 , step4l2 ,step4l3 , step4l4 , step4l5]
+        var unknownacc = [ekunknownacc ,dounknownacc,teenunknownacc, charunknownacc , paanchunknownacc]
+        var unknowntension = [ekunknowntension, dotensions, teentensions ,chartensions ]
         // var numbering = [ek, two, teen , char , paanch, che , a1, a2, a3, a4]
         
 
@@ -318,27 +329,62 @@ const TestThree = (props) => {
             function ganswerdone(y) {
            
                 if (y==answer[0]) {
-                    gplayer.src = ek;
+                    gplayer.src = unknownacc[0];
                     gplayer.play();
                 }
                 else if (y==answer[1]) {
-                    gplayer.src = two;
+                    gplayer.src = unknownacc[1];
                     gplayer.play();
                 }
                 else if (y==answer[2]) {
-                    gplayer.src = teen;
+                    gplayer.src = unknownacc[2];
                     gplayer.play();
                 }
                 else if (y==answer[3]) {
-                    gplayer.src = char;
+                    gplayer.src = unknownacc[3];
                     gplayer.play();
                 }
                 else if (y==answer[4]) {
-                    gplayer.src = ginone;
+                    gplayer.src = unknownacc[4];
                     gplayer.play();
                 }
                 else if (y==answer[5]) {
-                    gplayer.src = ginone;
+                    gplayer.src = unknownacc[4];
+                    gplayer.play();
+                }
+                
+
+                // setTimeout(
+                // function(){
+                
+                // player.pause();},5000); 
+        
+            }
+         
+            function ganswerdonetension(y) {
+           
+                if (y==answer[0]) {
+                    gplayer.src = unknowntension[0];
+                    gplayer.play();
+                }
+                else if (y==answer[1]) {
+                    gplayer.src = unknowntension[1];
+                    gplayer.play();
+                }
+                else if (y==answer[2]) {
+                    gplayer.src = unknowntension[2];
+                    gplayer.play();
+                }
+                else if (y==answer[3]) {
+                    gplayer.src = unknowntension[3];
+                    gplayer.play();
+                }
+                else if (y==answer[4]) {
+                    gplayer.src = unknowntension[3];
+                    gplayer.play();
+                }
+                else if (y==answer[5]) {
+                    gplayer.src = unknowntension[3];
                     gplayer.play();
                 }
                 
@@ -446,22 +492,24 @@ const TestThree = (props) => {
                     function(){
                         pyplayer.pause();
                      
-                        },7750); 
+                        },7750);
+
                 gplayer.pause();
-                gplayer.src = steponeptwo;
+                ganswerdone(t);
+                // gplayer.src = steponeptwo;
                 gplayer.play();
-              setTimeout(
+            //   setTimeout(
                     
-                    function(){
+            //         function(){
                      
-                        ganswerdone(t);
-                        setTimeout(function(){
-                            gplayer.src = steponepthree;
-                            gplayer.currentTime = 0.35;
-                gplayer.play();
-                        },1450)
-                    }
-                    ,4000); 
+                        
+            //             setTimeout(function(){
+            //                 gplayer.src = steponepthree;
+            //                 gplayer.currentTime = 0.35;
+            //     gplayer.play();
+            //             },1450)
+            //         }
+            //         ,4000); 
                 
 
 
@@ -518,22 +566,28 @@ const TestThree = (props) => {
                     },9500); 
 
                     
-                    gplayer.src = steponepfive;
-                    gplayer.play();
-                    setTimeout(
-                        function(){
+                    // gplayer.src = steponepfive;
+                    // gplayer.play();
+                    ganswerdonetension(t);
+                    // setTimeout(
+                    //     function(){
                             
-                            ganswerdone(t);
-                            setTimeout(function(){
-                                gplayer.src = steponepsix;
-                              gplayer.play();
-                                  setTimeout(function(){
-                                    gplayer.src = steponepseven;
-                                 gplayer.play();
-                                   },3200);
-                            },1450)
-                        },4000);   
+                    //         ganswerdone(t);
+                    //         setTimeout(function(){
+                    //             gplayer.src = steponepsix;
+                    //           gplayer.play();
+                    //               setTimeout(function(){
+                    //                 gplayer.src = steponepseven;
+                    //              gplayer.play();
+                    //                },3200);
+                    //         },1450)
+                    //     },4000);   
             }
+        }
+
+        if (step == "motion" && substep == 2) {
+            gplayer.src = steponepseven;
+                                 gplayer.play();
         }
 
         // if (step == "fbd" && subsubstep == -100) {

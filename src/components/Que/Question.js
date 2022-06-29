@@ -376,15 +376,40 @@ const Questions = (props) => {
         setStart(true);
         setbackstl("backstylehide")
     }
-
+    var fcheading = stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].threejsstep;
+    var fclen = stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc.length;
+    function trialsh() {
+        for(let inde=0 ; inde < fclen ; inde++ ){
+            <div className='print' style={{fontWeight:"bold"}}
+                            >stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc[inde]</div>
+        }
+    }
     return (
         <Container >
-        
-            <Form form={form} onFinish={checkAnswer} >
+             
+            <Form form={form} onFinish={checkAnswer}  >
                 <Row>
                     <Col span={6}>
+                   
+                                            
                         <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
+                        <Col span={24} className="eqa">
+                        
+                        { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfcheading.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"2000" , textAlign:"center"
+                                     }}
+                                                >{data}</div>
+                                            ))}
+                        
+                        { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"bold"}}
+                                                >{data}</div>
+                                            ))}
+                                            </Col>
                     </Col>
+                
                     <Col span={1}>
                     </Col>
                     <Col span={16}>

@@ -345,7 +345,7 @@ const Questions = (props) => {
 
     }
          
-
+     var fchead = stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfcheading;
 
     // this set show is now present in check answer
     const onChangeAns = () => {
@@ -394,13 +394,11 @@ const Questions = (props) => {
                                             
                         <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
                         <Col span={24} className="eqa">
-                        
-                        { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfcheading.map((data, idx) => (
-                                                
-                                                <div className='print' style={{fontWeight:"2000" , textAlign:"center"
+                        <div className='print' style={{fontWeight:"bold" , textAlign:"center"
                                      }}
-                                                >{data}</div>
-                                            ))}
+                                                >{fchead}</div>
+                        
+                      
                         
                         { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc.map((data, idx) => (
                                                 

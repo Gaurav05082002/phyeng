@@ -1325,7 +1325,7 @@ const TestThree = (props) => {
                     normal_chotasphere.position.y = normal_from.y;
                     normal_chotasphere.position.z = 0
 
-                    if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1)) {
+                    if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1 || subsubstep == 200)) {
                         scene.add(normal_chotasphere);
                     }
         
@@ -3172,7 +3172,7 @@ const TestThree = (props) => {
                     cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
                 }
 
-                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1])) {
+                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == 200)) {
                     scene.add(chotasphere[cs_count]);
                     if (subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
@@ -3657,7 +3657,7 @@ const TestThree = (props) => {
                 }*/
 
 
-                if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1)) {
+                if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == 200)) {
                     scene.add(chotasphere[cs_count]);
                     if (subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])

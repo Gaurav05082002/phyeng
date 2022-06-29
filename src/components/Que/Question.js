@@ -394,11 +394,21 @@ const Questions = (props) => {
                                             
                         <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
                         <Col span={24} className="eqa">
+<<<<<<< HEAD
                         <div className='print' style={{fontWeight:"bold" , textAlign:"center"
                                      }}
                                                 >{fchead}</div>
                         
                       
+=======
+                        
+                        { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfcheading.map((data, idx) => (
+                                                
+                                                <div className='print' style={{fontWeight:"2000" , textAlign:"center"
+                                     }}
+                                                >{data}</div>
+                                            ))}
+>>>>>>> 53a585c002286a15e3e49ee71e465443e161a430
                         
                         { stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc.map((data, idx) => (
                                                 

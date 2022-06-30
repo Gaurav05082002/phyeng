@@ -1325,7 +1325,7 @@ const TestThree = (props) => {
                     normal_chotasphere.position.y = normal_from.y;
                     normal_chotasphere.position.z = 0
 
-                    if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1 || subsubstep == 200)) {
+                    if (step == "fbd" && substep == i && (subsubstep == -200 || subsubstep == j+1 || subsubstep == -300)) {
                         scene.add(normal_chotasphere);
                     }
         
@@ -3172,7 +3172,7 @@ const TestThree = (props) => {
                     cone[cs_count].rotation.z = block_angle[i - 1] - Math.PI/2
                 }
 
-                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == 200)) {
+                if (step == "fbd" && substep == i && (subsubstep == -100 || subsubstep == j + 1 + block_normals[i - 1]  || subsubstep == -300)) {
                     scene.add(chotasphere[cs_count]);
                     if (subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])
@@ -3253,6 +3253,24 @@ const TestThree = (props) => {
             mg_cone.rotation.z = Math.PI
             //}
 
+            //adding code for mg chotasphere on 30 June
+
+            const material_mg_chotasphere = new THREE.MeshBasicMaterial()
+            material_mg_chotasphere.color = new THREE.Color(0xffffff)
+            //materialfbd.transparent = true
+            //materialfbd.opacity = 0.8
+            var mg_chotasphere = new THREE.Mesh(
+                new THREE.SphereGeometry(0.1, 16, 16),
+                material_mg_chotasphere
+            )
+
+            mg_chotasphere.position.x = mg_from.x;
+            mg_chotasphere.position.y = mg_from.y;
+
+            if (step == "fbd" && substep == i && subsubstep == -300)
+                scene.add(mg_chotasphere)
+
+            // code for mg chotasphere ends
 
             if (step == "fbd" && substep == i && (subsubstep > j + 1 + block_normals[i - 1] || subsubstep == 100)) {
                 scene.add(mg_line)
@@ -3657,7 +3675,7 @@ const TestThree = (props) => {
                 }*/
 
 
-                if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == 200)) {
+                if (step == "fbd" && substep == i + n_b && (subsubstep == -100 || subsubstep == j + 1 || subsubstep == -300)) {
                     scene.add(chotasphere[cs_count]);
                     if (subsubstep != -100) {
                         //audio = new Audio(fbdi_audio[i - 1])

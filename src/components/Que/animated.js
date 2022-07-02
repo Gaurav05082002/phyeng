@@ -59,8 +59,10 @@ import ginthree from './AUDIOS/stepOne/step_one_audioteen.mp3'
 import ginfour from './AUDIOS/stepOne/step_one_audiochar.mp3'
 import steptwopone from './AUDIOS/stepTwo/step_two_audiopart1.mp3'
 import steptwoptwo from './AUDIOS/stepTwo/step_two_audiopart2.mp3'
+import iscutf from './AUDIOS/stepTwo/iscutf.mp3'
 import redblockupeqn from './AUDIOS/stepTwo/redblockeqnaudio.mp3'
 import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
+import acccolor from './AUDIOS/stepTwo/redbluegreenyellow.mp3'
 // import redblockdowneqn from './AUDIOS/stepTwo/redblockdowneqn.mp3'
 import step2yellowcut from './AUDIOS/stepTwo/step2yellblockcut.mp3'
 import step2bluecut from './AUDIOS/stepTwo/step2bluecut.mp3'
@@ -100,11 +102,16 @@ import dotensions from './AUDIOS/newstep1/dotensions.mp3'
 import teentensions from './AUDIOS/newstep1/teentensions.mp3'
 import chartensions from './AUDIOS/newstep1/chartensions.mp3'
 // import Audiogaurav from "./Audiogaurav";
+import awesome from './AUDIOS/motivate/awe.mp3'
+import bahutbadiya from './AUDIOS/motivate/bahutbadiya.mp3'
+import nice from './AUDIOS/motivate/nice.mp3'
+import shabash from './AUDIOS/motivate/shabash.mp3'
+import welldone from './AUDIOS/motivate/welldone.mp3'
 
-
-
+import Back from "./Back";
+import {Howl, Howler} from 'howler';
 const TestThree = (props) => {
-
+   
     const mountRef = useRef(null);
 
     useEffect(() => {
@@ -190,9 +197,11 @@ const TestThree = (props) => {
         //             },5000);
         // }
         // var audioncount = 0;
-
+        
 
         // code by gaurav for audio on 15june ends 
+
+
 
 
 
@@ -253,6 +262,7 @@ const TestThree = (props) => {
         var step4_audl = [step4l1 , step4l1 , step4l2 ,step4l3 , step4l4 , step4l5]
         var unknownacc = [ekunknownacc ,dounknownacc,teenunknownacc, charunknownacc , paanchunknownacc]
         var unknowntension = [ekunknowntension, dotensions, teentensions ,chartensions ]
+        var motivate = [bahutbadiya ,nice , shabash , welldone]
         // var numbering = [ek, two, teen , char , paanch, che , a1, a2, a3, a4]
         
 
@@ -327,7 +337,7 @@ const TestThree = (props) => {
 
             var y;
             function ganswerdone(y) {
-           
+              
                 if (y==answer[0]) {
                     gplayer.src = unknownacc[0];
                     gplayer.play();
@@ -434,8 +444,18 @@ const TestThree = (props) => {
         //     // player.pause();},5000); 
     
         // }
-
+        var ranval = Math.floor(Math.random() * 4);
         var audioncount = 0;
+        var soundacc = new Howl({
+            
+            src: motivate[ranval],
+            // autoplay: true,
+            // loop: true,
+            // volume: 0.5,
+            onend: function() {
+                ganswerdone(t);
+            }
+          });
         
         if (step == "motion" && substep == 0) {
             let player = document.getElementById('radio');
@@ -495,9 +515,10 @@ const TestThree = (props) => {
                         },7750);
 
                 gplayer.pause();
-                ganswerdone(t);
+                soundacc.play();
+                // ganswerdone(t);
                 // gplayer.src = steponeptwo;
-                gplayer.play();
+                // gplayer.play();
             //   setTimeout(
                     
             //         function(){
@@ -518,7 +539,17 @@ const TestThree = (props) => {
                 
             }
         }
-
+        
+        var soundtension = new Howl({
+            
+            src: motivate[ranval],
+            // autoplay: true,
+            // loop: true,
+            // volume: 0.5,
+            onend: function() {
+                ganswerdonetension(t);
+            }
+          });
         if (step == "motion" && substep == 1) {
             let player = document.getElementById('radio');
             player.pause();
@@ -568,7 +599,9 @@ const TestThree = (props) => {
                     
                     // gplayer.src = steponepfive;
                     // gplayer.play();
-                    ganswerdonetension(t);
+                    // ganswerdonetension(t);
+                    gplayer.pause();
+                    soundtension.play();
                     // setTimeout(
                     //     function(){
                             
@@ -650,6 +683,22 @@ const TestThree = (props) => {
 
      // audio code by gaurav on 20june starts 
     //  audio for step2
+    var soundfbd = new Howl({
+            
+        src: motivate[ranval],
+        // autoplay: true,
+        // loop: true,
+        // volume: 0.5,
+        // onend: function() {
+        //     ganswerdonetension(t);
+        // }
+      });
+      
+  
+
+
+
+
    {for(let flag = 1 ; flag <= n_b ; flag++) {
       if(step == "fbd" && substep == flag && subsubstep == -100){
         //this is red block 
@@ -658,16 +707,30 @@ const TestThree = (props) => {
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
+                                soundfbd.play();
+                                // sund.play("track01");
+                                // sund.on('end', function(){
+                                    // sund.play("track02");
+                                //   });
+                                
                                 // ganswerdone(t);
                               }
+                              
       }
       if(step == "fbd" && substep == flag && subsubstep == 1){
         //this is t1 upwards or downwards 
         gplayer.pause();
+        if(flag==1){
             gplayer.src = steptwoptwo;
+        }
+        if(flag>1) {
+            gplayer.src = iscutf;
+        }
+            
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
+                                soundfbd.play();
                                 // ganswerdone(t);
                               }
       }
@@ -677,6 +740,7 @@ const TestThree = (props) => {
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
+                                soundfbd.play();
                                 // ganswerdone(t);
                               }
       }
@@ -686,11 +750,12 @@ const TestThree = (props) => {
                               gplayer.play();
                               if ( iscorrect == 1) {
                                 gplayer.pause();
+                                soundfbd.play();
                                 // ganswerdone(t);
                               }
       }
     }}
-
+    var newn = 0;
     {for(let flag = 4 ; flag <= n_p+4 ; flag++) {
         if(step == "fbd" && substep == flag && subsubstep == -100){
           //this is pulley cut 
@@ -699,36 +764,40 @@ const TestThree = (props) => {
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
+                                  soundfbd.play();
                                   // ganswerdone(t);
                                 }
         }
         if(step == "fbd" && substep == flag && subsubstep == 1){
           //this is t1 upwards or downwards 
           gplayer.pause();
-              gplayer.src = steptwoptwo;
+          gplayer.src = iscutf;
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
+                                  soundfbd.play();
                                   // ganswerdone(t);
                                 }
         }
         if(step == "fbd" && substep == flag && subsubstep == 2){
             //this is t1 upwards or downwards 
             gplayer.pause();
-                gplayer.src = steptwoptwo;
+                gplayer.src = iscutf;
                                   gplayer.play();
                                   if ( iscorrect == 1) {
                                     gplayer.pause();
+                                    soundfbd.play();
                                     // ganswerdone(t);
                                   }
           }
           if(step == "fbd" && substep == flag && subsubstep == 3){
             //this is t1 upwards or downwards 
             gplayer.pause();
-                gplayer.src = steptwoptwo;
+                gplayer.src = iscutf;
                                   gplayer.play();
                                   if ( iscorrect == 1) {
                                     gplayer.pause();
+                                    soundfbd.play();
                                     // ganswerdone(t);
                                   }
           }
@@ -738,6 +807,7 @@ const TestThree = (props) => {
                                 gplayer.play();
                                 if ( iscorrect == 1) {
                                   gplayer.pause();
+                                  soundfbd.play();
                                   // ganswerdone(t);
                                 }
         }
@@ -753,6 +823,11 @@ const TestThree = (props) => {
       }}
 
     // audio  for step3 
+    
+      
+      // Play each of the track.s
+      
+      
     
 
 
@@ -4292,7 +4367,7 @@ const TestThree = (props) => {
         }
 
         tick()
-
+        
 
         //******************************************SHIVAM CODE ENDS */
         //20th June last change ends, basically I changed the whole clock-tick part

@@ -142,12 +142,12 @@ return (
       <Card.Grid style={gridStyle}>1</Card.Grid> */}
       
 
-        <Link to="/home/39" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >1</Card.Grid></Link>
-        <Link to="/home/40" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >2</Card.Grid></Link>
-        <Link to="/home/3" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >3</Card.Grid></Link>
-        <Link to="/home/4" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >4</Card.Grid></Link>
-        <Link to="/home/5" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >5</Card.Grid></Link>
-        <Link to="/home/6" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >6</Card.Grid></Link>
+        <Link to="/home/41" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >1</Card.Grid></Link>
+        <Link to="/home/39" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >2</Card.Grid></Link>
+        <Link to="/home/43" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >3</Card.Grid></Link>
+        <Link to="/home/42" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >4</Card.Grid></Link>
+        <Link to="/home/44" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >5</Card.Grid></Link>
+        {/* <Link to="/home/6" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >6</Card.Grid></Link>
         <Link to="/home/7" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >7</Card.Grid></Link>
         <Link to="/home/8" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >8</Card.Grid></Link>
         <Link to="/home/9" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >9</Card.Grid></Link>
@@ -158,7 +158,7 @@ return (
         <Link to="/home/14" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >14</Card.Grid></Link>
         <Link to="/home/15" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >15</Card.Grid></Link>
         <Link to="/home/16" className="linkstla" ><Card.Grid style={gridStyle} className="gristl" >16</Card.Grid></Link>
-       
+        */}
         
       </Card>
     </div>
@@ -170,31 +170,3 @@ return (
 
 export default Chapters;
 
-<div className="ques">
-      <Card title="Questions" id='qloop' style={linkstyle}>
-      {/* <Card.Grid style={gridStyle}>1</Card.Grid>
-      <Card.Grid style={gridStyle}>1</Card.Grid>
-      <Card.Grid style={gridStyle}>1</Card.Grid>
-      <Card.Grid style={gridStyle}>1</Card.Grid> */}
-      
-
-        <Link to="/home/1" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >1</Card.Grid></Link>
-        <Link to="/home/2" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >2</Card.Grid></Link>
-        <Link to="/home/3" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >3</Card.Grid></Link>
-        <Link to="/home/4" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >4</Card.Grid></Link>
-        <Link to="/home/5" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >5</Card.Grid></Link>
-        <Link to="/home/6" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >6</Card.Grid></Link>
-        <Link to="/home/7" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >7</Card.Grid></Link>
-        <Link to="/home/8" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >8</Card.Grid></Link>
-        <Link to="/home/9" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >9</Card.Grid></Link>
-        <Link to="/home/10" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >10</Card.Grid></Link>
-        <Link to="/home/11" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >11</Card.Grid></Link>
-        <Link to="/home/12" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >12</Card.Grid></Link>
-        <Link to="/home/13" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >13</Card.Grid></Link>
-        <Link to="/home/14" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >14</Card.Grid></Link>
-        <Link to="/home/15" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >15</Card.Grid></Link>
-        <Link to="/home/16" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >16</Card.Grid></Link>
-       
-        
-      </Card>
-    </div>

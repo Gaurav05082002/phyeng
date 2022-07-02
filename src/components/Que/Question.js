@@ -8,6 +8,8 @@ import { Row, Col, Button, Form, Radio, Alert, message } from 'antd';
 import constraint from './constraint.mp3'
 import { useParams } from 'react-router';
 import { FcApproval , FcDisapprove} from "react-icons/fc";
+import Back from "./Back";
+import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
 // import { Card } from 'antd';
 import { Link } from "react-router-dom";
 // import Audiogaurav from './Audiogaurav.js';
@@ -20,6 +22,7 @@ import {
 
 } from 'reactstrap';
 import TestThree from './animated.js';
+import { GiPlayerBase } from 'react-icons/gi';
 var Latex = require('react-latex');
 
 
@@ -73,6 +76,8 @@ const Questions = (props) => {
 
     }
 
+    var gplayer = document.getElementById('gsound');
+
     //function for advancee to basic starts
     // var threejstep;
     //  function advancetobasic() {
@@ -90,6 +95,10 @@ const Questions = (props) => {
              setTimeout(() => { setright("heartb")
                
              }, 500);
+             gplayer.src = ginone;
+             gplayer.play();
+             
+
   
   }
     function incorrect() {setright("heart");  setwrong("hearta"); 
@@ -384,9 +393,12 @@ const Questions = (props) => {
                             >stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc[inde]</div>
         }
     }
+
+      
+
     return (
         <Container >
-             
+              <audio src="" id="gsound" class="hidden" preload="none"></audio>
             <Form form={form} onFinish={checkAnswer}  >
                 <Row>
                     <Col span={6}>
@@ -413,7 +425,8 @@ const Questions = (props) => {
                     <Col span={16}>
                         <Row className="answers">
                             <Col span={24}>
-                            <Link to="/chapters" className={backstl}   ><Button className={backstl} type="primary" > Back </Button></Link>
+                            <Back />
+                            {/* <Link to="/login"    ><Button  type="primary" > Back </Button></Link> */}
                                 <div className="question">
                                 
                                     <div>Question 1</div>

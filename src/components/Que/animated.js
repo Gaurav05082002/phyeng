@@ -53,7 +53,7 @@ import steponepfour from './AUDIOS/stepOne/step_one_audiopart4.mp3'
 import steponepfive from './AUDIOS/stepOne/step_one_audiopart5.mp3'
 import steponepsix from './AUDIOS/stepOne/step_one_audiopart6.mp3'
 import steponepseven from './AUDIOS/stepOne/step_one_audiopart7.mp3'
-import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
+// import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
 import gintwo from './AUDIOS/stepOne/step_one_audiodo.mp3'
 import ginthree from './AUDIOS/stepOne/step_one_audioteen.mp3'
 import ginfour from './AUDIOS/stepOne/step_one_audiochar.mp3'
@@ -107,6 +107,9 @@ import bahutbadiya from './AUDIOS/motivate/bahutbadiya.mp3'
 import nice from './AUDIOS/motivate/nice.mp3'
 import shabash from './AUDIOS/motivate/shabash.mp3'
 import welldone from './AUDIOS/motivate/welldone.mp3'
+import blockeqnad from './AUDIOS/advance/blockeqnad.mp3'
+import koibaatnahi from './AUDIOS/advance/koibaatnahi.mp3'
+import pulleyeqnad from './AUDIOS/advance/pulleyeqnad.mp3'
 
 import Back from "./Back";
 import {Howl, Howler} from 'howler';
@@ -240,6 +243,7 @@ const TestThree = (props) => {
         var answerClicked = props.answerClicked
         var iscorrect = props.iscorrect
         var uselessvar = 0.55
+        var click = props.click
 
         
 
@@ -562,6 +566,7 @@ const TestThree = (props) => {
             // pyplayer.play();
             setTimeout( ()=>{ pyplayer.pause();
                                    },16500 );
+
                     gplayer.pause();
                     gplayer.src = steponepfour;
                     gplayer.play();
@@ -618,9 +623,20 @@ const TestThree = (props) => {
             }
         }
 
+
+        var soundfbd = new Howl({
+            
+            src: motivate[ranval]
+            
+          });
+
         if (step == "motion" && substep == 2) {
             gplayer.src = steponepseven;
                                  gplayer.play();
+                                 if ( iscorrect == 1) {
+                                    gplayer.pause();
+                                    soundfbd.play();
+                                 }
         }
 
         // if (step == "fbd" && subsubstep == -100) {
@@ -700,6 +716,18 @@ const TestThree = (props) => {
 
 
    {for(let flag = 1 ; flag <= n_b ; flag++) {
+      
+    if(step == "fbd" && substep == flag && subsubstep == -200){
+        //this is red block 
+        gplayer.src = steponepseven;
+                                 gplayer.play();
+                                 if ( iscorrect == 1) {
+                                    gplayer.pause();
+                                    soundfbd.play();
+                                 }
+                              
+      }
+
       if(step == "fbd" && substep == flag && subsubstep == -100){
         //this is red block 
         gplayer.pause();
@@ -734,7 +762,24 @@ const TestThree = (props) => {
                                 // ganswerdone(t);
                               }
       }
-      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]>0){
+      if(step == "fbd" && substep == flag && subsubstep == 2){
+        //this is t1 upwards or downwards 
+        gplayer.pause();
+        if(flag==1){
+            gplayer.src = steptwoptwo;
+        }
+        if(flag>1) {
+            gplayer.src = iscutf;
+        }
+            
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                soundfbd.play();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 100   && blockdata[flag].acceleration[1]>0){
         gplayer.pause();
             gplayer.src = up_eqn[flag];
                               gplayer.play();
@@ -744,7 +789,7 @@ const TestThree = (props) => {
                                 // ganswerdone(t);
                               }
       }
-      if(step == "fbd" && substep == flag && subsubstep == 100 && blockdata[flag].acceleration[1]<0){
+      if(step == "fbd" && substep == flag && subsubstep == 100  && blockdata[flag].acceleration[1]<0){
         gplayer.pause();
             gplayer.src = down_eqn[flag];
                               gplayer.play();
@@ -755,6 +800,109 @@ const TestThree = (props) => {
                               }
       }
     }}
+
+// for advance step audio starts 
+
+{for(let flag = 1 ; flag <= n_b ; flag++) {
+      
+    if(step == "fbd" && substep == flag && subsubstep == -200){
+        //this is red block 
+        gplayer.src = steponepseven;
+                                 gplayer.play();
+                                 if ( iscorrect == 1) {
+                                    gplayer.pause();
+                                    soundfbd.play();
+                                 }
+                              
+      }
+
+      if(step == "fbd" && substep == flag && subsubstep == -100){
+        //this is red block 
+        gplayer.pause();
+            gplayer.src = cut_aud[flag];
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                soundfbd.play();
+                                // sund.play("track01");
+                                // sund.on('end', function(){
+                                    // sund.play("track02");
+                                //   });
+                                
+                                // ganswerdone(t);
+                              }
+                              
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 1){
+        //this is t1 upwards or downwards 
+        gplayer.pause();
+        if(flag==1){
+            gplayer.src = steptwoptwo;
+        }
+        if(flag>1) {
+            gplayer.src = iscutf;
+        }
+            
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                soundfbd.play();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag && subsubstep == 2){
+        //this is t1 upwards or downwards 
+        gplayer.pause();
+        if(flag==1){
+            gplayer.src = steptwoptwo;
+        }
+        if(flag>1) {
+            gplayer.src = iscutf;
+        }
+            
+                              gplayer.play();
+                              if ( iscorrect == 1) {
+                                gplayer.pause();
+                                soundfbd.play();
+                                // ganswerdone(t);
+                              }
+      }
+      if(step == "fbd" && substep == flag &&  subsubstep == -300 && blockdata[flag].acceleration[1]>0){
+        gplayer.pause();
+            gplayer.src = blockeqnad;
+            gplayer.play();
+            if ( answerClicked > 0 && iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+                // ganswerdone(t);
+}
+if (answerClicked > 0 && iscorrect != 1) {
+                gplayer.pause();
+            gplayer.src = koibaatnahi;
+            gplayer.play();
+              }
+      }
+      if(step == "fbd" && substep == flag &&  subsubstep == -300 && blockdata[flag].acceleration[1]<0){
+        gplayer.pause();
+        gplayer.src = blockeqnad;
+        gplayer.play();
+     if ( answerClicked > 0 && iscorrect == 1) {
+                            gplayer.pause();
+                            soundfbd.play();
+                            // ganswerdone(t);
+        }
+        if (answerClicked > 0 && iscorrect != 1) {
+                            gplayer.pause();
+                        gplayer.src = koibaatnahi;
+                        gplayer.play();
+                          }
+        
+      }
+    }}
+
+// for advance step audio ends
+
+
     var newn = 0;
     {for(let flag = 4 ; flag <= n_p+4 ; flag++) {
         if(step == "fbd" && substep == flag && subsubstep == -100){
@@ -801,7 +949,7 @@ const TestThree = (props) => {
                                     // ganswerdone(t);
                                   }
           }
-        if(step == "fbd" && substep == flag && subsubstep == 100 ){
+        if(step == "fbd" && substep == flag && (subsubstep == 100 || subsubstep == -300)){
           gplayer.pause();
               gplayer.src = pulleyeqn;
                                 gplayer.play();

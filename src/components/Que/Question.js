@@ -53,7 +53,8 @@ const Questions = (props) => {
     const [advtobas , setadvtobas] = useState(0);
     const [showoldprint , setshowoldprint] = useState(false)
     const [countnn,setcountnn] = useState(0);
-     
+    const [bgfchead , setbgfchead] = useState("white")
+     const [click , setclick] = useState(5);
     // var colors = ["red","blue","green"];
     // localStorage.setItem("my_colors", JSON.stringify(colors)); //store colors
     // var storedColors = JSON.parse(localStorage.getItem("my_colors")); //get them back
@@ -121,22 +122,27 @@ const Questions = (props) => {
             correct();
             setShowPrint(true);
             setcountnn(1);
+            setclick(5);
             
         } else {
             // message.error('Opps! Try Again');
             incorrect();
+           
         }
         setIscorrect(ansGiven === correctAns);
         setAnswerClicked(answerClicked + 1);
+        
       
     }
 
     var rcnt=0;
     var shownarray = [];
+    var colorarray = [];
     const noOfSteps = stepDetails.stepQuestions.length;
     for (let i = 0; i < noOfSteps; i++) {
 
         shownarray[i] = stepDetails.stepQuestions[i].tobeshown;
+        colorarray[i] = stepDetails.stepQuestions[i].showfcheading;
     }
 
     // if(currentQue == 1){
@@ -253,15 +259,41 @@ const Questions = (props) => {
         //     setwrong("heart")
     
         // }
-    
 
-    
+    const bgcolor = () => {
+        var fhead = colorarray[currentQue+1];
+        if(fhead == "Red block") {
+            setbgfchead("red");
+        }
+        else if(fhead == "Blue block") {
+            setbgfchead("blue");
+        }
+        else if(fhead == "Yellow block") {
+            setbgfchead("yellow");
+        }
+        else if(fhead == "Green block") {
+            setbgfchead("green");
+        }
+        else if(fhead == "Second pulley"){
+            setbgfchead("white");
+        }
+        else {
+            setbgfchead("white");
+        }
+       
+    }
+
+   
     var changeQuetion = () => {
+  
+        
         setcountnn(1);
         var shown = stepDetails.stepQuestions[currentQue].tobeshown;
         form.setFieldsValue({ answer: '' });
         const noOfSteps = stepDetails.stepQuestions.length;
-        setShowPrint(false)
+        setShowPrint(false);
+        // bgcolor();
+
         if (currentQue + 1 === noOfSteps) {
             //change the step
             let newStep = [...step];
@@ -270,8 +302,10 @@ const Questions = (props) => {
             newStep[c].stepStatus = 'inactive';
             newStep[c + 1].stepStatus = 'active';
             setSteps(newStep);
-            setcurrentQue(0)
-            setStepSelected(stepSelected + 1)
+            setcurrentQue(0);
+           
+            setStepSelected(stepSelected + 1);
+           
         } else {
         // for (let index = 0; index < 4; index++) {
         //     if(shownarray[index]==0){
@@ -310,6 +344,8 @@ const Questions = (props) => {
         
         if(kb < noOfSteps){
             setcurrentQue(kb);
+        
+            
         }
         else{
             //change the step
@@ -319,12 +355,17 @@ const Questions = (props) => {
             newStep[c].stepStatus = 'inactive';
             newStep[c + 1].stepStatus = 'active';
             setSteps(newStep);
-            setcurrentQue(0)
-            setStepSelected(stepSelected + 1)
+            setcurrentQue(0);
+          
+            setStepSelected(stepSelected + 1);
+        
+
         }
     }
     else {
+       
         setcurrentQue(currentQue + 1); 
+       
     }
             // if(shownarray[1]==1) {
             //     setcurrentQue(currentQue + 1)
@@ -347,10 +388,13 @@ const Questions = (props) => {
         }
             
         
-        setAnswerClicked(0)
-        setIscorrect(false)
-        setright("heart")
-        setwrong("heart")
+        setAnswerClicked(0);
+        setIscorrect(false);
+        setright("heart");
+        setwrong("heart");
+        // bgcolor();
+        
+       
 
     }
          
@@ -385,6 +429,9 @@ const Questions = (props) => {
         setStart(true);
         setbackstl("backstylehide")
     }
+    const handleStop = () => {
+        setStart(false);
+    }
     var fcheading = stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].threejsstep;
     var fclen = stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc.length;
     function trialsh() {
@@ -406,7 +453,7 @@ const Questions = (props) => {
                                             
                         <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
                         <Col span={24} className="eqa">
-                        <div className='print' style={{fontWeight:"bold" , textAlign:"center"
+                        <div className='print' style={{fontWeight:"bold" , textAlign:"center" , backgroundColor:bgfchead
                                      }}
                                                 >{fchead}</div>
                         
@@ -425,7 +472,7 @@ const Questions = (props) => {
                     <Col span={16}>
                         <Row className="answers">
                             <Col span={24}>
-                            <Back />
+                            {/* <Back className = {backstl} /> */}
                             {/* <Link to="/login"    ><Button  type="primary" > Back </Button></Link> */}
                                 <div className="question">
                                 
@@ -435,6 +482,7 @@ const Questions = (props) => {
                                     </div>
                                 </div>
                                 <Button type="primary" onClick={handleStart}> Start </Button>
+                                {/* <Button type="primary" onClick={handleStop}> Stop </Button> */}
 
                             </Col>
                             {start &&
@@ -454,6 +502,7 @@ const Questions = (props) => {
                                                         qno = {quesNo}
                                                         atob = {advtobas}
                                                         stepans={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].options[stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].answer]}
+                                                        click = {click}
                                                     />
                                                     {/* <Audiogaurav 
                                                         threejsstep={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep}

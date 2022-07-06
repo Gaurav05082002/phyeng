@@ -12,6 +12,10 @@ import Home from "./components/Que/home";
 import Chapter from './components/Que/chapters'
 import 'antd/dist/antd.css';
 
+import Quegri from "./components/Que/Quegri";
+import Nlmbasic from "./components/Que/Shownewtolaw/Nlmbasic";
+import Nlmadvance from "./components/Que/Shownewtolaw/Nlmadvance";
+
 
 const root = ReactDOM.createRoot(
   document.getElementById("root")
@@ -24,6 +28,10 @@ root.render(
       <Route path="home" element={<Home />} />
       <Route path="home/:quesId" element={<Home />} />
       <Route path="chapters" element={<Chapter />} />
+      {/* <Route path="quegrid" element={<Quegrid />} /> */}
+      <Route path="Quegr" element={<Quegri />} />
+      <Route path="NLMbasic" element={<Nlmbasic/>} />
+      <Route path="NLMadvance" element={<Nlmadvance />} />
     </Routes>
   </BrowserRouter>
 );

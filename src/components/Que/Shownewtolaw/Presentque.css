@@ -1,0 +1,48 @@
+.presentmain {
+    /* border: solid 2px black; */
+    width: 100vw;
+    height: 100vh;
+    /* background-color: rgb(112, 146, 190); */
+    background-image: url(../galaxybg.jpg);
+    backdrop-filter: blur(8px);
+}
+.headname {
+    /* border: solid 2px black; */
+    height: 17%;
+    text-align: center;
+    color: bisque;
+    font-size: xx-large;
+    padding-top: 2%;
+}
+.chapname {
+    /* border: solid 2px black; */
+    height: 15%;
+    /* align-items: center; */
+    display: flex;
+    justify-content: center;
+    
+}
+.chname {
+    background-color: rgb(8, 68, 156);
+    color: white;
+    width: 33%;
+    font-size: xx-large;
+    height: 65%;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+.presques {
+    border: solid 2px black;
+    height: 60%;
+}
+.ant-card-grid {
+    background-color: rgb(30, 34, 85) !important;
+    color: rgb(255, 218, 77);
+    margin-bottom: 10px !important;
+    
+}
+.gristl {
+    color: rgb(112, 255, 255);
+}

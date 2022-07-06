@@ -25,6 +25,7 @@ export default function App() {
         <Link to="/login">Invoices</Link> |{" "}
         <Link to="/home">Expenses</Link>
         <Link to="/chapter">Chapter</Link>
+        
       </nav>
     </div>
   );

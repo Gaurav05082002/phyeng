@@ -57,18 +57,18 @@ return (
                 <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
                  
                   <div className='menubox'>
-                  <div className='mainmenu'>
-                    Course overview
-                  </div>
-                  <div className='mainmenu'>
+                  <Link to="/feedback" className='mainmenu'>
+                    Courseoverview
+                  </Link>
+                  <Link to="/feedback" className='mainmenu'>
                     Content
-                  </div>
-                  <div className='mainmenu'>
+                  </Link>
+                  <Link to="/feedback" className='mainmenu'>
                     Dashboard
-                    </div>
-                    <div className='mainmenu'>
+                    </Link>
+                    <Link to="/feedback" className='mainmenu'>
                     Feedback
-                    </div>
+                    </Link>
                     </div>
            </div>
            <div className='lowerd'>
@@ -82,12 +82,12 @@ return (
                       <span className='status'><BsFillUnlockFill/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div></Link>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
 
@@ -97,13 +97,13 @@ return (
                       <span className='status'><BsFillUnlockFill/></span>
                   </div>
                   <div className='carbtns'>
-                   <Link className='carbtns' to="/NLMbasic"> <div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-    </Link>               <Link className='carbtns' to="/NLMbasic"> <div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
-  </Link>                </div>
+                    
+   </Link>               </div>
                  </div>
 
 
@@ -114,12 +114,12 @@ return (
                       <span className='status'><AiFillLock/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>               <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
 
@@ -130,12 +130,12 @@ return (
                       <span className='status'><BsFillUnlockFill/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>               <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
 
@@ -146,13 +146,13 @@ return (
                       <span className='status'><AiFillLock/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>              <Link className='carbtns' to="/NLMbasic"> <div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
-  </Link>                </div>
+                    
+   </Link>               </div>
                  </div>
 
 
@@ -162,12 +162,12 @@ return (
                       <span className='status'><BsFillUnlockFill/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>               <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
 
@@ -178,13 +178,13 @@ return (
                       <span className='status'><AiFillLock/></span>
                   </div>
                   <div className='carbtns'>
-                   <Link className='carbtns' to="/NLMbasic"> <div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-    </Link>               <Link className='carbtns' to="/NLMbasic"> <div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
-  </Link>                </div>
+                    
+   </Link>               </div>
                  </div>
 
 
@@ -194,12 +194,12 @@ return (
                       <span className='status'><AiFillLock/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>               <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
 
@@ -210,12 +210,12 @@ return (
                       <span className='status'><AiFillLock/></span>
                   </div>
                   <div className='carbtns'>
-                    <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Basic
-                    </div>
-     </Link>               <Link className='carbtns' to="/NLMbasic"><div className='basicbtn'>
+                    </Link>
+                    <Link className='basicbtn' to="/NLMbasic">
                          Advance
-                    </div>
+                    
    </Link>               </div>
                  </div>
            </div>

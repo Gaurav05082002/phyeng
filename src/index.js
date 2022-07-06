@@ -15,6 +15,7 @@ import 'antd/dist/antd.css';
 import Quegri from "./components/Que/Quegri";
 import Nlmbasic from "./components/Que/Shownewtolaw/Nlmbasic";
 import Nlmadvance from "./components/Que/Shownewtolaw/Nlmadvance";
+import Feedback from "./components/Que/Feedback";
 
 
 const root = ReactDOM.createRoot(
@@ -32,6 +33,8 @@ root.render(
       <Route path="Quegr" element={<Quegri />} />
       <Route path="NLMbasic" element={<Nlmbasic/>} />
       <Route path="NLMadvance" element={<Nlmadvance />} />
+      <Route path="feedback" element={<Feedback/>} />
+      
     </Routes>
   </BrowserRouter>
 );

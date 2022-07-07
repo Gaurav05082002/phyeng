@@ -16,6 +16,7 @@ import Quegri from "./components/Que/Quegri";
 import Nlmbasic from "./components/Que/Shownewtolaw/Nlmbasic";
 import Nlmadvance from "./components/Que/Shownewtolaw/Nlmadvance";
 import Feedback from "./components/Que/Feedback";
+import Dashboard from "./components/Que/Dashboard/Home";
 
 
 const root = ReactDOM.createRoot(
@@ -34,7 +35,7 @@ root.render(
       <Route path="NLMbasic" element={<Nlmbasic/>} />
       <Route path="NLMadvance" element={<Nlmadvance />} />
       <Route path="feedback" element={<Feedback/>} />
-      
+      <Route path="dashboard" element={<Dashboard/>} />
     </Routes>
   </BrowserRouter>
 );

@@ -8,6 +8,7 @@ import { Row, Col, Button, Form, Radio, Alert, message } from 'antd';
 import constraint from './constraint.mp3'
 import { useParams } from 'react-router';
 import { FcApproval , FcDisapprove} from "react-icons/fc";
+import { Header } from 'antd/lib/layout/layout.js';
 import Back from "./Back";
 import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
 // import { Card } from 'antd';
@@ -444,14 +445,15 @@ const Questions = (props) => {
       
 
     return (
-        <Container >
+        <Container className='impcont' >
+        {/* <h1 className='chaame'>Newton's Laws</h1> */}
               <audio src="" id="gsound" class="hidden" preload="none"></audio>
             <Form form={form} onFinish={checkAnswer}  >
                 <Row>
                     <Col span={6}>
                    
                                             
-                        <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep} />
+                        <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep}  />
                         <Col span={24} className="eqa">
                         <div className='print' style={{fontWeight:"bold" , textAlign:"center" , backgroundColor:bgfchead
                                      }}

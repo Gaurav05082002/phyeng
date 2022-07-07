@@ -949,7 +949,7 @@ if (answerClicked > 0 && iscorrect != 1) {
                                     // ganswerdone(t);
                                   }
           }
-        if(step == "fbd" && substep == flag && (subsubstep == 100 || subsubstep == -300)){
+        if(step == "fbd" && substep == flag && subsubstep == 100 ){
           gplayer.pause();
               gplayer.src = pulleyeqn;
                                 gplayer.play();
@@ -970,6 +970,31 @@ if (answerClicked > 0 && iscorrect != 1) {
         // }
       }}
 
+
+
+    //   for advance pulley 
+
+    {for(let flag = 4 ; flag <= n_p+4 ; flag++) {
+        
+    
+        if(step == "fbd" && substep == flag &&  subsubstep == -300){
+          gplayer.pause();
+              gplayer.src = pulleyeqn;
+                                gplayer.play();
+                                if ( answerClicked > 0 && iscorrect == 1) {
+                                  gplayer.pause();
+                                  soundfbd.play();
+                                  // ganswerdone(t);
+                                }
+                                if ( answerClicked > 0 && iscorrect != 1) {
+                                    gplayer.pause();
+                                    gplayer.src=koibaatnahi;
+                                    gplayer.play();
+                                    // ganswerdone(t);
+                                  }
+        }
+        
+      }}
     // audio  for step3 
     
       
@@ -2335,7 +2360,7 @@ if (answerClicked > 0 && iscorrect != 1) {
         //const camera = new THREE.OrthographicCamera(- 2, 2, 2, - 2, 0.1, 100)
         const aspectRatio = sizes.width / sizes.height
         //const camera = new THREE.OrthographicCamera(- 2 * aspectRatio, 2 * aspectRatio, 2, - 2, 0.1, 100)
-        camera.position.z = 12;
+        camera.position.z = 11;
         if ( alld_question_no == 3 || alld_question_no == 13 ) {
             camera.position.z = 14;
 

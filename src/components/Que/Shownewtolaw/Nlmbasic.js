@@ -46,7 +46,7 @@ export default function Nlmbasic() {
               <Card.Grid style={gridStyle}>1</Card.Grid> */}
               
         
-                <Link to="/quegr" className="linkstl" ><Card.Grid style={gridStyle}  >1</Card.Grid></Link>
+                <Link to="/home/1" className="linkstl" ><Card.Grid style={gridStyle}  >1</Card.Grid></Link>
                 <Link to="/home/2" className="linkstl" ><Card.Grid style={gridStyle}  >2</Card.Grid></Link>
                 <Link to="/home/3" className="linkstl" ><Card.Grid style={gridStyle}  >3</Card.Grid></Link>
                 <Link to="/home/4" className="linkstl" ><Card.Grid style={gridStyle}  >4</Card.Grid></Link>
@@ -83,8 +83,42 @@ export default function Nlmbasic() {
                 <Link to="/home/35" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >35</Card.Grid></Link>
                 <Link to="/home/36" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >36</Card.Grid></Link>
                 <Link to="/home/37" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >37</Card.Grid></Link> 
-                {/* 37 is 39 */}
+        
                 <Link to="/home/38" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >38</Card.Grid></Link>
+                <Link to="/home/39" className="linkstl" ><Card.Grid style={gridStyle}  >39</Card.Grid></Link>
+                <Link to="/home/40" className="linkstl" ><Card.Grid style={gridStyle}  >40</Card.Grid></Link>
+                <Link to="/home/41" className="linkstl" ><Card.Grid style={gridStyle}  >41</Card.Grid></Link>
+                <Link to="/home/42" className="linkstl" ><Card.Grid style={gridStyle}  >42</Card.Grid></Link>
+                <Link to="/home/43" className="linkstl" ><Card.Grid style={gridStyle}  >43</Card.Grid></Link>
+                <Link to="/home/44" className="linkstl" ><Card.Grid style={gridStyle}  >44</Card.Grid></Link>
+                <Link to="/home/45" className="linkstl" ><Card.Grid style={gridStyle}  >45</Card.Grid></Link>
+                <Link to="/home/46" className="linkstl" ><Card.Grid style={gridStyle}  >46</Card.Grid></Link>
+                <Link to="/home/47" className="linkstl" ><Card.Grid style={gridStyle}  >47</Card.Grid></Link>
+                <Link to="/home/48" className="linkstl" ><Card.Grid style={gridStyle}  >48</Card.Grid></Link>
+                <Link to="/home/49" className="linkstl" ><Card.Grid style={gridStyle}  >49</Card.Grid></Link>
+                <Link to="/home/50" className="linkstl" ><Card.Grid style={gridStyle}  >50</Card.Grid></Link>
+                <Link to="/home/51" className="linkstl" ><Card.Grid style={gridStyle}  >51</Card.Grid></Link>
+                <Link to="/home/52" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >52</Card.Grid></Link>
+                <Link to="/home/53" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >53</Card.Grid></Link>
+                <Link to="/home/54" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >54</Card.Grid></Link>
+                <Link to="/home/55" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >55</Card.Grid></Link>
+                <Link to="/home/56" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >56</Card.Grid></Link>
+                <Link to="/home/57" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >57</Card.Grid></Link>
+                <Link to="/home/58" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >58</Card.Grid></Link>
+                <Link to="/home/59" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >59</Card.Grid></Link>
+                <Link to="/home/60" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >60</Card.Grid></Link>
+                <Link to="/home/61" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >61</Card.Grid></Link>
+                <Link to="/home/62" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >62</Card.Grid></Link>
+                <Link to="/home/63" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >63</Card.Grid></Link>
+                <Link to="/home/64" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >64</Card.Grid></Link>
+                <Link to="/home/65" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >65</Card.Grid></Link>
+                <Link to="/home/66" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >66</Card.Grid></Link>
+                <Link to="/home/67" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >67</Card.Grid></Link>
+                <Link to="/home/68" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >68</Card.Grid></Link>
+                <Link to="/home/69" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >69</Card.Grid></Link>
+                <Link to="/home/70" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >70</Card.Grid></Link>
+                
+                
         
                 
               {/* </Card> */}

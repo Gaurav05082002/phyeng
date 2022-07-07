@@ -58,6 +58,7 @@
 .ant-card-grid {
     border-radius: 3px !important;
     padding: 15px !important;
+    border: solid 2px black !important;
 }
 
 .ant-layout-header {

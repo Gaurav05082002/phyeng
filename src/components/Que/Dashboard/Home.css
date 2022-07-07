@@ -1,0 +1,12 @@
+.main {
+    /* border: solid 2px black; */
+    width: 98vw;
+    height: 100vh;
+}
+/* ::-webkit-scrollbar { width: 10px;
+   
+color:blue; } */
+::-webkit-scrollbar {
+    color: blue;
+    width: 10px;
+} 

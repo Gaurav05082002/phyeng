@@ -60,10 +60,10 @@ return (
                   <Link to="/feedback" className='mainmenu'>
                     Courseoverview
                   </Link>
-                  <Link to="/feedback" className='mainmenu'>
+                  <Link to="/chapters" className='mainmenu'>
                     Content
                   </Link>
-                  <Link to="/feedback" className='mainmenu'>
+                  <Link to="/dashboard" className='mainmenu'>
                     Dashboard
                     </Link>
                     <Link to="/feedback" className='mainmenu'>
@@ -85,7 +85,7 @@ return (
                     <Link className='basicbtn' to="/NLMbasic">
                          Basic
                     </Link>
-                    <Link className='basicbtn' to="/NLMbasic">
+                    <Link className='basicbtn' to="/NLMadvance">
                          Advance
                     
    </Link>               </div>

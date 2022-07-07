@@ -8,6 +8,7 @@ const Home = (props) => {
     return (
       <Layout class="center bg-image">
       <Header>Physics Engine</Header>
+      
       <Content>
         <Questions />
       </Content>

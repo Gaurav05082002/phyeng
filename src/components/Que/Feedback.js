@@ -8,17 +8,17 @@ export default function Feedback() {
   return (
      <div className='feedmain'>
 
-<div className='upperd'>
+<div className='upperdn'>
                 <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
                  
                 <div className='menubox'>
                   <Link to="/feedback" className='mainmenu'>
                     Courseoverview
                   </Link>
-                  <Link to="/feedback" className='mainmenu'>
+                  <Link to="/chapters" className='mainmenu'>
                     Content
                   </Link>
-                  <Link to="/feedback" className='mainmenu'>
+                  <Link to="/dashboard" className='mainmenu'>
                     Dashboard
                     </Link>
                     <Link to="/feedback" className='mainmenu'>
@@ -31,12 +31,12 @@ export default function Feedback() {
                 <form action="backend.php">
                     <div class="f4">
                         <label for="doseno">Name :  </label>
-                        <input type="text" id="doseno" name="mydoseno" class="f5"></input>
+                        <input type="text" id="doseno" name="mydoseno" class="f5" className='easyin'></input>
                 
                     </div>
                 
                     <div class="f4">
-                        email : <input type="email" name="myemail" class="f5" ></input>
+                        email : <input type="email" name="myemail" class="f5" className='easyin'></input>
                     </div>
                    
                 {/* <div class="f4">
@@ -48,7 +48,7 @@ export default function Feedback() {
                 <label for="desease" class="f4">Give your review : </label>
             
                 <textarea name="write" id="desease"
-                 cols="30" rows="5" class="f5"></textarea>
+                 cols="30" rows="5" class="f5" className='easyin'></textarea>
                 <div class="f4">
                 
                     <label for="like">Video quality</label>

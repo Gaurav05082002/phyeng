@@ -12,7 +12,7 @@ export default function Feedback() {
                 <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
                  
                 <div className='menubox'>
-                  <Link to="/feedback" className='mainmenu'>
+                  <Link to="/videos" className='mainmenu'>
                     Courseoverview
                   </Link>
                   <Link to="/chapters" className='mainmenu'>

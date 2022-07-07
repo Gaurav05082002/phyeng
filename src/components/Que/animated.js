@@ -46,7 +46,8 @@ import char from './AUDIOS/charl.mp3'
 import paanch from './gaurav_audios/paanch.mp3'
 import che from './gaurav_audios/che.mp3'
 import gauravaudio from './audio-trial-2.mp3'
-import steponepone from './AUDIOS/stepOne/step_one_audiopart1.mp3'
+import steponepone from './AUDIOS/stepOne/neaudiostep1.mp3'
+// import steponepone from './AUDIOS/stepOne/step_one_audiopart1.mp3'
 import steponeptwo from './AUDIOS/stepOne/step_one_audiopart2.mp3'
 import steponepthree from './AUDIOS/stepOne/step_one_audiopart3.mp3'
 import steponepfour from './AUDIOS/stepOne/step_one_audiopart4.mp3'
@@ -450,6 +451,7 @@ const TestThree = (props) => {
         // }
         var ranval = Math.floor(Math.random() * 4);
         var audioncount = 0;
+        
         var soundacc = new Howl({
             
             src: motivate[ranval],
@@ -461,7 +463,7 @@ const TestThree = (props) => {
             }
           });
         
-        if (step == "motion" && substep == 0) {
+        if (step == "motion" && substep == 0  ) {
             let player = document.getElementById('radio');
             player.src = unkb_audio[0];
             // player.play();
@@ -718,6 +720,7 @@ const TestThree = (props) => {
    {for(let flag = 1 ; flag <= n_b ; flag++) {
       
     if(step == "fbd" && substep == flag && subsubstep == -200){
+        soundtension.pause();
         //this is red block 
         gplayer.src = steponepseven;
                                  gplayer.play();
@@ -729,6 +732,7 @@ const TestThree = (props) => {
       }
 
       if(step == "fbd" && substep == flag && subsubstep == -100){
+        
         //this is red block 
         gplayer.pause();
             gplayer.src = cut_aud[flag];
@@ -780,6 +784,7 @@ const TestThree = (props) => {
                               }
       }
       if(step == "fbd" && substep == flag && subsubstep == 100   && blockdata[flag].acceleration[1]>0){
+        soundtension.pause();
         gplayer.pause();
             gplayer.src = up_eqn[flag];
                               gplayer.play();
@@ -790,6 +795,7 @@ const TestThree = (props) => {
                               }
       }
       if(step == "fbd" && substep == flag && subsubstep == 100  && blockdata[flag].acceleration[1]<0){
+        soundtension.pause();
         gplayer.pause();
             gplayer.src = down_eqn[flag];
                               gplayer.play();

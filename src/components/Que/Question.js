@@ -108,12 +108,13 @@ const Questions = (props) => {
       
     }, 500);}
 
- 
+   
    var corans;
     const checkAnswer = () => {
         //  debugger
         let ansGiven = form.getFieldValue('answer');
         let correctAnsIndex = stepDetails?.stepQuestions[currentQue].answer
+        
         let correctAns = stepDetails?.stepQuestions[currentQue].options[correctAnsIndex]
         corans = correctAns;
         if (ansGiven === correctAns) {

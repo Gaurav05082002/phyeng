@@ -17,6 +17,7 @@ import Nlmbasic from "./components/Que/Shownewtolaw/Nlmbasic";
 import Nlmadvance from "./components/Que/Shownewtolaw/Nlmadvance";
 import Feedback from "./components/Que/Feedback";
 import Dashboard from "./components/Que/Dashboard/Home";
+import Videos from "./components/Que/Videos/chaptervid";
 
 
 const root = ReactDOM.createRoot(
@@ -36,6 +37,7 @@ root.render(
       <Route path="NLMadvance" element={<Nlmadvance />} />
       <Route path="feedback" element={<Feedback/>} />
       <Route path="dashboard" element={<Dashboard/>} />
+      <Route path="videos" element={<Videos/>} />
     </Routes>
   </BrowserRouter>
 );

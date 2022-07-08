@@ -38,12 +38,7 @@ export default function Nlmadvance() {
       <div className='preques'>
 
       <div className="ques">
-           {/* <Card title="Questions" id='qloop' style={linkstyle}> */}
-           {/* <Card.Grid style={gridStyle}>1</Card.Grid>
-           <Card.Grid style={gridStyle}>1</Card.Grid>
-           <Card.Grid style={gridStyle}>1</Card.Grid>
-           <Card.Grid style={gridStyle}>1</Card.Grid> */}
-           
+          
      
              <Link to="/home/71" className="linkstl" ><Card.Grid style={gridStyle}  >1</Card.Grid></Link>
              <Link to="/home/72" className="linkstl" ><Card.Grid style={gridStyle}  >2</Card.Grid></Link>
@@ -82,7 +77,6 @@ export default function Nlmadvance() {
              <Link to="/home/105" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >35</Card.Grid></Link>
              <Link to="/home/106" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >36</Card.Grid></Link>
              <Link to="/home/107" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >37</Card.Grid></Link> 
-     
              <Link to="/home/108" className="linkstl" ><Card.Grid style={gridStyle} className="gristl" >38</Card.Grid></Link>
              <Link to="/home/109" className="linkstl" ><Card.Grid style={gridStyle}  >39</Card.Grid></Link>
              <Link to="/home/110" className="linkstl" ><Card.Grid style={gridStyle}  >40</Card.Grid></Link>
@@ -120,7 +114,7 @@ export default function Nlmadvance() {
              
      
              
-           {/* </Card> */}
+        
          </div>
          
 

@@ -9,7 +9,7 @@ export default function Navbar() {
      
       <div className='menubox'>
       <Link to="/videos" className='mainmenu'>
-        Courseoverview
+        Course Overview
       </Link>
       <Link to="/chapters" className='mainmenu'>
         Content

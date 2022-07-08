@@ -2,9 +2,12 @@
     /* border: solid 2px black; */
     width: 100vw;
     height: 100vh;
-    /* background-color: rgb(112, 146, 190); */
-    background-image: url(../galaxybg.jpg);
-    backdrop-filter: blur(8px);
+    
+    background-image: url(../galaxybg1.jpg);
+  
+    background-repeat: no-repeat;
+  background-size: cover;
+    opacity: 0.99;
 }
 .headname {
     /* border: solid 2px black; */

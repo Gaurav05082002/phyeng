@@ -21,6 +21,7 @@
     flex-direction: column;
     margin-top: -40px;
     background-color: rgb(5, 84, 252);
+    /* position: absolute; */
     /* background-color: rgb(5, 84, 252); */
 
 }
@@ -501,7 +502,7 @@ li {
     width: 43%;
     background-color: rgba(146, 127, 126, 0.5);
     border: 2px solid blue;
-    
+    height: 80%;
     margin-top: 0px;
     border-radius: 20px;
     margin-right: 10px;

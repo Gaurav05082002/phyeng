@@ -80,8 +80,8 @@ export default function Content() {
 
 
     
-      <div className="sidebar">
-        <button className="sidebarbtn">
+      {/* <div className="sidebar"> */}
+        {/* <button className="sidebarbtn">
           <FiBarChart /> Dashboard
         </button>
         <button className="sidebarbtn , activebtn">
@@ -89,13 +89,13 @@ export default function Content() {
         </button>
         <button className="sidebarbtn">
           <AiOutlineFile /> Internships
-        </button>
-      </div>
+        </button> */}
+      {/* </div> */}
 
       {/* skilltest div is mid part of our window which UPDATE div , QUICKSTATS div , COMPARISION GRAPH div */}
       {/* style coming from content.css */}
       <div className="skilltest">
-        skill test
+        Analysis
         {/* <div className="outline , update">
           <div>
             <img
@@ -173,7 +173,7 @@ export default function Content() {
         <div></div>
         <div className="graph , outline">
           <div className="grapheading">
-            <h4 style={{ fontfamily: "georgia" }}>Stepvise Analysis</h4>
+            <h4 style={{ fontfamily: "georgia" }}>Stepwise Analysis</h4>
           </div>
           <div className="grapbody">
             <span className="darker">You have attempted 30 questions </span>{" "}
@@ -202,7 +202,7 @@ export default function Content() {
       <div className="syllabus">
           <div className="sylheading">
             {" "}
-            <h4>Syllabus wise Analysis</h4>
+            <h4>Chapter wise Analysis</h4>
           </div>
           <div className="box">
             <div>NEWTON'S LAWS</div>
@@ -268,6 +268,7 @@ export default function Content() {
               </span>
             </div>
           </div>
+          
 
         {/* in this graph div PIEGRAPH is coming from Graph folder's piegraph.js file ,score is sent as props to piegraph.js  */}
         <div className="piegraph">

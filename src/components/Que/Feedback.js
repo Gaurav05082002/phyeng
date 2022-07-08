@@ -27,7 +27,9 @@ export default function Feedback() {
                     </div>
            </div>
 
-          <div id="b4c"><h1 class="tit4">SHARE YOUR FEEDBACK</h1>
+          <div id="b4c">
+          
+          <h1 class="tit4">SHARE YOUR FEEDBACK</h1>
                 <form action="backend.php">
                     <div class="f4">
                         <label for="doseno">Name :  </label>
@@ -83,7 +85,7 @@ export default function Feedback() {
             
             
                 </form>
-                 </div>
+            </div>
      </div>
   )
 }

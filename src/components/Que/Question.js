@@ -506,6 +506,7 @@ const Questions = (props) => {
                                                         atob = {advtobas}
                                                         stepans={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].options[stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].answer]}
                                                         click = {click}
+                                                        type={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].type}
                                                     />
                                                     {/* <Audiogaurav 
                                                         threejsstep={stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep}
@@ -539,7 +540,7 @@ const Questions = (props) => {
                                                     <CardText>
                                                         <Form.Item
                                                             name="answer"
-                                                            rules={[{ required: true, message: 'Please select and option.' }]}
+                                                            rules={[{ required: true, message: 'Please select any option.' }]}
                                                         >
                                                          {/* onChange={onChangeAns} is now in check answer it self */}
                                                             <Radio.Group  onChange={checkAnswer} >

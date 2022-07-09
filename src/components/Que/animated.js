@@ -39,7 +39,7 @@ import a1 from './gaurav_audios/a1.mp3'
 import a2 from './gaurav_audios/a2.mp3'
 import a3 from './gaurav_audios/a3.mp3'
 import a4 from './gaurav_audios/a4.mp3'
-import ek from './AUDIOS/ekl.mp3'
+// import ek from './AUDIOS/ekl.mp3'
 import two from './AUDIOS/dol.mp3'
 import teen from './AUDIOS/teenl.mp3'
 import char from './AUDIOS/charl.mp3'
@@ -111,7 +111,11 @@ import welldone from './AUDIOS/motivate/welldone.mp3'
 import blockeqnad from './AUDIOS/advance/blockeqnad.mp3'
 import koibaatnahi from './AUDIOS/advance/koibaatnahi.mp3'
 import pulleyeqnad from './AUDIOS/advance/pulleyeqnad.mp3'
-
+import pinkstringlenchange from './AUDIOS/step4new/pinkstringlenchange.mp3'
+import redstringlenchange from './AUDIOS/step4new/redstringkilenchange.mp3'
+import stringconsteqn from './AUDIOS/step4new/stringconsteqn.mp3'
+import lendoublederi from './AUDIOS/step4new/lendoublederi.mp3'
+import finalstepaudio from './AUDIOS/step4new/finalstepaudio.mp3'
 import Back from "./Back";
 import {Howl, Howler} from 'howler';
 const TestThree = (props) => {
@@ -3985,8 +3989,56 @@ if (answerClicked > 0 && iscorrect != 1) {
 
 
         }
+// constraintaudio
+        
+         if (step == "constraint" && substep == 1 && subsubstep == -1) {
+            gplayer.pause();
+            gplayer.src= pinkstringlenchange;
+            gplayer.play();
+            if ( iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+             }
+             
+         }
+         if (step == "constraint" && (subsubstep == 1 || subsubstep ==2)) {
+            gplayer.pause();
+            gplayer.src= lendoublederi;
+            gplayer.play();
+            if ( iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+             }
+         }
+         if (step == "constraint" && subsubstep == 300) {
+            gplayer.pause();
+            gplayer.src= stringconsteqn;
+            gplayer.play();
+            if ( iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+             }
+             if( answerClicked > 0 && props.type == "advance" && iscorrect != 1) {
+                gplayer.pause();
+                gplayer.src=koibaatnahi;
+                gplayer.play();
+             }
+         }
+
+         if (step == "finalanswer" ) {
+            gplayer.pause();
+            gplayer.src= finalstepaudio;
+            gplayer.play();
+            if ( iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+             }
+         }
 
 
+
+
+// constraint audio ends
 
         // 20th June last change starts
         //the following part has a lot of changes made by mangalik

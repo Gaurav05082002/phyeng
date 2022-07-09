@@ -8,7 +8,7 @@ export default function Feedback() {
   return (
      <div className='feedmain'>
 
-<div className='upperdn'>
+        <div className='feedhead'><div className='upperdn4'>
                 <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
                  
                 <div className='menubox'>
@@ -26,7 +26,10 @@ export default function Feedback() {
                     </Link>
                     </div>
            </div>
+           </div>
+        <div className='feedbotm'>
 
+      
           <div id="b4c">
           
           <h1 class="tit4">SHARE YOUR FEEDBACK</h1>
@@ -49,8 +52,7 @@ export default function Feedback() {
                
                 <label for="desease" class="f4">Give your review : </label>
             
-                <textarea name="write" id="desease"
-                 cols="30" rows="5" class="f5" className='easyin'></textarea>
+                <input type="text" id="doseno" name="mydoseno" class="reviewin" className='easyin'></input>
                 <div class="f4">
                 
                     <label for="like">Video quality</label>
@@ -86,6 +88,7 @@ export default function Feedback() {
             
                 </form>
             </div>
+            </div>    
      </div>
   )
 }

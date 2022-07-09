@@ -116,6 +116,7 @@ import redstringlenchange from './AUDIOS/step4new/redstringkilenchange.mp3'
 import stringconsteqn from './AUDIOS/step4new/stringconsteqn.mp3'
 import lendoublederi from './AUDIOS/step4new/lendoublederi.mp3'
 import finalstepaudio from './AUDIOS/step4new/finalstepaudio.mp3'
+import lateeqnkya from './AUDIOS/advance/lateeqnkya.mp3'
 import Back from "./Back";
 import {Howl, Howler} from 'howler';
 const TestThree = (props) => {
@@ -892,9 +893,40 @@ if (answerClicked > 0 && iscorrect != 1) {
             gplayer.play();
               }
       }
+      if(step == "fbd" && substep == 1 &&  subsubstep == -300 && blockdata[flag].acceleration[1]>0){
+        gplayer.pause();
+            gplayer.src = lateeqnkya;
+            gplayer.play();
+            if ( answerClicked > 0 && iscorrect == 1) {
+                gplayer.pause();
+                soundfbd.play();
+                // ganswerdone(t);
+}
+if (answerClicked > 0 && iscorrect != 1) {
+                gplayer.pause();
+            gplayer.src = koibaatnahi;
+            gplayer.play();
+              }
+      }
       if(step == "fbd" && substep == flag &&  subsubstep == -300 && blockdata[flag].acceleration[1]<0){
         gplayer.pause();
         gplayer.src = blockeqnad;
+        gplayer.play();
+     if ( answerClicked > 0 && iscorrect == 1) {
+                            gplayer.pause();
+                            soundfbd.play();
+                            // ganswerdone(t);
+        }
+        if (answerClicked > 0 && iscorrect != 1) {
+                            gplayer.pause();
+                        gplayer.src = koibaatnahi;
+                        gplayer.play();
+                          }
+        
+      }
+      if(step == "fbd" && substep == 1 &&  subsubstep == -300 && blockdata[flag].acceleration[1]<0){
+        gplayer.pause();
+        gplayer.src = lateeqnkya;
         gplayer.play();
      if ( answerClicked > 0 && iscorrect == 1) {
                             gplayer.pause();

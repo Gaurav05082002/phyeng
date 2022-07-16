@@ -1,7 +1,7 @@
 import React , {useState} from 'react';
 import 'antd/dist/antd.css';
 // import '../chap.css';
-// import Cardn from '../Cardn';
+// import Cardn from '../Cardn'
 
 import { Card } from 'antd';
 import { Link } from "react-router-dom";

@@ -29,7 +29,7 @@ export default class Piegraph extends Component {
                 
                 { y: this.props.score, toolTipContent: "{y} Correct", },
                 
-                { y: 30-this.props.score, toolTipContent: "{y} Incorrect",}
+                { y: this.props.totalques -this.props.score, toolTipContent: "{y} Incorrect",}
             ]
         }]
     }

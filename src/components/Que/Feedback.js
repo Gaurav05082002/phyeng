@@ -3,30 +3,13 @@ import React from 'react'
 import "./Feedback.css"
 import { AiFillStar } from "react-icons/ai";
 import { Link } from 'react-router-dom';
-
+import Navbar from './Dashboard/navbar/Navbar'
 export default function Feedback() {
   return (
-     <div className='feedmain'>
+     <>
 
-        <div className='feedhead'><div className='upperdn4'>
-                <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
-                 
-                <div className='menubox'>
-                  <Link to="/videos" className='mainmenu'>
-                    Course Overview
-                  </Link>
-                  <Link to="/chapters" className='mainmenu'>
-                    Content
-                  </Link>
-                  <Link to="/dashboard" className='mainmenu'>
-                    Dashboard
-                    </Link>
-                    <Link to="/feedback" className='mainmenu'>
-                    Feedback
-                    </Link>
-                    </div>
-           </div>
-           </div>
+        <Navbar/>
+    
         <div className='feedbotm'>
 
       
@@ -89,6 +72,6 @@ export default function Feedback() {
                 </form>
             </div>
             </div>    
-     </div>
+     </>
   )
 }

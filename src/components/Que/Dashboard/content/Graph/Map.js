@@ -2,12 +2,19 @@
 import React from 'react';
 
 import CanvasJSReact from './canvasjs.react';
+// import { graphdata } from "./graphdata.json";
 var Component = React.Component;
 //var CanvasJSReact = require('./canvasjs.react');
 var CanvasJS = CanvasJSReact.CanvasJS;
 var CanvasJSChart = CanvasJSReact.CanvasJSChart;
 export default class Map extends Component {	
-    render(props) {
+  
+    render() {
+      var step1c = this.props.c1;
+      var step2c = this.props.c2;
+      var step3c = this.props.c3;
+      var step4c = this.props.c4;
+      var step5c = this.props.c5;
       const options = {
         theme: "dark1", // "light1", "light2", "dark1", "dark2"
         animationEnabled: true,	
@@ -43,11 +50,11 @@ export default class Map extends Component {
             toolTipContent: "{y}% Percentage questions are corrected in this step",
             // xValueFormatString: "##.00mn",
             dataPoints: [
-                { x: 1 ,y:70  },
-                { x: 2 ,y:40 },
-                { x: 3 ,y:60 },
-                {x: 4 ,y:30 },
-                {x: 5 ,y:20 }
+                { x: 1 ,y:step1c },
+                { x: 2 ,y:step2c },
+                { x: 3 ,y:step3c },
+                {x: 4 ,y:step4c },
+                {x: 5 ,y:step5c }
                 
             ]
          }]

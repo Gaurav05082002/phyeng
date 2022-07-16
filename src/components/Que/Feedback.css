@@ -506,13 +506,14 @@ li {
 }
 
 #b4c {
-    width: 130%;
+    width: 60%;
     background-color: rgba(146, 127, 126, 0.5);
     border: 2px solid blue;
     height: 100%;
     margin-top: 0px;
     border-radius: 20px;
-    margin-right: 10px;
+    /* margin-right: 10px; */
+    margin-left: 20%;
     /* box-sizing: border-box; */
     padding-top: 10px;
     padding-left: 15px;

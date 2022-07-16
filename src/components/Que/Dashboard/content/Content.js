@@ -10,6 +10,9 @@ import { IoBookmarksOutline } from "react-icons/io5";
 import { useState, useRef, useEffect } from "react";
 import Map from "./Graph/Map";
 import Piegraph from "./Graph/Piegraph";
+import { graphdata } from "./Graph/graphdata";
+
+
 // map file contains the comparison graph
 // piegraph file contains pie graph for score analysis
 
@@ -25,6 +28,14 @@ export default function Content() {
     setvaln3(24);
     setvaln4(96);
   }
+  const mdata = graphdata[0]
+  const step1correct = mdata.steponecorrect;
+  const step2correct = mdata.steptwocorrect;
+  const step3correct = mdata.stepthreecorrect;
+  const step4correct = mdata.stepfourcorrect;
+  const step5correct = mdata.stepfivecorrect;
+  const attempt = mdata.attempted;
+  const corr = mdata.quescorrect;
 
   // r is variable for rank , p: percentile , s:score
 
@@ -176,11 +187,18 @@ export default function Content() {
             <h4 style={{ fontfamily: "georgia" }}>Stepwise Analysis</h4>
           </div>
           <div className="grapbody">
-            <span className="darker">You have attempted 30 questions </span>{" "}
+            <span className="darker">You have attempted {attempt} questions </span>{" "}
             this graph shows performance in each step in overall attempted
             questions
           </div>
-          <Map perc={p} />
+          <Map c1= {step1correct}
+                c2= {step2correct}
+                c3= {step3correct}
+                c4= {step4correct}
+                c5= {step5correct}
+        
+         
+         />
           {/* in this graph div map is coming from Graph folder's map.js file percentile is sent as props to map.js  */}
 
           {/* this is MODAL for taking the values for updation */}
@@ -274,16 +292,16 @@ export default function Content() {
         <div className="piegraph">
           <div className="pieheading">
             <h4>
-              Questions Analysis <span className="marks">{15}/30</span>
+              Questions Analysis <span className="marks">{corr}/{attempt}</span>
             </h4>
             <div className="discription">
               <span className="darker">
-                You scored {15} ques correct out of {30}
+                You scored {corr} ques correct out of {attempt}
               </span>
               .However it still needs some improvements
             </div>
             <div>
-              <Piegraph score={15} />
+              <Piegraph score={corr} totalques = {attempt} />
             </div>
           </div>
         </div>

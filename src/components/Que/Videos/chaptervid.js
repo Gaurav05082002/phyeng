@@ -3,10 +3,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import vid from './newtonlawvideo.mp4'
 import "./chapvid.css"
+import Navbar from '../Dashboard/navbar/Navbar'
 
 export default function chaptervid() {
   return (
-   <div><div className='upperdn2'>
+   <div>
+   {/* <div className='upperdn2'>
    <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
     
      <div className='menubox'>
@@ -23,7 +25,8 @@ export default function chaptervid() {
        Feedback
        </Link>
        </div>
-</div>
+</div> */}
+<Navbar/>
         <div className='videocont'>
         <h1 className='stepheading'>NEWTON'S LAW</h1>
 

@@ -7,6 +7,7 @@ import { Card } from 'antd';
 import { Link } from "react-router-dom";
 import { AiFillLock } from "react-icons/ai";
 import { BsFillUnlockFill } from "react-icons/bs";
+import Navbar from './Dashboard/navbar/Navbar';
 
 
 
@@ -29,7 +30,7 @@ const Chapters = () => {
 
   <>
        <div className='maind'>
-           <div className='upperd'>
+           {/* <div className='upperd'>
                 <div className='upperheadbox'><h1 className='upperhead'>PHYSICS ENGINE</h1> </div>
                  
                   <div className='menubox'>
@@ -46,7 +47,8 @@ const Chapters = () => {
                     Feedback
                     </Link>
                     </div>
-           </div>
+           </div> */}
+           <Navbar/>
            <div className='lowerd'>
 
            

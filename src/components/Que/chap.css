@@ -118,7 +118,7 @@
 
 }
 .lowerd {
-    border: solid 1px black;
+    /* border: solid 1px black; */
     height: 87%;
     width: 100vw;
     display: flex;

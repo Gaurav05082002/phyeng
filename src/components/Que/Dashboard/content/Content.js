@@ -107,81 +107,7 @@ export default function Content() {
       {/* style coming from content.css */}
       <div className="skilltest">
         Analysis
-        {/* <div className="outline , update">
-          <div>
-            <img
-              className="htmllogo"
-              src="https://ih1.redbubble.net/image.361593789.5453/flat,128x,075,f-pad,128x128,f8f8f8.u1.jpg"
-            ></img>
-          </div>
-          <div className="writeup">
-            {" "}
-            Hypertext Markup Language<br></br>
-            <span className="writeupspan">
-              Questions:08 | Duration: 15mins | Submitted on 5 June 2021
-            </span>
-          </div>
-          <div className="updatebtndiv">
-            {" "}
-            <button
-              className="updatebtn"
-              data-bs-toggle="modal"
-              data-bs-target="#exampleModal"
-            >
-              Update
-            </button>
-          </div>
-        </div> */}
-
-
-
-
-        {/* <div className="quickstats , outline">
-          <div className="quickstatheading">
-            <h4>Quick Statistics</h4>
-          </div>
-          <div className="quickstatbody">
-            <div className="icons">
-              <img
-                className="logo"
-                src="http://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/trophy.png"
-              ></img>
-            </div>
-            <div className="writeup , rank">
-              {r}
-              <br></br>
-              <span className="writeupspan">YOUR RANK</span>
-            </div>
-            <div className="icons">
-              <img
-                className="logo"
-                src="https://m.media-amazon.com/images/I/41D+j5AzwtL._SX522_.jpg"
-              ></img>
-            </div>
-            <div className="writeup , percentile">
-              
-              {p}%<br></br>
-              <span className="writeupspan">PERCENTILE</span>
-            </div>
-            <div className="icons">
-              <img
-                className="logo"
-                src="https://printoshop.co.za/wp-content/uploads/Tick-Stickers.jpg"
-              ></img>
-            </div>
-            <div className="writeup , score">
-             
-              {s}/15<br></br>
-              <span className="writeupspan">CORRECT ANSWERS</span>
-            </div>
-          </div> */}
-
-
-
-
-
-          
-        <div></div>
+      <div></div>
         <div className="graph , outline">
           <div className="grapheading">
             <h4 style={{ fontfamily: "georgia" }}>Stepwise Analysis</h4>
@@ -222,6 +148,7 @@ export default function Content() {
             {" "}
             <h4>Chapter wise Analysis</h4>
           </div>
+          
           <div className="box">
             <div>NEWTON'S LAWS</div>
             <div>
@@ -238,6 +165,7 @@ export default function Content() {
               </span>
             </div>
           </div>
+
           <div className="box">
             <div> KINEMATICS</div>
             <div>
@@ -254,6 +182,7 @@ export default function Content() {
               </span>
             </div>
           </div>
+
           <div className="box">
             <div> SHM</div>
             <div>
@@ -270,6 +199,7 @@ export default function Content() {
               </span>
             </div>
           </div>
+
           <div className="box">
             <div>ROTATIONAL MOTION</div>
             <div>
@@ -286,6 +216,7 @@ export default function Content() {
               </span>
             </div>
           </div>
+      </div>
           
 
         {/* in this graph div PIEGRAPH is coming from Graph folder's piegraph.js file ,score is sent as props to piegraph.js  */}
@@ -307,6 +238,6 @@ export default function Content() {
         </div>
       </div>
     </div>
-    </div>
+    
   );
 }

@@ -131,3 +131,21 @@
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif !important;
     font-style: italic;
   }
+
+  @media only screen and (max-width: 480px){
+  .questes {
+    /* visibility:hidden; */
+    width: 0px !important;
+  }
+  .quesblk {
+    width: 100vw !important;
+    border: solid 1px black;
+    margin-left: 0px;
+  }
+  .answers {
+    width: 100vw;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  
+}

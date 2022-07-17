@@ -30,7 +30,7 @@ export default function chaptervid() {
         <div className='videocont'>
         <h1 className='stepheading'>NEWTON'S LAW</h1>
 
-<video width="750" height="500" controls >
+<video className='videogal' controls >
       <source   src={vid} type="video/mp4"/>
      </video>
 
@@ -39,7 +39,7 @@ export default function chaptervid() {
      <div className='videocont'>
         <h1 className='stepheading'>KINEMATICS</h1>
 
-<video width="750" height="500" controls >
+<video className='videogal'controls >
       <source   src={vid} type="video/mp4"/>
      </video>
 
@@ -48,7 +48,7 @@ export default function chaptervid() {
      <div className='videocont'>
         <h1 className='stepheading'>SHM</h1>
 
-<video width="750" height="500" controls >
+<video className='videogal' controls >
       <source   src={vid} type="video/mp4"/>
      </video>
 

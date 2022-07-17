@@ -448,10 +448,10 @@ const Questions = (props) => {
     return (
         <Container className='impcont' >
         {/* <h1 className='chaame'>Newton's Laws</h1> */}
-              <audio src="" id="gsound" class="hidden" preload="none"></audio>
+              {/* <audio src="" id="gsound" class="hidden" preload="none"></audio> */}
             <Form form={form} onFinish={checkAnswer}  >
                 <Row>
-                    <Col span={6}>
+                    <Col span={6} className="questes">
                    
                                             
                         <Steps questionDetails={questionDetails} stepDetails={stepDetails} steps={step} changeStep={changeStep}  />
@@ -469,12 +469,12 @@ const Questions = (props) => {
                                             ))}
                                             </Col>
                     </Col>
+                    {/* .. */}
                 
-                    <Col span={1}>
-                    </Col>
-                    <Col span={16}>
+                    
+                    <Col span={16} className="quesblk">
                         <Row className="answers">
-                            <Col span={24}>
+                            <Col span={24} >
                             {/* <Back className = {backstl} /> */}
                             {/* <Link to="/login"    ><Button  type="primary" > Back </Button></Link> */}
                                 <div className="question">

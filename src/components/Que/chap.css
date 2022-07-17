@@ -238,3 +238,65 @@
     /* z-index: 20; */
 
 }
+@media only screen and (max-width: 480px) {
+    .lowerd {
+     
+      height: 87%;
+      width: 100vw;
+      display: flex;
+      /* justify-content: space-around; */
+      flex-wrap:wrap;
+      padding-left: 0px;
+      padding-top: 10px;
+      /* align-items:center; */
+      justify-content: center;
+      /* border: solid 2px black; */
+    }
+    .carddiv {
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+        /* border: solid 1px red; */
+        border-bottom: solid 8px green;
+        /* background-image: url(./newtonlaw.jpg); */
+        background-color: rgb(252, 249, 235);
+        /* background-size: cover; */
+        border-radius: 20px;
+        /* display: inline-block; */
+        background-size: contain;
+        /* justify-content: center; */
+        
+        /* box-shadow: 6px 2px 5px 2px white; */
+        /* opacity: 0.5; */
+    }
+    .carddiv1 {
+        width: 80%;
+        height: 20%;
+        margin: 10px;
+        /* margin-left: 50px; */
+        /* margin-right: 50px; */
+        /* border: solid 1px red; */
+        border-bottom: solid 8px rgb(255, 96, 96);
+        /* background-image: url(./newtonlaw.jpg); */
+        background-color: rgb(252, 249, 235);
+        /* background-size: cover; */
+        border-radius: 20px;
+        /* display: inline-block; */
+        background-size: contain;
+        /* box-shadow: 6px 2px 5px 2px white; */
+        /* opacity: 0.5; */
+    }
+    .maind {
+        /* border: solid 1px black; */
+        width: 100vw;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        background-image: url(./galaxybg.jpg);
+        background-color: rgb(139, 193, 240);
+        background-size: cover;
+        background-repeat: repeat-x;
+    }
+  }

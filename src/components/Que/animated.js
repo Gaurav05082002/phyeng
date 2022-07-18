@@ -2387,9 +2387,16 @@ if (answerClicked > 0 && iscorrect != 1) {
         //scene.add(mesh1,sphere)
 
         // Sizes
-        const sizes = {
+        // const mob = window.innerWidth <= 600;
+        var sizes = {
             width: 500,
             height: 450
+        }
+        if(window.innerWidth <= 600) {
+            sizes = {
+                width: 300,
+                height: 250
+            }
         }
 
         //const axesHelper = new THREE.AxesHelper(2)

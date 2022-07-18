@@ -49,3 +49,33 @@
 .gristl {
     color: rgb(112, 255, 255);
 }
+@media only screen and (max-width: 480px) {
+    .chname {
+        background-color: rgb(8, 68, 156);
+        color: white;
+        width: 50%;
+        font-size: large;
+        height: 30%;
+        text-align: center;
+        padding-top: 8px;
+    
+    }
+    .chapname {
+        /* border: solid 2px black; */
+        height: fit-content;
+        /* align-items: center; */
+        display: flex;
+        justify-content: center;
+        margin-bottom: 5%;
+        
+    }
+    .headname {
+        /* border: solid 2px black; */
+        height: 8%;
+        text-align: center;
+        color: bisque;
+        font-size: xx-large;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
+}

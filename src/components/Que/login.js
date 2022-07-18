@@ -14,6 +14,7 @@ const Login = (props) => {
       };
 
       const handleSubmit = useCallback(() => navigate('/chapters', {replace: true}), [navigate]);
+      const mob = window.innerWidth <= 480;
 
     return (
         <div className='logbody'>
@@ -22,9 +23,12 @@ const Login = (props) => {
           </div>
           <div className='rightlog'>
           <div id="sign-form">
-          <div id="sub-title" >
+          <div>{mob ? <div id="sub-title" >
+                    Physics Engine
+                </div> : <div id="sub-title" >
                     LOG IN
-                </div>
+                </div>}</div>
+          
           <Form
           name="basic"
           labelCol={{

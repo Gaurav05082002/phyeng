@@ -12,8 +12,9 @@ import { FcApproval , FcDisapprove} from "react-icons/fc";
 import { Header } from 'antd/lib/layout/layout.js';
 import Back from "./Back";
 import ginone from './AUDIOS/stepOne/step_one_audioek.mp3'
+import { Link } from 'react-router-dom'
 // import { Card } from 'antd';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 // import Audiogaurav from './Audiogaurav.js';
 import {  Drawer,  Space } from 'antd';
 import './Question-mobile.css'
@@ -669,7 +670,8 @@ const QuestionsM = (props) => {
                                     </Latex> */}
 
                                         </Col>
-                                        <Button type="primary" className='nextQue' onClick={changeQuetion}>Next Step</Button>
+                                        {/* <Button type="primary" className='nextQue' onClick={changeQuetion}>Next Step</Button> */}
+                                        {(stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep== "finalanswer") ? <Link to="/chapters"><Button type="primary" className='nextQue' onClick={changeQuetion}>Stop</Button></Link> : <Button type="primary" className='nextQue' onClick={changeQuetion}>Next step</Button> }
 
                                     </Col>
 

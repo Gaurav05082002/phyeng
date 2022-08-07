@@ -527,6 +527,7 @@ const QuestionsM = (props) => {
                                     </div>
                                 </div>
                                 <Button type="primary" onClick={handleStart}> Start </Button>
+                                <span className = {backstl}><Back v="0"  /></span>
                                 
                                 {/* <Button type="primary" onClick={handleStop}> Stop </Button> */}
 
@@ -671,7 +672,7 @@ const QuestionsM = (props) => {
 
                                         </Col>
                                         {/* <Button type="primary" className='nextQue' onClick={changeQuetion}>Next Step</Button> */}
-                                        {(stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep== "finalanswer") ? <Link to="/chapters"><Button type="primary" className='nextQue' onClick={changeQuetion}>Stop</Button></Link> : <Button type="primary" className='nextQue' onClick={changeQuetion}>Next step</Button> }
+                                        {(stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep== "finalanswer") ? <Back v="1" /> : <Button type="primary" className='nextQue' onClick={changeQuetion}>Next step</Button> }
 
                                     </Col>
 

@@ -1,7 +1,7 @@
 export const graphdata = [
 
     {
-        "steponecorrect" : 60,
+        "steponecorrect" : 10,
         "steptwocorrect" : 50,
         "stepthreecorrect" : 30,
         "stepfourcorrect" : 20,

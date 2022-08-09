@@ -444,6 +444,14 @@ const Questions = (props) => {
                             >stepDetails.stepQuestions[currentQue] && stepDetails?.stepQuestions[currentQue].showfc[inde]</div>
         }
     }
+    var j;
+    if(quesNo<=70){
+        j = "1";
+    }
+    else {
+        j = "2";
+    }
+
 
       
 
@@ -634,8 +642,8 @@ const Questions = (props) => {
                                         {/* {mob ? <QuestionsM /> : <Questions />} */}
                                         {console.log("heyyyyyy")}
                                         {console.log(questionDetails.steps.stepName)}
-                                     
-                                         {(stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep== "finalanswer") ? <Back v="1" /> : <Button type="primary" className='nextQue' onClick={changeQuetion}>Next step</Button> }
+                                         {/* {(quesNo<=70) ? j="1" : j="2"} */}
+                                         {(stepDetails && stepDetails.stepQuestions[currentQue] && stepDetails.stepQuestions[currentQue].threejsstep== "finalanswer") ? <Back v="1" h={j} /> : <Button type="primary" className='nextQue' onClick={changeQuetion}>Next step</Button> }
                                         {/* <Button type="primary" className='nextQue' onClick={changeQuetion}>Next Step</Button> */}
 
                                     </Col>
